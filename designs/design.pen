@@ -1,0 +1,1398 @@
+﻿{
+    "version":  "2.13",
+    "variables":  {
+                      "--muted":  {
+                                      "value":  "#F8F9FA",
+                                      "type":  "color"
+                                  },
+                      "--foreground":  {
+                                           "value":  "#111827",
+                                           "type":  "color"
+                                       },
+                      "--accent":  {
+                                       "value":  "#8B5E3C",
+                                       "type":  "color"
+                                   },
+                      "--muted-foreground":  {
+                                                 "value":  "#6B7280",
+                                                 "type":  "color"
+                                             },
+                      "--secondary":  {
+                                          "value":  "#4A2E15",
+                                          "type":  "color"
+                                      },
+                      "--background":  {
+                                           "value":  "#FFFFFF",
+                                           "type":  "color"
+                                       },
+                      "--primary-foreground":  {
+                                                   "value":  "#FFFFFF",
+                                                   "type":  "color"
+                                               },
+                      "--border":  {
+                                       "value":  "#E5E7EB",
+                                       "type":  "color"
+                                   },
+                      "--font-secondary":  {
+                                               "value":  "Inter",
+                                               "type":  "string"
+                                           },
+                      "--font-primary":  {
+                                             "value":  "Inter",
+                                             "type":  "string"
+                                         },
+                      "--primary":  {
+                                        "value":  "#5D3A1A",
+                                        "type":  "color"
+                                    }
+                  },
+    "children":  [
+                     {
+                         "children":  [
+                                          {
+                                              "children":  [
+                                                               {
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "id":  "home-logo-circle",
+                                                                                        "name":  "Logo Circle",
+                                                                                        "width":  44,
+                                                                                        "fill":  "$--primary",
+                                                                                        "type":  "rectangle",
+                                                                                        "height":  44
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "home-logo-text",
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--background",
+                                                                                        "name":  "Logo Text",
+                                                                                        "type":  "text",
+                                                                                        "content":  "HUAJIUAN",
+                                                                                        "fontSize":  22,
+                                                                                        "fontWeight":  "700"
+                                                                                    }
+                                                                                ],
+                                                                   "y":  0,
+                                                                   "width":  200,
+                                                                   "id":  "home-logo",
+                                                                   "fill":  "$--foreground",
+                                                                   "name":  "Logo",
+                                                                   "type":  "frame",
+                                                                   "height":  44,
+                                                                   "x":  0,
+                                                                   "justifyContent":  "start",
+                                                                   "layout":  "horizontal",
+                                                                   "gap":  12,
+                                                                   "alignItems":  "center"
+                                                               },
+                                                               {
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "id":  "nav-0",
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--background",
+                                                                                        "name":  "Нүүр",
+                                                                                        "type":  "text",
+                                                                                        "content":  "Нүүр",
+                                                                                        "fontSize":  14,
+                                                                                        "fontWeight":  "normal"
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "nav-1",
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--background",
+                                                                                        "name":  "Бидний тухай",
+                                                                                        "type":  "text",
+                                                                                        "content":  "Бидний тухай",
+                                                                                        "fontSize":  14,
+                                                                                        "fontWeight":  "normal"
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "nav-2",
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--background",
+                                                                                        "name":  "Үйлчилгээ",
+                                                                                        "type":  "text",
+                                                                                        "content":  "Үйлчилгээ",
+                                                                                        "fontSize":  14,
+                                                                                        "fontWeight":  "normal"
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "nav-3",
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--background",
+                                                                                        "name":  "Зураг",
+                                                                                        "type":  "text",
+                                                                                        "content":  "Зураг",
+                                                                                        "fontSize":  14,
+                                                                                        "fontWeight":  "normal"
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "nav-4",
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--background",
+                                                                                        "name":  "Мэдээ",
+                                                                                        "type":  "text",
+                                                                                        "content":  "Мэдээ",
+                                                                                        "fontSize":  14,
+                                                                                        "fontWeight":  "normal"
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "nav-5",
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--background",
+                                                                                        "name":  "Холбоо барих",
+                                                                                        "type":  "text",
+                                                                                        "content":  "Холбоо барих",
+                                                                                        "fontSize":  14,
+                                                                                        "fontWeight":  "normal"
+                                                                                    }
+                                                                                ],
+                                                                   "y":  0,
+                                                                   "width":  600,
+                                                                   "id":  "home-nav",
+                                                                   "fill":  "$--foreground",
+                                                                   "name":  "Nav",
+                                                                   "type":  "frame",
+                                                                   "height":  44,
+                                                                   "x":  0,
+                                                                   "justifyContent":  "end",
+                                                                   "layout":  "horizontal",
+                                                                   "gap":  32,
+                                                                   "alignItems":  "center"
+                                                               }
+                                                           ],
+                                              "y":  0,
+                                              "width":  "fill_container",
+                                              "padding":  [
+                                                              28,
+                                                              80
+                                                          ],
+                                              "id":  "home-header",
+                                              "fill":  "$--foreground",
+                                              "name":  "Header",
+                                              "type":  "frame",
+                                              "height":  80,
+                                              "x":  0,
+                                              "justifyContent":  "space_between",
+                                              "layout":  "horizontal",
+                                              "gap":  0,
+                                              "alignItems":  "center"
+                                          },
+                                          {
+                                              "children":  [
+                                                               {
+                                                                   "id":  "home-kicker",
+                                                                   "fontFamily":  "$--font-primary",
+                                                                   "fill":  "$--accent",
+                                                                   "name":  "Hero Kicker",
+                                                                   "type":  "text",
+                                                                   "lineHeight":  "-1",
+                                                                   "content":  "#HUAJIUANALLINIUM",
+                                                                   "fontSize":  14,
+                                                                   "fontWeight":  "600",
+                                                                   "letterSpacing":  3
+                                                               },
+                                                               {
+                                                                   "id":  "home-title",
+                                                                   "width":  1000,
+                                                                   "fontFamily":  "$--font-primary",
+                                                                   "fill":  "$--background",
+                                                                   "name":  "Hero Title",
+                                                                   "type":  "text",
+                                                                   "lineHeight":  1,
+                                                                   "content":  "Гадна өнгөлгөөний ирээдүй",
+                                                                   "fontSize":  80,
+                                                                   "textGrowth":  "fixed-width",
+                                                                   "fontWeight":  "900"
+                                                               },
+                                                               {
+                                                                   "id":  "home-subtitle",
+                                                                   "width":  700,
+                                                                   "fontFamily":  "$--font-primary",
+                                                                   "fill":  "#9CA3AF",
+                                                                   "name":  "Hero Subtitle",
+                                                                   "type":  "text",
+                                                                   "content":  "Шилэн пасад. Металл пасад. Гадна дуулаалга. Тоноглол.",
+                                                                   "fontSize":  24,
+                                                                   "textGrowth":  "fixed-width",
+                                                                   "fontWeight":  "normal"
+                                                               },
+                                                               {
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "home-cta1-text",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--primary-foreground",
+                                                                                                             "name":  "CTA Text",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Үнийн санал авах",
+                                                                                                             "fontSize":  16,
+                                                                                                             "fontWeight":  "600"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fit_content",
+                                                                                        "padding":  [
+                                                                                                        18,
+                                                                                                        36
+                                                                                                    ],
+                                                                                        "id":  "home-cta1",
+                                                                                        "fill":  "$--primary",
+                                                                                        "name":  "Primary CTA",
+                                                                                        "type":  "frame",
+                                                                                        "height":  56,
+                                                                                        "x":  0,
+                                                                                        "layout":  "horizontal",
+                                                                                        "gap":  0
+                                                                                    },
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "home-cta2-text",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--background",
+                                                                                                             "name":  "CTA Text",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Төслүүд",
+                                                                                                             "fontSize":  16,
+                                                                                                             "fontWeight":  "600"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fit_content",
+                                                                                        "padding":  [
+                                                                                                        18,
+                                                                                                        36
+                                                                                                    ],
+                                                                                        "id":  "home-cta2",
+                                                                                        "fill":  "transparent",
+                                                                                        "name":  "Secondary CTA",
+                                                                                        "type":  "frame",
+                                                                                        "height":  56,
+                                                                                        "x":  0,
+                                                                                        "layout":  "horizontal",
+                                                                                        "gap":  0
+                                                                                    }
+                                                                                ],
+                                                                   "y":  0,
+                                                                   "width":  "fit_content",
+                                                                   "id":  "home-ctas",
+                                                                   "fill":  "$--foreground",
+                                                                   "name":  "Hero CTAs",
+                                                                   "type":  "frame",
+                                                                   "height":  56,
+                                                                   "x":  0,
+                                                                   "justifyContent":  "start",
+                                                                   "layout":  "horizontal",
+                                                                   "gap":  16,
+                                                                   "alignItems":  "center"
+                                                               }
+                                                           ],
+                                              "y":  0,
+                                              "width":  "fill_container",
+                                              "padding":  [
+                                                              100,
+                                                              80
+                                                          ],
+                                              "id":  "home-hero",
+                                              "fill":  "$--foreground",
+                                              "name":  "Hero",
+                                              "type":  "frame",
+                                              "height":  820,
+                                              "x":  0,
+                                              "justifyContent":  "end",
+                                              "layout":  "vertical",
+                                              "gap":  0,
+                                              "alignItems":  "start"
+                                          },
+                                          {
+                                              "children":  [
+                                                               {
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "id":  "home-services-label",
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--primary",
+                                                                                        "name":  "Section Label",
+                                                                                        "type":  "text",
+                                                                                        "lineHeight":  "-1",
+                                                                                        "content":  "ҮЙЛЧИЛГЭЭ",
+                                                                                        "fontSize":  12,
+                                                                                        "fontWeight":  "600",
+                                                                                        "letterSpacing":  2
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "home-services-title",
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--foreground",
+                                                                                        "name":  "Services Title",
+                                                                                        "type":  "text",
+                                                                                        "content":  "Бүтээгдэхүүн, үйлчилгээ",
+                                                                                        "fontSize":  44,
+                                                                                        "fontWeight":  "800"
+                                                                                    }
+                                                                                ],
+                                                                   "y":  0,
+                                                                   "width":  "fill_container",
+                                                                   "id":  "home-services-head",
+                                                                   "fill":  "$--background",
+                                                                   "name":  "Services Header",
+                                                                   "type":  "frame",
+                                                                   "height":  "fit_content",
+                                                                   "x":  0,
+                                                                   "layout":  "vertical",
+                                                                   "gap":  16
+                                                               },
+                                                               {
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "svc-title-0",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--background",
+                                                                                                             "name":  "Card Title",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Шилэн пасад",
+                                                                                                             "fontSize":  22,
+                                                                                                             "fontWeight":  "700"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "svc-desc-0",
+                                                                                                             "width":  "fill_container",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "#9CA3AF",
+                                                                                                             "name":  "Card Desc",
+                                                                                                             "type":  "text",
+                                                                                                             "lineHeight":  1.5,
+                                                                                                             "content":  "Төвөгшөөрсөн архитектурын шийдэл",
+                                                                                                             "fontSize":  16,
+                                                                                                             "textGrowth":  "fixed-width",
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fill_container",
+                                                                                        "padding":  32,
+                                                                                        "id":  "svc-card-0",
+                                                                                        "fill":  "$--foreground",
+                                                                                        "name":  "Шилэн пасад",
+                                                                                        "type":  "frame",
+                                                                                        "height":  "fit_content",
+                                                                                        "x":  0,
+                                                                                        "layout":  "vertical",
+                                                                                        "gap":  16
+                                                                                    },
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "svc-title-1",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--background",
+                                                                                                             "name":  "Card Title",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Металл пасад",
+                                                                                                             "fontSize":  22,
+                                                                                                             "fontWeight":  "700"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "svc-desc-1",
+                                                                                                             "width":  "fill_container",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "#9CA3AF",
+                                                                                                             "name":  "Card Desc",
+                                                                                                             "type":  "text",
+                                                                                                             "lineHeight":  1.5,
+                                                                                                             "content":  "Тэсвэртэй, урт настай өнгөлгөө",
+                                                                                                             "fontSize":  16,
+                                                                                                             "textGrowth":  "fixed-width",
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fill_container",
+                                                                                        "padding":  32,
+                                                                                        "id":  "svc-card-1",
+                                                                                        "fill":  "$--foreground",
+                                                                                        "name":  "Металл пасад",
+                                                                                        "type":  "frame",
+                                                                                        "height":  "fit_content",
+                                                                                        "x":  0,
+                                                                                        "layout":  "vertical",
+                                                                                        "gap":  16
+                                                                                    },
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "svc-title-2",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--background",
+                                                                                                             "name":  "Card Title",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Гадна дуулаалга",
+                                                                                                             "fontSize":  22,
+                                                                                                             "fontWeight":  "700"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "svc-desc-2",
+                                                                                                             "width":  "fill_container",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "#9CA3AF",
+                                                                                                             "name":  "Card Desc",
+                                                                                                             "type":  "text",
+                                                                                                             "lineHeight":  1.5,
+                                                                                                             "content":  "Дулаан, дуу чимээ тусгаарлалт",
+                                                                                                             "fontSize":  16,
+                                                                                                             "textGrowth":  "fixed-width",
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fill_container",
+                                                                                        "padding":  32,
+                                                                                        "id":  "svc-card-2",
+                                                                                        "fill":  "$--foreground",
+                                                                                        "name":  "Гадна дуулаалга",
+                                                                                        "type":  "frame",
+                                                                                        "height":  "fit_content",
+                                                                                        "x":  0,
+                                                                                        "layout":  "vertical",
+                                                                                        "gap":  16
+                                                                                    },
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "svc-title-3",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--background",
+                                                                                                             "name":  "Card Title",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Тоноглол",
+                                                                                                             "fontSize":  22,
+                                                                                                             "fontWeight":  "700"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "svc-desc-3",
+                                                                                                             "width":  "fill_container",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "#9CA3AF",
+                                                                                                             "name":  "Card Desc",
+                                                                                                             "type":  "text",
+                                                                                                             "lineHeight":  1.5,
+                                                                                                             "content":  "Олон улсын стандартад нийцсэн дагалдах хэрэгсэл",
+                                                                                                             "fontSize":  16,
+                                                                                                             "textGrowth":  "fixed-width",
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fill_container",
+                                                                                        "padding":  32,
+                                                                                        "id":  "svc-card-3",
+                                                                                        "fill":  "$--foreground",
+                                                                                        "name":  "Тоноглол",
+                                                                                        "type":  "frame",
+                                                                                        "height":  "fit_content",
+                                                                                        "x":  0,
+                                                                                        "layout":  "vertical",
+                                                                                        "gap":  16
+                                                                                    }
+                                                                                ],
+                                                                   "y":  0,
+                                                                   "width":  "fill_container",
+                                                                   "id":  "home-service-grid",
+                                                                   "fill":  "$--background",
+                                                                   "name":  "Service Grid",
+                                                                   "type":  "frame",
+                                                                   "height":  "fit_content",
+                                                                   "x":  0,
+                                                                   "layout":  "horizontal",
+                                                                   "gap":  24
+                                                               }
+                                                           ],
+                                              "y":  0,
+                                              "width":  "fill_container",
+                                              "padding":  [
+                                                              120,
+                                                              80
+                                                          ],
+                                              "id":  "home-services",
+                                              "fill":  "$--background",
+                                              "name":  "Services",
+                                              "type":  "frame",
+                                              "height":  "fit_content",
+                                              "x":  0,
+                                              "layout":  "vertical",
+                                              "gap":  48
+                                          },
+                                          {
+                                              "children":  [
+                                                               {
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "id":  "home-about-label",
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--primary",
+                                                                                        "name":  "Section Label",
+                                                                                        "type":  "text",
+                                                                                        "lineHeight":  "-1",
+                                                                                        "content":  "БИДНИЙ ТУХАЙ",
+                                                                                        "fontSize":  12,
+                                                                                        "fontWeight":  "600",
+                                                                                        "letterSpacing":  2
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "home-about-title",
+                                                                                        "width":  600,
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--foreground",
+                                                                                        "name":  "About Title",
+                                                                                        "type":  "text",
+                                                                                        "content":  "Мэргэжлийн, чанартай, итгэл үнэмшилтэй",
+                                                                                        "fontSize":  40,
+                                                                                        "textGrowth":  "fixed-width",
+                                                                                        "fontWeight":  "800"
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "home-about-body",
+                                                                                        "width":  560,
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--muted-foreground",
+                                                                                        "name":  "About Body",
+                                                                                        "type":  "text",
+                                                                                        "lineHeight":  1.6,
+                                                                                        "content":  "Бид 4 жилийн туршлага, өндөр бүтээмж, олон улсын стандартын бүтээгдэхүүнээр Монголын барилгын салбарт үйлчилж байна.",
+                                                                                        "fontSize":  18,
+                                                                                        "textGrowth":  "fixed-width",
+                                                                                        "fontWeight":  "normal"
+                                                                                    },
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "children":  [
+                                                                                                                              {
+                                                                                                                                  "id":  "stat-1-num",
+                                                                                                                                  "fontFamily":  "$--font-primary",
+                                                                                                                                  "fill":  "$--primary",
+                                                                                                                                  "name":  "Stat Number",
+                                                                                                                                  "type":  "text",
+                                                                                                                                  "content":  "4+",
+                                                                                                                                  "fontSize":  36,
+                                                                                                                                  "fontWeight":  "800"
+                                                                                                                              },
+                                                                                                                              {
+                                                                                                                                  "id":  "stat-1-label",
+                                                                                                                                  "fontFamily":  "$--font-primary",
+                                                                                                                                  "fill":  "$--muted-foreground",
+                                                                                                                                  "name":  "Stat Label",
+                                                                                                                                  "type":  "text",
+                                                                                                                                  "content":  "Жил",
+                                                                                                                                  "fontSize":  14,
+                                                                                                                                  "fontWeight":  "normal"
+                                                                                                                              }
+                                                                                                                          ],
+                                                                                                             "y":  0,
+                                                                                                             "width":  "fit_content",
+                                                                                                             "id":  "stat-1",
+                                                                                                             "name":  "Жил",
+                                                                                                             "type":  "frame",
+                                                                                                             "height":  "fit_content",
+                                                                                                             "x":  0,
+                                                                                                             "layout":  "vertical",
+                                                                                                             "gap":  4
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "children":  [
+                                                                                                                              {
+                                                                                                                                  "id":  "stat-2-num",
+                                                                                                                                  "fontFamily":  "$--font-primary",
+                                                                                                                                  "fill":  "$--primary",
+                                                                                                                                  "name":  "Stat Number",
+                                                                                                                                  "type":  "text",
+                                                                                                                                  "content":  "50+",
+                                                                                                                                  "fontSize":  36,
+                                                                                                                                  "fontWeight":  "800"
+                                                                                                                              },
+                                                                                                                              {
+                                                                                                                                  "id":  "stat-2-label",
+                                                                                                                                  "fontFamily":  "$--font-primary",
+                                                                                                                                  "fill":  "$--muted-foreground",
+                                                                                                                                  "name":  "Stat Label",
+                                                                                                                                  "type":  "text",
+                                                                                                                                  "content":  "Төсөл",
+                                                                                                                                  "fontSize":  14,
+                                                                                                                                  "fontWeight":  "normal"
+                                                                                                                              }
+                                                                                                                          ],
+                                                                                                             "y":  0,
+                                                                                                             "width":  "fit_content",
+                                                                                                             "id":  "stat-2",
+                                                                                                             "name":  "Төсөл",
+                                                                                                             "type":  "frame",
+                                                                                                             "height":  "fit_content",
+                                                                                                             "x":  0,
+                                                                                                             "layout":  "vertical",
+                                                                                                             "gap":  4
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "children":  [
+                                                                                                                              {
+                                                                                                                                  "id":  "stat-3-num",
+                                                                                                                                  "fontFamily":  "$--font-primary",
+                                                                                                                                  "fill":  "$--primary",
+                                                                                                                                  "name":  "Stat Number",
+                                                                                                                                  "type":  "text",
+                                                                                                                                  "content":  "100%",
+                                                                                                                                  "fontSize":  36,
+                                                                                                                                  "fontWeight":  "800"
+                                                                                                                              },
+                                                                                                                              {
+                                                                                                                                  "id":  "stat-3-label",
+                                                                                                                                  "fontFamily":  "$--font-primary",
+                                                                                                                                  "fill":  "$--muted-foreground",
+                                                                                                                                  "name":  "Stat Label",
+                                                                                                                                  "type":  "text",
+                                                                                                                                  "content":  "Стандарт",
+                                                                                                                                  "fontSize":  14,
+                                                                                                                                  "fontWeight":  "normal"
+                                                                                                                              }
+                                                                                                                          ],
+                                                                                                             "y":  0,
+                                                                                                             "width":  "fit_content",
+                                                                                                             "id":  "stat-3",
+                                                                                                             "name":  "Стандарт",
+                                                                                                             "type":  "frame",
+                                                                                                             "height":  "fit_content",
+                                                                                                             "x":  0,
+                                                                                                             "layout":  "vertical",
+                                                                                                             "gap":  4
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fit_content",
+                                                                                        "id":  "home-stats",
+                                                                                        "fill":  "$--background",
+                                                                                        "name":  "Stats",
+                                                                                        "type":  "frame",
+                                                                                        "height":  "fit_content",
+                                                                                        "x":  0,
+                                                                                        "justifyContent":  "start",
+                                                                                        "layout":  "horizontal",
+                                                                                        "gap":  48,
+                                                                                        "alignItems":  "start"
+                                                                                    }
+                                                                                ],
+                                                                   "y":  0,
+                                                                   "width":  600,
+                                                                   "id":  "home-about-text",
+                                                                   "fill":  "$--background",
+                                                                   "name":  "About Text",
+                                                                   "type":  "frame",
+                                                                   "height":  "fit_content",
+                                                                   "x":  0,
+                                                                   "layout":  "vertical",
+                                                                   "gap":  24
+                                                               },
+                                                               {
+                                                                   "id":  "home-about-img",
+                                                                   "name":  "About Image",
+                                                                   "width":  600,
+                                                                   "fill":  "$--border",
+                                                                   "type":  "rectangle",
+                                                                   "height":  400
+                                                               }
+                                                           ],
+                                              "y":  0,
+                                              "width":  "fill_container",
+                                              "padding":  [
+                                                              120,
+                                                              80
+                                                          ],
+                                              "id":  "home-about",
+                                              "fill":  "$--muted",
+                                              "name":  "About Teaser",
+                                              "type":  "frame",
+                                              "height":  "fit_content",
+                                              "x":  0,
+                                              "justifyContent":  "space_between",
+                                              "layout":  "horizontal",
+                                              "gap":  80,
+                                              "alignItems":  "center"
+                                          },
+                                          {
+                                              "children":  [
+                                                               {
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "id":  "gal-1",
+                                                                                        "name":  "Gallery Item 1",
+                                                                                        "width":  "fill_container",
+                                                                                        "fill":  "$--muted",
+                                                                                        "type":  "rectangle",
+                                                                                        "height":  "fill_container"
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "gal-2",
+                                                                                        "name":  "Gallery Item 2",
+                                                                                        "width":  "fill_container",
+                                                                                        "fill":  "$--border",
+                                                                                        "type":  "rectangle",
+                                                                                        "height":  "fill_container"
+                                                                                    }
+                                                                                ],
+                                                                   "y":  0,
+                                                                   "width":  "fill_container",
+                                                                   "id":  "gallery-row-1",
+                                                                   "fill":  "$--background",
+                                                                   "name":  "Gallery Row 1",
+                                                                   "type":  "frame",
+                                                                   "height":  360,
+                                                                   "x":  0,
+                                                                   "layout":  "horizontal",
+                                                                   "gap":  0
+                                                               },
+                                                               {
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "id":  "gal-3",
+                                                                                        "name":  "Gallery Item 3",
+                                                                                        "width":  "fill_container",
+                                                                                        "fill":  "$--foreground",
+                                                                                        "type":  "rectangle",
+                                                                                        "height":  "fill_container"
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "gal-4",
+                                                                                        "name":  "Gallery Item 4",
+                                                                                        "width":  "fill_container",
+                                                                                        "fill":  "$--primary",
+                                                                                        "type":  "rectangle",
+                                                                                        "height":  "fill_container"
+                                                                                    }
+                                                                                ],
+                                                                   "y":  0,
+                                                                   "width":  "fill_container",
+                                                                   "id":  "gallery-row-2",
+                                                                   "fill":  "$--background",
+                                                                   "name":  "Gallery Row 2",
+                                                                   "type":  "frame",
+                                                                   "height":  360,
+                                                                   "x":  0,
+                                                                   "layout":  "horizontal",
+                                                                   "gap":  0
+                                                               }
+                                                           ],
+                                              "y":  0,
+                                              "width":  "fill_container",
+                                              "id":  "home-gallery",
+                                              "fill":  "$--background",
+                                              "name":  "Gallery",
+                                              "type":  "frame",
+                                              "height":  "fit_content",
+                                              "x":  0,
+                                              "layout":  "vertical",
+                                              "gap":  0
+                                          },
+                                          {
+                                              "children":  [
+                                                               {
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "home-blog-label",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--primary",
+                                                                                                             "name":  "Section Label",
+                                                                                                             "type":  "text",
+                                                                                                             "lineHeight":  "-1",
+                                                                                                             "content":  "МЭДЭЭ",
+                                                                                                             "fontSize":  12,
+                                                                                                             "fontWeight":  "600",
+                                                                                                             "letterSpacing":  2
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "home-blog-title",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--foreground",
+                                                                                                             "name":  "Blog Title",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Сүүлийн нийтлэлүүд",
+                                                                                                             "fontSize":  44,
+                                                                                                             "fontWeight":  "800"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fit_content",
+                                                                                        "id":  "home-blog-title",
+                                                                                        "name":  "Blog Title",
+                                                                                        "type":  "frame",
+                                                                                        "height":  "fit_content",
+                                                                                        "x":  0,
+                                                                                        "layout":  "vertical",
+                                                                                        "gap":  16
+                                                                                    },
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "home-blog-cta-text",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--foreground",
+                                                                                                             "name":  "CTA Text",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Бүх мэдээ",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "600"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fit_content",
+                                                                                        "padding":  [
+                                                                                                        14,
+                                                                                                        28
+                                                                                                    ],
+                                                                                        "id":  "home-blog-cta",
+                                                                                        "fill":  "transparent",
+                                                                                        "name":  "Blog CTA",
+                                                                                        "type":  "frame",
+                                                                                        "height":  "fit_content",
+                                                                                        "x":  0,
+                                                                                        "justifyContent":  "center",
+                                                                                        "layout":  "horizontal",
+                                                                                        "gap":  0,
+                                                                                        "alignItems":  "center"
+                                                                                    }
+                                                                                ],
+                                                                   "y":  0,
+                                                                   "width":  "fill_container",
+                                                                   "id":  "home-blog-head",
+                                                                   "fill":  "$--background",
+                                                                   "name":  "Blog Header",
+                                                                   "type":  "frame",
+                                                                   "height":  "fit_content",
+                                                                   "x":  0,
+                                                                   "justifyContent":  "space_between",
+                                                                   "layout":  "horizontal",
+                                                                   "gap":  0,
+                                                                   "alignItems":  "end"
+                                                               },
+                                                               {
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "blog-img-0",
+                                                                                                             "name":  "Post Image",
+                                                                                                             "width":  "fill_container",
+                                                                                                             "fill":  "$--muted",
+                                                                                                             "type":  "rectangle",
+                                                                                                             "height":  200
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "blog-title-0",
+                                                                                                             "width":  "fill_container",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--foreground",
+                                                                                                             "name":  "Post Title",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Мэдээний гарчиг 1",
+                                                                                                             "fontSize":  18,
+                                                                                                             "textGrowth":  "fixed-width",
+                                                                                                             "fontWeight":  "600"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "blog-excerpt-0",
+                                                                                                             "width":  "fill_container",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Post Excerpt",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Товч агуулга...",
+                                                                                                             "fontSize":  14,
+                                                                                                             "textGrowth":  "fixed-width",
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fill_container",
+                                                                                        "id":  "blog-card-0",
+                                                                                        "fill":  "$--background",
+                                                                                        "name":  "Blog Post 1",
+                                                                                        "type":  "frame",
+                                                                                        "height":  "fit_content",
+                                                                                        "x":  0,
+                                                                                        "justifyContent":  "start",
+                                                                                        "layout":  "vertical",
+                                                                                        "gap":  16,
+                                                                                        "alignItems":  "start"
+                                                                                    },
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "blog-img-1",
+                                                                                                             "name":  "Post Image",
+                                                                                                             "width":  "fill_container",
+                                                                                                             "fill":  "$--muted",
+                                                                                                             "type":  "rectangle",
+                                                                                                             "height":  200
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "blog-title-1",
+                                                                                                             "width":  "fill_container",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--foreground",
+                                                                                                             "name":  "Post Title",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Мэдээний гарчиг 2",
+                                                                                                             "fontSize":  18,
+                                                                                                             "textGrowth":  "fixed-width",
+                                                                                                             "fontWeight":  "600"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "blog-excerpt-1",
+                                                                                                             "width":  "fill_container",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Post Excerpt",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Товч агуулга...",
+                                                                                                             "fontSize":  14,
+                                                                                                             "textGrowth":  "fixed-width",
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fill_container",
+                                                                                        "id":  "blog-card-1",
+                                                                                        "fill":  "$--background",
+                                                                                        "name":  "Blog Post 2",
+                                                                                        "type":  "frame",
+                                                                                        "height":  "fit_content",
+                                                                                        "x":  0,
+                                                                                        "justifyContent":  "start",
+                                                                                        "layout":  "vertical",
+                                                                                        "gap":  16,
+                                                                                        "alignItems":  "start"
+                                                                                    },
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "blog-img-2",
+                                                                                                             "name":  "Post Image",
+                                                                                                             "width":  "fill_container",
+                                                                                                             "fill":  "$--muted",
+                                                                                                             "type":  "rectangle",
+                                                                                                             "height":  200
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "blog-title-2",
+                                                                                                             "width":  "fill_container",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--foreground",
+                                                                                                             "name":  "Post Title",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Мэдээний гарчиг 3",
+                                                                                                             "fontSize":  18,
+                                                                                                             "textGrowth":  "fixed-width",
+                                                                                                             "fontWeight":  "600"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "blog-excerpt-2",
+                                                                                                             "width":  "fill_container",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Post Excerpt",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Товч агуулга...",
+                                                                                                             "fontSize":  14,
+                                                                                                             "textGrowth":  "fixed-width",
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fill_container",
+                                                                                        "id":  "blog-card-2",
+                                                                                        "fill":  "$--background",
+                                                                                        "name":  "Blog Post 3",
+                                                                                        "type":  "frame",
+                                                                                        "height":  "fit_content",
+                                                                                        "x":  0,
+                                                                                        "justifyContent":  "start",
+                                                                                        "layout":  "vertical",
+                                                                                        "gap":  16,
+                                                                                        "alignItems":  "start"
+                                                                                    }
+                                                                                ],
+                                                                   "y":  0,
+                                                                   "width":  "fill_container",
+                                                                   "id":  "home-blog-grid",
+                                                                   "fill":  "$--background",
+                                                                   "name":  "Blog Grid",
+                                                                   "type":  "frame",
+                                                                   "height":  "fit_content",
+                                                                   "x":  0,
+                                                                   "layout":  "horizontal",
+                                                                   "gap":  24
+                                                               }
+                                                           ],
+                                              "y":  0,
+                                              "width":  "fill_container",
+                                              "padding":  [
+                                                              120,
+                                                              80
+                                                          ],
+                                              "id":  "home-blog",
+                                              "fill":  "$--background",
+                                              "name":  "Blog",
+                                              "type":  "frame",
+                                              "height":  "fit_content",
+                                              "x":  0,
+                                              "layout":  "vertical",
+                                              "gap":  48
+                                          },
+                                          {
+                                              "children":  [
+                                                               {
+                                                                   "id":  "home-cta-title",
+                                                                   "fontFamily":  "$--font-primary",
+                                                                   "fill":  "$--primary-foreground",
+                                                                   "name":  "CTA Title",
+                                                                   "type":  "text",
+                                                                   "lineHeight":  "-1",
+                                                                   "content":  "Хамтран ажиллая",
+                                                                   "fontSize":  56,
+                                                                   "textAlign":  "center",
+                                                                   "fontWeight":  "900"
+                                                               },
+                                                               {
+                                                                   "id":  "home-cta-subtitle",
+                                                                   "fontFamily":  "$--font-primary",
+                                                                   "fill":  "#FED7AA",
+                                                                   "name":  "CTA Subtitle",
+                                                                   "type":  "text",
+                                                                   "lineHeight":  "-1",
+                                                                   "content":  "Төслийнхөө талаар ярилцахад бид бэлэн",
+                                                                   "fontSize":  20,
+                                                                   "textAlign":  "center",
+                                                                   "fontWeight":  "normal"
+                                                               },
+                                                               {
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "id":  "home-cta-btn-text",
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--primary",
+                                                                                        "name":  "CTA Text",
+                                                                                        "type":  "text",
+                                                                                        "content":  "Холбоо барих",
+                                                                                        "fontSize":  18,
+                                                                                        "fontWeight":  "700"
+                                                                                    }
+                                                                                ],
+                                                                   "y":  0,
+                                                                   "width":  "fit_content",
+                                                                   "padding":  [
+                                                                                   20,
+                                                                                   40
+                                                                               ],
+                                                                   "id":  "home-cta-btn",
+                                                                   "fill":  "$--background",
+                                                                   "name":  "CTA Button",
+                                                                   "type":  "frame",
+                                                                   "height":  "fit_content",
+                                                                   "x":  0,
+                                                                   "justifyContent":  "center",
+                                                                   "layout":  "horizontal",
+                                                                   "gap":  0,
+                                                                   "alignItems":  "center"
+                                                               }
+                                                           ],
+                                              "y":  0,
+                                              "width":  "fill_container",
+                                              "padding":  [
+                                                              120,
+                                                              80
+                                                          ],
+                                              "id":  "home-cta",
+                                              "fill":  "$--primary",
+                                              "name":  "Contact CTA",
+                                              "type":  "frame",
+                                              "height":  "fit_content",
+                                              "x":  0,
+                                              "justifyContent":  "center",
+                                              "layout":  "vertical",
+                                              "gap":  24,
+                                              "alignItems":  "center"
+                                          },
+                                          {
+                                              "children":  [
+                                                               {
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "id":  "footer-logo",
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--background",
+                                                                                        "name":  "Footer Logo",
+                                                                                        "type":  "text",
+                                                                                        "content":  "HUAJIUAN ALLINIUM",
+                                                                                        "fontSize":  18,
+                                                                                        "fontWeight":  "700"
+                                                                                    },
+                                                                                    {
+                                                                                        "id":  "footer-address",
+                                                                                        "width":  360,
+                                                                                        "fontFamily":  "$--font-primary",
+                                                                                        "fill":  "$--muted-foreground",
+                                                                                        "name":  "Footer Address",
+                                                                                        "type":  "text",
+                                                                                        "lineHeight":  1.6,
+                                                                                        "content":  "Улаанбаатар, Монгол\ninfo@huajiuan.mn\n+976 9999 9999",
+                                                                                        "fontSize":  14,
+                                                                                        "textGrowth":  "fixed-width",
+                                                                                        "fontWeight":  "normal"
+                                                                                    }
+                                                                                ],
+                                                                   "y":  0,
+                                                                   "width":  360,
+                                                                   "id":  "footer-brand",
+                                                                   "fill":  "$--foreground",
+                                                                   "name":  "Footer Brand",
+                                                                   "type":  "frame",
+                                                                   "height":  "fit_content",
+                                                                   "x":  0,
+                                                                   "layout":  "vertical",
+                                                                   "gap":  16
+                                                               },
+                                                               {
+                                                                   "children":  [
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "fcol1-title",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--background",
+                                                                                                             "name":  "Footer Col Title",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Хуудас",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "700"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fcol1-1",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Нүүр",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Нүүр",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fcol1-2",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Бидний тухай",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Бидний тухай",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fcol1-3",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Үйлчилгээ",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Үйлчилгээ",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fcol1-4",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Зураг",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Зураг",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fcol1-5",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Мэдээ",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Мэдээ",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fit_content",
+                                                                                        "id":  "footer-col-1",
+                                                                                        "name":  "Хуудас",
+                                                                                        "type":  "frame",
+                                                                                        "height":  "fit_content",
+                                                                                        "x":  0,
+                                                                                        "layout":  "vertical",
+                                                                                        "gap":  12
+                                                                                    },
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "fcol2-title",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--background",
+                                                                                                             "name":  "Footer Col Title",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Үйлчилгээ",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "700"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fcol2-1",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Шилэн пасад",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Шилэн пасад",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fcol2-2",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Металл пасад",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Металл пасад",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fcol2-3",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Гадна дуулаалга",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Гадна дуулаалга",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fcol2-4",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Тоноглол",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Тоноглол",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fit_content",
+                                                                                        "id":  "footer-col-2",
+                                                                                        "name":  "Үйлчилгээ",
+                                                                                        "type":  "frame",
+                                                                                        "height":  "fit_content",
+                                                                                        "x":  0,
+                                                                                        "layout":  "vertical",
+                                                                                        "gap":  12
+                                                                                    },
+                                                                                    {
+                                                                                        "children":  [
+                                                                                                         {
+                                                                                                             "id":  "fcol3-title",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--background",
+                                                                                                             "name":  "Footer Col Title",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Хууль эрх зүй",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "700"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fcol3-1",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Үйлчилгээний нөхцөл",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Үйлчилгээний нөхцөл",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "id":  "fcol3-2",
+                                                                                                             "fontFamily":  "$--font-primary",
+                                                                                                             "fill":  "$--muted-foreground",
+                                                                                                             "name":  "Нууцлалын бодлого",
+                                                                                                             "type":  "text",
+                                                                                                             "content":  "Нууцлалын бодлого",
+                                                                                                             "fontSize":  14,
+                                                                                                             "fontWeight":  "normal"
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "y":  0,
+                                                                                        "width":  "fit_content",
+                                                                                        "id":  "footer-col-3",
+                                                                                        "name":  "Хууль эрх зүй",
+                                                                                        "type":  "frame",
+                                                                                        "height":  "fit_content",
+                                                                                        "x":  0,
+                                                                                        "layout":  "vertical",
+                                                                                        "gap":  12
+                                                                                    }
+                                                                                ],
+                                                                   "y":  0,
+                                                                   "width":  "fill_container",
+                                                                   "id":  "footer-nav",
+                                                                   "fill":  "$--foreground",
+                                                                   "name":  "Footer Nav",
+                                                                   "type":  "frame",
+                                                                   "height":  "fit_content",
+                                                                   "x":  0,
+                                                                   "justifyContent":  "start",
+                                                                   "layout":  "horizontal",
+                                                                   "gap":  80,
+                                                                   "alignItems":  "start"
+                                                               }
+                                                           ],
+                                              "y":  0,
+                                              "width":  "fill_container",
+                                              "padding":  [
+                                                              60,
+                                                              80
+                                                          ],
+                                              "id":  "home-footer",
+                                              "fill":  "$--foreground",
+                                              "name":  "Footer",
+                                              "type":  "frame",
+                                              "height":  "fit_content",
+                                              "x":  0,
+                                              "justifyContent":  "start",
+                                              "layout":  "horizontal",
+                                              "gap":  80,
+                                              "alignItems":  "start"
+                                          }
+                                      ],
+                         "y":  0,
+                         "width":  1440,
+                         "clip":  true,
+                         "id":  "home",
+                         "fill":  "$--background",
+                         "name":  "Home",
+                         "type":  "frame",
+                         "height":  "fit_content",
+                         "x":  0,
+                         "justifyContent":  "start",
+                         "layout":  "vertical",
+                         "gap":  0,
+                         "alignItems":  "start"
+                     }
+                 ]
+}

@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "siteName": "huajiuan-allinium",
+    "visualDirection": "bold-industrial",
+    "motionLevel": 3,
+    "defaultLocale": "mn",
+    "locales": ["mn"]
+  },
+  "colors": {
+    "brand": {
+      "primary": "#5D3A1A",
+      "primaryForeground": "#FFFFFF",
+      "secondary": "#4A2E15",
+      "accent": "#F97316"
+    },
+    "neutral": {
+      "50": "#F8F9FA",
+      "100": "#E5E7EB",
+      "400": "#9CA3AF",
+      "500": "#6B7280",
+      "900": "#111827"
+    },
+    "semantic": {
+      "background": "#FFFFFF",
+      "foreground": "#111827",
+      "card": "#111827",
+      "cardForeground": "#FFFFFF",
+      "popover": "#FFFFFF",
+      "popoverForeground": "#111827",
+    "primary": "#5D3A1A",
+    "primaryForeground": "#FFFFFF",
+    "secondary": "#4A2E15",
+    "secondaryForeground": "#FFFFFF",
+    "muted": "#F8F9FA",
+    "mutedForeground": "#6B7280",
+    "accent": "#F97316",
+    "accentForeground": "#111827",
+    "border": "#E5E7EB",
+    "input": "#E5E7EB",
+    "ring": "#5D3A1A",
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "destructive": "#EF4444"
+    }
+  },
+  "typography": {
+    "families": {
+      "display": "Inter",
+      "body": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "scale": {
+      "xs": 12,
+      "sm": 14,
+      "base": 16,
+      "lg": 18,
+      "xl": 22,
+      "2xl": 24,
+      "3xl": 32,
+      "4xl": 40,
+      "5xl": 44,
+      "6xl": 56,
+      "7xl": 80
+    }
+  },
+  "spacing": {
+    "scale": {
+      "0": 0,
+      "1": 4,
+      "2": 8,
+      "3": 12,
+      "4": 16,
+      "5": 24,
+      "6": 32,
+      "7": 40,
+      "8": 48,
+      "9": 60,
+      "10": 80,
+      "11": 100,
+      "12": 120
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "contentPadding": 80,
+      "sectionGap": 0
+    }
+  },
+  "radius": {
+    "none": 0,
+    "sm": 4,
+    "md": 8,
+    "lg": 12,
+    "full": 999
+  },
+  "shadows": {
+    "none": "none",
+    "sm": "0 1px 2px rgba(17,24,39,0.05)",
+    "md": "0 4px 6px rgba(17,24,39,0.07)",
+    "lg": "0 10px 15px rgba(17,24,39,0.1)"
+  },
+  "motion": {
+    "duration": {
+      "fast": 150,
+      "normal": 250,
+      "slow": 400
+    },
+    "easing": {
+      "default": "easeOut",
+      "smooth": "cubic-bezier(0.4,0,0.2,1)"
+    },
+    "spring_configs": {
+      "hover": { "stiffness": 300, "damping": 30 }
+    },
+    "variants": {
+      "fadeInUp": { "initial": { "opacity": 0, "y": 30 }, "animate": { "opacity": 1, "y": 0 }, "transition": { "duration": 0.5 } },
+      "stagger": { "staggerChildren": 0.1 }
+    },
+    "gsap_configs": {}
+  }
+}

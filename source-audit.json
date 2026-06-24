@@ -1,0 +1,223 @@
+{
+  "site": "https://seele.com",
+  "start_url": "https://seele.com/",
+  "audited_at": "2026-06-23T12:15:00.000Z",
+  "locales": ["en-US", "de-DE", "ar"],
+  "audited_pages": [
+    {
+      "url": "https://seele.com/",
+      "pathname": "/",
+      "title": "seele: Façade specialist seele",
+      "description": "seele is a technology leader in façade construction and a leading full-service supplier for ambitious glass façades and building envelopes.",
+      "locale": "en-US",
+      "html_lang": "en-US",
+      "headings": [
+        "façades made by seele",
+        "#welovefaçades",
+        "façade construction expertise",
+        "innovative façades and building envelopes engineered by seele",
+        "creative collaboration among the best results in exceptional façades.",
+        "façade solutions by seele",
+        "latest developments"
+      ],
+      "cta_labels": [
+        "projects / highlights",
+        "façades / technologies",
+        "jobs / benefits",
+        "locations / worldwide",
+        "company",
+        "news",
+        "contact us"
+      ],
+      "text_blocks": [
+        "seele is a technology leader in façade construction. Providing solutions for spectacular building skins and innovative façades is the responsibility of seele's 1,000+ employees worldwide. From intelligent planning to efficient installation, seele provides everything necessary to complete ambitious, unique architectural creations true to their original designs.",
+        "creative collaboration among the best results in exceptional façades."
+      ],
+      "links": [
+        { "url": "/projects", "label": "projects / highlights", "source": "nav" },
+        { "url": "/facade-engineering", "label": "façades / technologies", "source": "nav" },
+        { "url": "/seele-jobs", "label": "jobs / benefits", "source": "nav" },
+        { "url": "/locations-worldwide", "label": "locations / worldwide", "source": "nav" },
+        { "url": "/facade-design", "label": "company", "source": "nav" },
+        { "url": "/news", "label": "news", "source": "nav" },
+        { "url": "/contacts", "label": "contact us", "source": "nav" }
+      ],
+      "contact": {
+        "emails": [],
+        "phones": []
+      },
+      "source": "nav"
+    },
+    {
+      "url": "https://seele.com/projects",
+      "pathname": "/projects",
+      "title": "seele: Architecture Landmarks Realised by seele",
+      "description": null,
+      "locale": "en-US",
+      "html_lang": "en-US",
+      "headings": [
+        "seele project highlights",
+        "#madebyseele",
+        "latest technologies"
+      ],
+      "cta_labels": ["Reference list"],
+      "text_blocks": [
+        "seele project highlights",
+        "Highlights",
+        "Reference list"
+      ],
+      "links": [
+        { "url": "/projects/overview", "label": "Reference list", "source": "content" },
+        { "url": "/isoshade", "label": "ISOshade®", "source": "content" },
+        { "url": "/kinetiq/kinetic-facade", "label": "kinetIQ", "source": "content" }
+      ],
+      "contact": {
+        "emails": [],
+        "phones": []
+      },
+      "source": "nav"
+    },
+    {
+      "url": "https://seele.com/facade-engineering",
+      "pathname": "/facade-engineering",
+      "title": "seele: Façade engineering excellence by seele",
+      "description": null,
+      "locale": "en-US",
+      "html_lang": "en-US",
+      "headings": [
+        "ISOshade® – the advanced closed cavity façade",
+        "ISOshade® – flat, curved, illuminated",
+        "kinetic façades and retractable roofs",
+        "kinetIQ – moving architecture",
+        "high-tech façade engineering by seele",
+        "bringing complex geometry to fruition",
+        "manufacturing",
+        "quality is measurable",
+        "high-tech façades"
+      ],
+      "cta_labels": ["More about ISOshade®", "kinetIQ – movable structures"],
+      "text_blocks": [
+        "ISOshade® is a modular façade system that combines maximum planning reliability with the greatest possible design flexibility.",
+        "Movable structures embody the symbiosis of cutting-edge technology, exceptional functionality and aesthetic excellence.",
+        "At seele, we link 3D engineering directly with automation and robotics.",
+        "our expertise in materials, production, and façade engineering drives solutions that redefine architectural excellence",
+        "In our production centres, manufacturing and automation procedures are seamlessly integrated and supported by continuous 3D computer-based technology.",
+        "seele is your partner in turning bold façade concepts into reality."
+      ],
+      "links": [
+        { "url": "/steel-and-glass-facade", "label": "steel-and-glass façade", "source": "content" },
+        { "url": "/structural-glazing", "label": "structural glass", "source": "content" },
+        { "url": "/unitised-facade", "label": "unitised façade", "source": "content" },
+        { "url": "/isoshade", "label": "ISOshade®", "source": "content" },
+        { "url": "/kinetiq/kinetic-facade", "label": "kinetIQ", "source": "content" },
+        { "url": "/interior-design", "label": "interior design", "source": "content" },
+        { "url": "/tensile-membrane-architecture", "label": "tensile membrane architecture", "source": "content" }
+      ],
+      "contact": {
+        "emails": [],
+        "phones": []
+      },
+      "source": "nav"
+    },
+    {
+      "url": "https://seele.com/contacts",
+      "pathname": "/contacts",
+      "title": "seele contacts – worldwide points of contact for your architecture",
+      "description": null,
+      "locale": "en-US",
+      "html_lang": "en-US",
+      "headings": [
+        "let´s talk",
+        "europe",
+        "america",
+        "asia/middle east"
+      ],
+      "cta_labels": ["info@seele.com"],
+      "text_blocks": [
+        "Reach out to us with your project enquiry via email. Our sales team will be delighted to get in touch with you. Your enquiry will be handled with strict confidentiality."
+      ],
+      "links": [
+        { "url": "/europe/seele-germany", "label": "seele gmbh | DE", "source": "content" },
+        { "url": "/europe/seele-austria", "label": "se-austria | AT", "source": "content" },
+        { "url": "/europe/seele-uk", "label": "seele uk | UK", "source": "content" },
+        { "url": "/europe/seele-pilsen", "label": "seele pilsen | CZ", "source": "content" },
+        { "url": "/europe/seele-france", "label": "seele france | FR", "source": "content" },
+        { "url": "/america/seele-usa", "label": "seele usa | US", "source": "content" },
+        { "url": "/america/seele-canada", "label": "seele canada | CA", "source": "content" },
+        { "url": "/asia/seele-hong-kong", "label": "seele hong kong | HK", "source": "content" },
+        { "url": "/asia/seele-singapore", "label": "seele singapore | SG", "source": "content" },
+        { "url": "/asia/seele-middle-east", "label": "seele middle east | AE", "source": "content" },
+        { "url": "/asia/seele-saudi-arabia", "label": "seele saudi arabia | SA", "source": "content" }
+      ],
+      "contact": {
+        "emails": ["info.de@seele.com", "office@se-austria.com", "seele.cz@seele.cz", "info.uk@seele.com", "info@seele-fr.com", "info.us@seele.com", "info.ca@seele.com", "info.hk@seele.com", "info.sg@seele.com", "office@seele-uae.com", "office@seele-ksa.com"],
+        "phones": ["+49 821 2494 0", "+43 7662 22000 0", "+420 377 432 811", "+44 20 7426 0798", "+33 3 88 44 49 76", "+1 212 239 3600", "+1 647 777 7233", "+65 6908 8023", "+971 4299 7899", "+966 555 76 1578"]
+      },
+      "source": "nav"
+    },
+    {
+      "url": "https://seele.com/news",
+      "pathname": "/news",
+      "title": "news and press releases from seele",
+      "description": null,
+      "locale": "en-US",
+      "html_lang": "en-US",
+      "headings": [
+        "dive into the world of seele façades",
+        "News",
+        "Movies",
+        "PR"
+      ],
+      "cta_labels": ["Read more", "load more"],
+      "text_blocks": [
+        "Download press articles or watch engaging videos that bring our unique façade projects to life.",
+        "For the David Geffen Galleries, seele has delivered a 52,000 sq ft glass and brass facade."
+      ],
+      "links": [
+        { "url": "/news/news", "label": "News", "source": "content" },
+        { "url": "/news/movies", "label": "Movies", "source": "content" },
+        { "url": "/news/pr", "label": "PR", "source": "content" }
+      ],
+      "contact": {
+        "emails": [],
+        "phones": []
+      },
+      "source": "nav"
+    }
+  ],
+  "discovered_pages": [
+    "/projects",
+    "/facade-engineering",
+    "/seele-jobs",
+    "/locations-worldwide",
+    "/facade-design",
+    "/news",
+    "/contacts",
+    "/projects/overview",
+    "/isoshade",
+    "/kinetiq/kinetic-facade",
+    "/steel-and-glass-facade",
+    "/structural-glazing",
+    "/unitised-facade",
+    "/interior-design",
+    "/tensile-membrane-architecture",
+    "/europe/seele-germany",
+    "/europe/seele-austria",
+    "/europe/seele-uk",
+    "/europe/seele-pilsen",
+    "/europe/seele-france",
+    "/america/seele-usa",
+    "/america/seele-canada",
+    "/asia/seele-hong-kong",
+    "/asia/seele-singapore",
+    "/asia/seele-middle-east",
+    "/asia/seele-saudi-arabia",
+    "/legal-notice",
+    "/privacy-policy"
+  ],
+  "skipped_pages": [
+    "/search",
+    "/de/*",
+    "/ar/*"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "motion_level": 3,
+  "visual_direction": "bold-industrial",
+  "packages": [
+    "framer-motion",
+    "clsx",
+    "tailwind-merge",
+    "lucide-react",
+    "next-themes"
+  ],
+  "shadcn_components": [],
+  "custom_components": [
+    "Header",
+    "Footer",
+    "Hero",
+    "ServiceCard",
+    "ProjectGallery",
+    "BlogCard",
+    "ContactForm",
+    "PageHero"
+  ],
+  "animation_config": {
+    "core_library": "framer-motion",
+    "scroll_library": "lenis",
+    "text_animation": "custom",
+    "page_transition": "framer",
+    "ambient_system": "css",
+    "micro_interactions": "framer-motion",
+    "gsap_plugins": []
+  }
+}
