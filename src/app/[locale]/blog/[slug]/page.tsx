@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { PageHero } from '@/components/sections/PageHero';
 import { MotionSection } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { MotionSection } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
 
