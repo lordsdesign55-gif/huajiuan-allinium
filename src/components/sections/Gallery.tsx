@@ -4,10 +4,10 @@ import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
 
 const homepageProjects = [
-  { title: 'EOSS шилен пасадан барилга', system: 'EOSS шилен пасад', location: 'Улаанбаатар', image: '/gallery/project-1.png' },
-  { title: 'Худалдааны төв', system: 'Unitized Glass System', location: 'Улаанбаатар', image: '/gallery/project-2.png' },
-  { title: 'Орон сууцны хороолол', system: '3 давхар Low-E шил', location: 'Улаанбаатар', image: '/gallery/project-3.png' },
-  { title: 'Спортын цогцолбор', system: 'Металл пасад', location: 'Улаанбаатар', image: '/gallery/project-4.png' },
+  { title: 'EOSS шилен пасадан барилга', system: 'EOSS шилен пасад', location: 'Улаанбаатар', image: '/images/project-2.jpg' },
+  { title: 'Худалдааны төв', system: 'Unitized Glass System', location: 'Улаанбаатар', image: '/images/project-3.jpg' },
+  { title: 'Орон сууцны хороолол', system: '3 давхар Low-E шил', location: 'Улаанбаатар', image: '/images/project-4.jpg' },
+  { title: 'Спортын цогцолбор', system: 'Металл пасад', location: 'Улаанбаатар', image: '/images/project-5.jpg' },
 ];
 
 export function Gallery() {
@@ -40,7 +40,7 @@ export function Gallery() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-6">

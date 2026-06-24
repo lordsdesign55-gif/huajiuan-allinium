@@ -4,6 +4,15 @@ import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
 import { posts } from '@/lib/mock';
 
+const postImages: Record<string, string> = {
+  'global-aluminum-price-today': '/images/project-1.jpg',
+  'new-project-eoss-installation': '/images/project-2.jpg',
+  'passive-house-metal-thermal-window': '/images/project-3.jpg',
+  'eoss-shilen-pasad-standard': '/images/project-4.jpg',
+  'metal-pasad-songoh': '/images/project-5.jpg',
+  'gadna-duulaalga-energy': '/images/project-6.jpg',
+};
+
 export function Blog() {
   const latestPosts = posts.slice(0, 3);
 
@@ -28,13 +37,13 @@ export function Blog() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {latestPosts.map((post, index) => (
             <MotionItem key={post._id} delay={index * 0.1}>
-              <article className="group flex h-full flex-col bg-background">
+              <article className="group flex h-full flex-col bg-background shadow-sm">
                 <Link href={`/blog/${post.slug}`} className="relative aspect-video overflow-hidden bg-muted">
                   <Image
-                    src="/logo.png"
+                    src={postImages[post.slug] || '/images/hero-bg.jpg'}
                     alt={post.title}
                     fill
-                    className="object-cover opacity-20 transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </Link>
                 <div className="flex flex-1 flex-col p-6">

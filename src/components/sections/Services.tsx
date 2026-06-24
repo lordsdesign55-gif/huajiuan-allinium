@@ -1,6 +1,7 @@
 'use client';
 
 import { Link } from '@/i18n/routing';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
@@ -12,30 +13,35 @@ const services = [
     title: 'EOSS шилен пасад',
     description: 'Passive House сертификаттай, Монголын -40°C ~ +40°C уур амьсгалд тохируулсан өндөр чанарын шилен пасад.',
     icon: Building2,
+    image: '/images/project-2.jpg',
   },
   {
     id: 'metal-window',
     title: 'Металл дулаан цонх',
     description: 'Passive House сертификаттай EOSS брендийн 10 см зузаантай best-seller металл цонх.',
     icon: Frame,
+    image: '/images/project-3.jpg',
   },
   {
     id: 'metal',
     title: 'Металл пасад',
     description: 'Alucobond болон хөнгөн цагаан хавтангийн өнгөлгөө, уян хатан дизайн, удаан эдэлгээтэй бүтээн байгуулалт.',
     icon: Layers,
+    image: '/images/project-5.jpg',
   },
   {
     id: 'insulation',
     title: 'Гадна дуулаалга',
     description: 'Rockwool стандартад нийцсэн дулаан, дуу чимээ тусгаарлалт — эрчим хүчний хэмнэлттэй барилга.',
     icon: Thermometer,
+    image: '/images/project-7.jpg',
   },
   {
     id: 'equipment',
     title: 'Дагалдах тоноглол',
     description: 'Төмөр тогтоогч бүрдэл, резин хөндлөнгийн холболт, ус зайлуулах профиль болон бусад дагалдах хэрэгсэл.',
     icon: Wrench,
+    image: '/images/project-8.jpg',
   },
 ];
 
@@ -61,24 +67,35 @@ export function Services() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {services.map((service, index) => (
-            <MotionItem key={service.id} delay={index * 0.08}>
+              <MotionItem key={service.id} delay={index * 0.08}>
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
-                className="group flex h-full flex-col bg-[#4B5563] p-7 text-white"
+                className="group relative flex h-full flex-col overflow-hidden bg-card text-white"
               >
-                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center bg-white/10 text-accent">
-                  <service.icon className="h-6 w-6" />
+                <div className="relative h-40 w-full">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
                 </div>
-                <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-white/80">{service.description}</p>
-                <div className="mt-6">
-                  <Link
-                    href={`/services#${service.id}`}
-                    className="text-sm font-medium text-accent hover:text-white transition-colors"
-                  >
-                    Дэлгэрэнгүй →
-                  </Link>
+                <div className="flex flex-1 flex-col p-7">
+                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center bg-white/10 text-accent">
+                    <service.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-white/80">{service.description}</p>
+                  <div className="mt-6">
+                    <Link
+                      href={`/services#${service.id}`}
+                      className="text-sm font-medium text-accent hover:text-white transition-colors"
+                    >
+                      Дэлгэрэнгүй →
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             </MotionItem>

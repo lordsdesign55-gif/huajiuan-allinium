@@ -3,15 +3,15 @@ import Image from 'next/image';
 import { MotionItem } from '@/components/motion/MotionSection';
 
 const galleryProjects = [
-  { title: 'EOSS шилен пасадан барилга', system: 'EOSS шилен пасад', location: 'Улаанбаатар', image: '/gallery/project-1.png' },
-  { title: 'Худалдааны төв', system: 'Unitized Glass System', location: 'Улаанбаатар', image: '/gallery/project-2.png' },
-  { title: 'Орон сууцны хороолол', system: '3 давхар Low-E шил', location: 'Улаанбаатар', image: '/gallery/project-3.png' },
-  { title: 'Спортын цогцолбор', system: 'Металл пасад', location: 'Улаанбаатар', image: '/gallery/project-4.png' },
-  { title: 'Зочид буудал', system: 'EOSS шилен пасад', location: 'Улаанбаатар', image: '/logo.png' },
-  { title: 'Боловсролын байгууллага', system: 'Rockwool дулаалга', location: 'Улаанбаатар', image: '/gallery/project-6.png' },
-  { title: 'Эмнэлэг', system: 'Хатсан шил + профиль', location: 'Улаанбаатар', image: '/gallery/project-7.png' },
-  { title: 'Үзвэр үйлчилгээний төв', system: 'Alucobond', location: 'Улаанбаатар', image: '/logo.png' },
-  { title: 'Агуулах, ложистик төв', system: 'Металл пасад', location: 'Улаанбаатар', image: '/logo.png' },
+  { title: 'EOSS шилен пасадан барилга', system: 'EOSS шилен пасад', location: 'Улаанбаатар', image: '/images/project-2.jpg' },
+  { title: 'Худалдааны төв', system: 'Unitized Glass System', location: 'Улаанбаатар', image: '/images/project-3.jpg' },
+  { title: 'Орон сууцны хороолол', system: '3 давхар Low-E шил', location: 'Улаанбаатар', image: '/images/project-4.jpg' },
+  { title: 'Спортын цогцолбор', system: 'Металл пасад', location: 'Улаанбаатар', image: '/images/project-5.jpg' },
+  { title: 'Зочид буудал', system: 'EOSS шилен пасад', location: 'Улаанбаатар', image: '/images/project-6.jpg' },
+  { title: 'Боловсролын байгууллага', system: 'Rockwool дулаалга', location: 'Улаанбаатар', image: '/images/project-7.jpg' },
+  { title: 'Эмнэлэг', system: 'Хатсан шил + профиль', location: 'Улаанбаатар', image: '/images/project-8.jpg' },
+  { title: 'Үзвэр үйлчилгээний төв', system: 'Alucobond', location: 'Улаанбаатар', image: '/images/project-9.jpg' },
+  { title: 'Агуулах, ложистик төв', system: 'Металл пасад', location: 'Улаанбаатар', image: '/images/hero-bg.jpg' },
 ];
 
 export function GalleryGrid() {
@@ -24,7 +24,7 @@ export function GalleryGrid() {
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/30 to-transparent" />
             <div className="absolute bottom-0 left-0 p-5">

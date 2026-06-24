@@ -4,9 +4,23 @@ import { MotionSection } from '@/components/motion/MotionSection';
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-card text-card-foreground">
-      <div className="absolute inset-0 bg-gradient-to-br from-card via-[#1a1f2e] to-card" />
-      <div className="container-site relative flex min-h-[80vh] flex-col justify-center py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-card text-card-foreground min-h-[90vh] flex items-center">
+      {/* Video background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/images/hero-bg.jpg"
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/videos/hero-bg.mp4" type="video/mp4" />
+      </video>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-card/95 via-card/80 to-card/40" />
+
+      <div className="container-site relative z-10 flex min-h-[90vh] flex-col justify-center py-24 lg:py-32">
         <MotionSection className="max-w-3xl">
           <span className="mb-6 inline-block text-sm font-bold uppercase tracking-widest text-accent">
             #HUAJIUANALLINIUM
@@ -14,7 +28,7 @@ export function Hero() {
           <h1 className="text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-display-lg">
             EOSS шилен пасад — Гадна өнгөлгөөний ирээдүй
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-white/75 lg:text-xl leading-relaxed">
+          <p className="mt-6 max-w-2xl text-lg text-white/80 lg:text-xl leading-relaxed">
             Бид Хятадын Huajian Aluminium компанийн EOSS брендийн шилэн пасадын бүтээгдэхүүнийг Монгол улсад албан ёсоор нэвтрүүлж, борлуулж, угсарч байна. Чанар, стандарт, бүтээмж — бидний амлалт.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">

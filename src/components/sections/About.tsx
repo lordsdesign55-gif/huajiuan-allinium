@@ -38,12 +38,12 @@ export function About() {
             </div>
           </MotionSection>
 
-          <MotionSection className="relative aspect-[4/3] bg-white lg:aspect-square">
+          <MotionSection className="relative aspect-[4/3] overflow-hidden bg-white shadow-lg lg:aspect-square">
             <Image
-              src="/logo.png"
-              alt="Huajiuan Allinium лого"
+              src="/images/project-1.jpg"
+              alt="Huajiuan Allinium төсөл"
               fill
-              className="object-contain p-12"
+              className="object-cover"
             />
           </MotionSection>
         </div>

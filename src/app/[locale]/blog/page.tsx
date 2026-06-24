@@ -4,6 +4,15 @@ import { PageHero } from '@/components/sections/PageHero';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { posts } from '@/lib/mock';
 
+const postImages: Record<string, string> = {
+  'global-aluminum-price-today': '/images/project-1.jpg',
+  'new-project-eoss-installation': '/images/project-2.jpg',
+  'passive-house-metal-thermal-window': '/images/project-3.jpg',
+  'eoss-shilen-pasad-standard': '/images/project-4.jpg',
+  'metal-pasad-songoh': '/images/project-5.jpg',
+  'gadna-duulaalga-energy': '/images/project-6.jpg',
+};
+
 export default function BlogPage() {
   return (
     <>
@@ -19,10 +28,10 @@ export default function BlogPage() {
               <article className="group grid gap-6 border-b border-border pb-8 sm:grid-cols-3 lg:grid-cols-4">
                 <Link href={`/blog/${post.slug}`} className="relative aspect-video overflow-hidden bg-muted sm:aspect-square">
                   <Image
-                    src={index === 0 ? '/gallery/project-1.png' : '/logo.png'}
+                    src={postImages[post.slug] || '/images/hero-bg.jpg'}
                     alt={post.title}
                     fill
-                    className="object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </Link>
                 <div className="flex flex-col justify-center sm:col-span-2 lg:col-span-3">
