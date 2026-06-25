@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/Button';
 
 export function Footer() {
   const footerItems = getFooterMenus();
-  const t = useTranslations('nav');
+  const t = useTranslations();
 
   return (
     <footer className="bg-card text-card-foreground border-t border-white/10">
@@ -27,22 +27,39 @@ export function Footer() {
                 Huajiuan Allinium
               </span>
             </Link>
-            <p className="max-w-sm text-white/70 leading-relaxed">
-              EOSS шилэн пасад, металл пасад, гадна дуулаалга — чанар, стандарт, бүтээмж.
-            </p>
+            <p className="max-w-sm text-white/70 leading-relaxed">{t('footer.tagline')}</p>
             <div className="mt-6">
               <Button variant="primary" size="sm" asChild>
-                <Link href="/contact">{t('quote')}</Link>
+                <Link href="/contact">{t('nav.quote')}</Link>
               </Button>
             </div>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-3 lg:col-span-7">
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">Компани</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">{t('footer.company')}</h3>
               <ul className="space-y-3">
                 {footerItems.filter(i => ['/about', '/contact', '/blog'].includes(i.url)).map((item) => (
                   <li key={item._id}>
+                    <Link href={item.url} className="text-sm text-white/70 hover:text-accent transition-colors"
+                    >
+                      {t(`nav.${item.labelKey}`)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">{t('footer.services')}</h3>
+              <ul className="space-y-3">
+                {[
+                  { url: '/services', labelKey: 'services.items.glass.title' },
+                  { url: '/unitized-glass-system', labelKey: 'nav.unitized' },
+                  { url: '/services', labelKey: 'services.items.metal.title' },
+                  { url: '/services', labelKey: 'services.items.insulation.title' },
+                ].map((item) => (
+                  <li key={item.url + item.labelKey}>
                     <Link href={item.url} className="text-sm text-white/70 hover:text-accent transition-colors"
                     >
                       {t(item.labelKey)}
@@ -53,31 +70,12 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">Үйлчилгээ</h3>
-              <ul className="space-y-3">
-                {[
-                  { url: '/services', label: 'EOSS шилэн пасад' },
-                  { url: '/unitized-glass-system', label: 'Unitized Glass System' },
-                  { url: '/services', label: 'Металл пасад' },
-                  { url: '/services', label: 'Гадна дуулаалга' },
-                ].map((item) => (
-                  <li key={item.url + item.label}>
-                    <Link href={item.url} className="text-sm text-white/70 hover:text-accent transition-colors"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">Холбоо барих</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">{t('footer.contact')}</h3>
               <ul className="space-y-3 text-sm text-white/70">
-                <li>Утас: +976 7000 9559</li>
-                <li>Имэйл: gergroup11@gmail.com</li>
-                <li>Баянзүрх дүүрэг, 5-р хороо, Монелийн задгай</li>
-                <li>Ажлын цаг: 08:00 - 18:00</li>
+                <li>{t('contact.info.phone')}: +976 7000 9559</li>
+                <li>{t('contact.info.email')}: gergroup11@gmail.com</li>
+                <li>{t('contact.info.address')}: {t('contact.info.addressValue')}</li>
+                <li>{t('contact.info.hours')}: {t('contact.info.hoursValue')}</li>
               </ul>
             </div>
           </div>
@@ -85,11 +83,11 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
           <p className="text-sm text-white/50">
-            © {new Date().getFullYear()} Huajiuan Allinium. Бүх эрх хуулиар хамгаалагдсан.
+            {t('footer.copyright', { year: new Date().getFullYear() })}
           </p>
           <div className="flex gap-6">
-            <Link href="/" className="text-sm text-white/50 hover:text-accent transition-colors">Нууцлал</Link>
-            <Link href="/" className="text-sm text-white/50 hover:text-accent transition-colors">Үйлчилгээний нөхцөл</Link>
+            <Link href="/" className="text-sm text-white/50 hover:text-accent transition-colors">{t('footer.privacy')}</Link>
+            <Link href="/" className="text-sm text-white/50 hover:text-accent transition-colors">{t('footer.terms')}</Link>
           </div>
         </div>
       </div>

@@ -1,3 +1,6 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
@@ -14,6 +17,7 @@ const postImages: Record<string, string> = {
 };
 
 export function Blog() {
+  const t = useTranslations('blog');
   const latestPosts = posts.slice(0, 3);
 
   return (
@@ -21,15 +25,15 @@ export function Blog() {
       <div className="container-site">
         <div className="mb-12 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <MotionSection className="max-w-2xl">
-            <span className="text-sm font-bold uppercase tracking-widest text-accent">Мэдээ</span>
+            <span className="text-sm font-bold uppercase tracking-widest text-accent">{t('title')}</span>
             <h2 className="mt-3 text-3xl font-bold text-foreground lg:text-display-md">
-              Салбарын мэдээ, зөвлөгөө
+              {t('subtitle')}
             </h2>
           </MotionSection>
 
           <MotionSection>
             <Button variant="outline" className="border-foreground/20 text-foreground hover:bg-background" asChild>
-              <Link href="/blog">Бүх мэдээ</Link>
+              <Link href="/blog">{t('cta')}</Link>
             </Button>
           </MotionSection>
         </div>
@@ -61,7 +65,7 @@ export function Blog() {
                       href={`/blog/${post.slug}`}
                       className="text-sm font-medium text-accent hover:text-foreground transition-colors"
                     >
-                      Дэлгэрэнгүй унших →
+                      {t('readMore')} →
                     </Link>
                   </div>
                 </div>

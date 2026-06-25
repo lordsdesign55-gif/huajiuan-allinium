@@ -23,10 +23,16 @@
   "services": {
     "title": "Services",
     "subtitle": "All external finishing solutions in one place",
+    "viewAll": "View all services",
+    "details": "Details",
     "items": {
       "glass": {
         "title": "EOSS Glass Facade",
         "description": "Passive House certified glass facade engineered for Mongolia's -40°C to +40°C climate."
+      },
+      "metalWindow": {
+        "title": "Metal Thermal Window",
+        "description": "Passive House certified EOSS brand 100mm best-seller metal thermal window."
       },
       "metal": {
         "title": "Metal Facade",
@@ -43,16 +49,17 @@
     },
     "lowE": {
       "title": "Low-E Glass Features",
-      "intro": "Low-E glass engineered for Mongolia reduces heat loss at -40°C in winter and blocks solar heat at +40°C in summer.",
+      "intro": "Low-E glass engineered for Mongolia reduces heat loss at -40°C in winter and blocks solar heat at +40°C in summer. Products meet EN 673, ASTM E2190, CSA A440.2 and other cold-climate international standards.",
       "paneTitle": "Double vs Triple Glazing",
       "pane2": "Double Low-E",
       "pane3": "Triple Low-E",
       "uValue": "U-value",
       "sound": "Sound insulation",
       "gValue": "Solar factor (g)",
-      "standard": "Climate suitability",
+      "standard": "Mongolia climate",
       "standardsTitle": "Cold-climate standards",
-      "standards": "ASTM E2190 • EN 1279-2 • EN 673 • CSA A440.2 • GOST 30674 • Passive House certified"
+      "standards": "ASTM E2190 • EN 1279-2 • EN 673 • CSA A440.2 • GOST 30674 • Passive House certified",
+      "note": "Tinted glass + light transmission reduction available. Technical specs may vary by product type."
     }
   },
   "about": {
@@ -93,7 +100,9 @@
       "phone": "Phone",
       "email": "Email",
       "address": "Address",
-      "addressValue": "Ulaanbaatar, Mongolia"
+      "hours": "Working hours",
+      "addressValue": "Bayanzurkh district, 5th khoroo, Monelii zadgai",
+      "hoursValue": "08:00 - 18:00"
     }
   },
   "cta": {
@@ -103,11 +112,11 @@
   },
   "footer": {
     "tagline": "EOSS glass facades, metal facades, external insulation — quality, standards, performance.",
-    "columns": {
-      "company": "Company",
-      "services": "Services",
-      "resources": "Resources"
-    },
+    "company": "Company",
+    "services": "Services",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms of service",
     "copyright": "© {year} Huajiuan Allinium. All rights reserved."
   }
 }

@@ -1,3 +1,6 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
@@ -11,23 +14,22 @@ const homepageProjects = [
 ];
 
 export function Gallery() {
+  const t = useTranslations('gallery');
+
   return (
     <section className="bg-background py-20 lg:py-28" id="gallery">
       <div className="container-site">
         <div className="mb-12 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <MotionSection className="max-w-2xl">
-            <span className="text-sm font-bold uppercase tracking-widest text-accent">Төслүүд</span>
+            <span className="text-sm font-bold uppercase tracking-widest text-accent">{t('title')}</span>
             <h2 className="mt-3 text-3xl font-bold text-foreground lg:text-display-md">
-              Гүйцэтгэсэн ажлууд
+              {t('subtitle')}
             </h2>
-            <p className="mt-3 text-muted-foreground">
-              Бидний гүйцэтгэсэн төслүүд Huajian Aluminium / EOSS системээр хийгдсэн.
-            </p>
           </MotionSection>
 
           <MotionSection>
             <Button variant="outline" className="border-foreground/20 text-foreground hover:bg-muted" asChild>
-              <Link href="/gallery">Бүх төслүүд</Link>
+              <Link href="/gallery">{t('cta')}</Link>
             </Button>
           </MotionSection>
         </div>
