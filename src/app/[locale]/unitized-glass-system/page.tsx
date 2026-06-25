@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { PageHero } from '@/components/sections/PageHero';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
-import { CheckCircle2, Layers, Ruler, Wind, Factory, Truck, HardHat, Clock, Shield, TrendingUp, ArrowRight, Zap, Thermometer } from 'lucide-react';
+import { CheckCircle2, Layers, Ruler, Wind, Factory, Truck, HardHat, Clock, Shield, TrendingUp, ArrowRight, Zap, Thermometer, Snowflake, FileCheck } from 'lucide-react';
 
 const benefits = [
   { icon: Clock, title: 'Хурдан угсралт', desc: 'Урьдчилан үйлдвэрлэсэн тул талбай дээр угсарлалтын хугацаа 30-50% богиносдог.' },
@@ -59,6 +59,28 @@ const faqs = [
   { q: 'Unitized систем ямар барилгад тохиромжтой вэ?', a: 'Өндөр цамхаг, том нээлттэй фасадтай оффис, худалдааны төв, зочид буудал, эмнэлэг зэрэг төслүүдэд хамгийн тохиромжтой.' },
   { q: 'Угсралт хэд хоног үргэлжлэх вэ?', a: 'Барилгын өндөр, фасадын талбайгаас хамаарна. Жишээ нь 20 давхар барилгын нэг талын фасадыг 4-6 долоо хоногт дуусгаж болно.' },
   { q: 'Монголын уур амьсгалд тохируулсан уу?', a: 'Тийм. EOSS unitized систем нь -40°C хүйтэн, +40°C халуун, хүчтэй салхинд тэсвэрлэхэд тохируулсан резин, хөндлөнгийн холболт, шилний багцтай.' },
+];
+
+const siberianStandards = [
+  { code: 'GOST 23166-2024', desc: 'Цонх, балконы хаалганы блок. Ерөнхий шаардлага.' },
+  { code: 'GOST 21519-2022', desc: 'Хөнгөн цагаан профильт цонхны блок. Техникийн нөхцөл.' },
+  { code: 'GOST 30674-2023', desc: 'PVC профильт цонх, балконы хаалга. Техникийн нөхцөл.' },
+  { code: 'GOST 24866-2014', desc: 'Холбосон дулаалсан шилэн багц. Ерөнхий шаардлага.' },
+  { code: 'GOST 26602.1-2023', desc: 'Цонх, хаалганы дулаан тусгаарлалтын эсэргүүцэл тодорхойлох арга.' },
+  { code: 'GOST 26602.2-99', desc: 'Цонх, хаалганы агаар, ус нэвтрүүлэлтийг тодорхойлох арга.' },
+  { code: 'GOST 26602.5-2001', desc: 'Цонх, хаалганы салхины ачаалалд тэсвэрлэх чадварыг тодорхойлох арга.' },
+  { code: 'GOST 31427-2020', desc: 'Цонх, гадаад хаалга. Эрчим хүчний үр ашгийн ангилал.' },
+  { code: 'SP 131.13330.2020', desc: 'Барилгын уур амьсгал. Сибирь, Оросын бүс нутгийн тооцооны температур.' },
+  { code: 'SP 50.13330.2012', desc: 'Барилгын дулаан хамгаалалт. Цонх, ханааны шаардлагатай R-утга.' },
+  { code: 'SP 20.13330.2016', desc: 'Ачаалал, нөлөөлөл. Салхи, цасны тооцоо.' },
+  { code: 'GOST R 59134-2020', desc: 'Гадаад шилэн пасад. Модуль, элемент угсрах дүрэм, хяналт.' },
+];
+
+const coldClimateFeatures = [
+  { icon: Snowflake, title: '-40°C хүйтэнд тэсвэртэй', desc: 'EPDM резин, термобарьцалтай профиль, хөлдөлт/хайлалтын мөчлөгөнд тэсвэртэй.' },
+  { icon: Thermometer, title: 'Өндөр дулаан тусгаарлалт', desc: '3 давхар Low-E + Argon, U ≤ 1.0 W/m²K — SP 50.13330-ийн хатуу бүс нутгийн шаардлагыг хангана.' },
+  { icon: Wind, title: 'Хүчтэй салхины ачаалал', desc: '±3.0 kPa хүртэл, GOST 26602.5-ийн туршилтын аргаар баталгаажсан.' },
+  { icon: FileCheck, title: 'Бүрэн битүүмжлэл', desc: 'Агаар, ус нэвтрүүлэлтийг үйлдвэрт 100% шалгаж, GOST 26602.2-ийн шаардлагыг хангасан.' },
 ];
 
 export default function UnitizedGlassSystemPage() {
@@ -184,6 +206,48 @@ export default function UnitizedGlassSystemPage() {
                 </div>
               </MotionItem>
             ))}
+          </div>
+        </MotionSection>
+
+        {/* Siberian / GOST standards */}
+        <MotionSection className="mt-20">
+          <span className="text-sm font-bold uppercase tracking-widest text-accent">Сибирийн стандарт</span>
+          <h3 className="mt-3 text-2xl font-bold text-foreground lg:text-3xl">
+            Хүйтэн уур амьсгалд зориулсан цонх, шилэн пасадын стандарт
+          </h3>
+          <p className="mt-4 max-w-3xl text-muted-foreground">
+            Монголын уур амьсгал Сибирьтэй ойролцоо учраас бид Оросын GOST болон SP стандартад нийцсэн бүтээгдэхүүн, угсралтын шийдлийг санал болгодог. EOSS unitized систем нь дараах хүйтэн уур амьсгалын шаардлагыг хангана.
+          </p>
+
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {coldClimateFeatures.map((item, index) => (
+              <MotionItem key={item.title} delay={index * 0.08}>
+                <div className="flex h-full flex-col bg-white p-6 shadow-sm">
+                  <item.icon className="h-8 w-8 text-accent" />
+                  <div className="mt-4 font-semibold text-foreground">{item.title}</div>
+                  <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+                </div>
+              </MotionItem>
+            ))}
+          </div>
+
+          <div className="mt-8 overflow-hidden border border-border">
+            <table className="w-full text-left text-sm">
+              <thead className="bg-card text-white">
+                <tr>
+                  <th className="px-6 py-4 font-medium">Стандарт</th>
+                  <th className="px-6 py-4 font-medium">Тайлбар</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {siberianStandards.map((row) => (
+                  <tr key={row.code}>
+                    <td className="px-6 py-4 font-medium text-foreground">{row.code}</td>
+                    <td className="px-6 py-4 text-muted-foreground">{row.desc}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </MotionSection>
 
