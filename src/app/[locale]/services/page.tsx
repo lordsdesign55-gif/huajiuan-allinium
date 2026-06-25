@@ -24,7 +24,7 @@ const services = [
     id: 'metal',
     icon: Layers,
     image: '/images/services/service-metal.jpg',
-    features: ['Alucobond хавтан', 'Хөнгөн цагаан композит', 'Уян хатан дизайн', 'Удаан эдэлгээ'],
+    features: ['Alucobond A2 / PLUS хавтан', 'Хөнгөн цагаан композит', 'Европ стандарт (EN 13501)', 'Уян хатан дизайн, удаан эдэлгээ'],
   },
   {
     id: 'insulation',
@@ -38,6 +38,35 @@ const services = [
     image: '/images/services/service-equipment.jpg',
     features: ['Төмөр тогтоогч бүрдэл', 'Резин хөндлөнгийн холболт', 'Ус зайлуулах профиль', 'Бүх дагалдах хэрэгсэл'],
   },
+];
+
+const alucobondImages = [
+  { src: '/images/alucobond/facade-1.jpg', alt: 'Alucobond modern facade' },
+  { src: '/images/alucobond/facade-2.jpg', alt: 'Alucobond architectural cladding' },
+  { src: '/images/alucobond/facade-3.jpg', alt: 'Alucobond facade detail' },
+  { src: '/images/alucobond/facade-4.jpg', alt: 'Alucobond composite panel facade' },
+];
+
+const alucobondProducts = [
+  { name: 'ALUCOBOND® A2', desc: 'Галд тэсвэртэй, хөнгөн цагаан композит хавтан. B-s1,d0 ангилал (EN 13501-1).' },
+  { name: 'ALUCOBOND® PLUS', desc: 'Өндөр бат бөх чанар, 4 мм зузаантай, олон төрлийн өнгө, металлик болон аноджуулсан дуурайлтууд.' },
+  { name: 'ALUCORE®', desc: 'Зуурмаг бус хөнгөн цагаан сэндвич хавтан. Том хэмжээний хавтангуудад илүү сайн тэгш байдал.' },
+];
+
+const euStandards = [
+  { code: 'EN 13501-1', desc: 'Галын ангилал (B-s1,d0 хүртэл).' },
+  { code: 'EN 13830', desc: 'Металл пасадын системийн ерөнхий шаардлага.' },
+  { code: 'EN 14509', desc: 'Сэндвич хавтангийн дулаан тусгаарлалт, агаар/ус нэвтрүүлэлт.' },
+  { code: 'EN 1991-1-4', desc: 'Салхины ачааллын тооцоо (Eurocode 1).' },
+  { code: 'EN 1096', desc: 'Бүрээстэй шил — Low-E шилний оптик/энерги үзүүлэлт.' },
+  { code: 'EN 1279', desc: 'Дулаалсан шилэн багцын чанар, чийгний тэсвэрлэлт.' },
+];
+
+const metalWindows = [
+  { title: 'Металл дулаан цонх', desc: 'EOSS 10 см хөнгөн цагаан профиль, 3 давхар Low-E + Argon. Passive House сертификаттай.' },
+  { title: 'Хөнгөн цагаан фасад цонх', desc: 'Alucobond пасадтай уялдуулсан, ус/агаар нэвтрүүлэхгүй битүүмжлэл.' },
+  { title: 'Урсах цонх', desc: 'Дуу чимээ, дулаан тусгаарлалт сайтай, том нээлттэй тагт, ложонд зориулсан.' },
+  { title: 'Аюулгүй байдлын цонх', desc: 'Хатсан шил, мултиплекс шилтэй сонголт — ослын эрсдэлийг бууруулна.' },
 ];
 
 const workflow = [
@@ -115,6 +144,89 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                   </div>
+                </div>
+              </MotionItem>
+            ))}
+          </div>
+        </MotionSection>
+
+        {/* Metal facade detail: Alucobond gallery */}
+        <MotionSection className="mt-24 border-t border-border pt-16">
+          <div className="text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-accent">Alucobond</span>
+            <h2 className="mt-3 text-3xl font-bold text-foreground lg:text-4xl">Европ стандарт металл пасад</h2>
+            <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
+              Бид Германы 3A Composites компанийн ALUCOBOND® брендийн хөнгөн цагаан композит хавтанг Монголд нэвтрүүлж, орчин үеийн, галд тэсвэртэй, удаан эдэлгээтэй фасадын шийдэл санал болгож байна.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {alucobondImages.map((img, index) => (
+              <MotionItem key={img.src} delay={index * 0.08}>
+                <div className="group relative aspect-[4/3] overflow-hidden bg-muted">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              </MotionItem>
+            ))}
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-3">
+            {alucobondProducts.map((product, index) => (
+              <MotionItem key={product.name} delay={index * 0.08}>
+                <div className="h-full rounded-lg border border-border bg-white p-6 shadow-sm">
+                  <div className="text-lg font-bold text-foreground">{product.name}</div>
+                  <p className="mt-2 text-muted-foreground">{product.desc}</p>
+                </div>
+              </MotionItem>
+            ))}
+          </div>
+        </MotionSection>
+
+        {/* European standards */}
+        <MotionSection className="mt-24 border-t border-border pt-16">
+          <div className="text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-accent">Стандарт</span>
+            <h2 className="mt-3 text-3xl font-bold text-foreground lg:text-4xl">Европын чанарын стандарт</h2>
+            <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
+              Металл пасад, шил, цонхны бүтээгдэхүүн нь Европын EN стандартад нийцсэн бөгөөд галд тэсвэрлэлт, дулаан тусгаарлалт, салхины ачаалал, ус/агаар нэвтрүүлэлтээр баталгаажсан.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {euStandards.map((std, index) => (
+              <MotionItem key={std.code} delay={index * 0.06}>
+                <div className="flex h-full items-start gap-4 rounded-lg bg-white p-6 shadow-sm">
+                  <CheckCircle2 className="h-6 w-6 shrink-0 text-accent" />
+                  <div>
+                    <div className="font-semibold text-foreground">{std.code}</div>
+                    <p className="mt-1 text-sm text-muted-foreground">{std.desc}</p>
+                  </div>
+                </div>
+              </MotionItem>
+            ))}
+          </div>
+        </MotionSection>
+
+        {/* Metal windows */}
+        <MotionSection className="mt-24 border-t border-border pt-16">
+          <div className="text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-accent">Металл цонх</span>
+            <h2 className="mt-3 text-3xl font-bold text-foreground lg:text-4xl">Металл пасадны цонхны шийдэл</h2>
+            <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
+              Пасадны дизайнтай уялдсан, дулаан тусгаарлалт сайтай, ус/агаар нэвтрүүлэхгүй металл цонхны сонголтууд.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {metalWindows.map((win, index) => (
+              <MotionItem key={win.title} delay={index * 0.08}>
+                <div className="h-full rounded-lg border border-border bg-muted p-6">
+                  <Frame className="h-8 w-8 text-accent" />
+                  <div className="mt-4 font-semibold text-foreground">{win.title}</div>
+                  <p className="mt-2 text-sm text-muted-foreground">{win.desc}</p>
                 </div>
               </MotionItem>
             ))}
