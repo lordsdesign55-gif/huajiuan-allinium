@@ -228,23 +228,23 @@ export default function UnitizedGlassSystemPage() {
             Low-E (Low-Emissivity) шил нь гадаргуун дээрх нимгэн металл бүрхүүлээр дулааны цацрагийг буцааж, өрөөний дулааныг дотор үлдээдэг. Энгийн 2 давхар шилтэй харьцуулахад U-утга 2.5–3 дахин сайжирч, эрчим хүчний зардал эрс буурна.
           </p>
 
-          <div className="mt-8 overflow-hidden border border-border">
+          <div className="mt-8 overflow-hidden rounded-lg border border-cyan-200 bg-cyan-50/50 shadow-sm">
             <table className="w-full text-left text-sm">
-              <thead className="bg-card text-white">
+              <thead className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
                 <tr>
                   <th className="px-6 py-4 font-medium">Үзүүлэлт</th>
                   <th className="px-6 py-4 font-medium">Энгийн шил</th>
-                  <th className="px-6 py-4 font-medium text-accent">Low-E шил</th>
+                  <th className="px-6 py-4 font-medium">Low-E шил</th>
                   <th className="px-6 py-4 font-medium">Тайлбар</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-border">
-                {lowEComparison.map((row) => (
-                  <tr key={row.indicator}>
-                    <td className="px-6 py-4 text-muted-foreground">{row.indicator}</td>
-                    <td className="px-6 py-4 text-foreground/70">{row.regular}</td>
-                    <td className="px-6 py-4 font-semibold text-foreground">{row.lowE}</td>
-                    <td className="px-6 py-4 text-muted-foreground">{row.note}</td>
+              <tbody className="divide-y divide-cyan-100">
+                {lowEComparison.map((row, index) => (
+                  <tr key={row.indicator} className={index % 2 === 0 ? 'bg-white' : 'bg-cyan-50/60'}>
+                    <td className="px-6 py-4 text-slate-700">{row.indicator}</td>
+                    <td className="px-6 py-4 text-slate-600">{row.regular}</td>
+                    <td className="px-6 py-4 font-semibold text-cyan-700">{row.lowE}</td>
+                    <td className="px-6 py-4 text-slate-600">{row.note}</td>
                   </tr>
                 ))}
               </tbody>
@@ -253,24 +253,24 @@ export default function UnitizedGlassSystemPage() {
 
           <div className="mt-8 grid gap-6 sm:grid-cols-3">
             <MotionItem delay={0}>
-              <div className="bg-muted p-6">
-                <div className="text-sm text-muted-foreground">Энгийн 2 давхар шил</div>
-                <div className="mt-1 text-2xl font-bold text-foreground">U ≈ 2.8</div>
-                <div className="text-sm text-muted-foreground">W/m²K</div>
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-6">
+                <div className="text-sm text-slate-600">Энгийн 2 давхар шил</div>
+                <div className="mt-1 text-2xl font-bold text-slate-800">U ≈ 2.8</div>
+                <div className="text-sm text-slate-500">W/m²K</div>
               </div>
             </MotionItem>
             <MotionItem delay={0.08}>
-              <div className="bg-muted p-6">
-                <div className="text-sm text-muted-foreground">2 давхар Low-E + Argon</div>
-                <div className="mt-1 text-2xl font-bold text-foreground">U ≈ 1.4</div>
-                <div className="text-sm text-muted-foreground">W/m²K</div>
+              <div className="rounded-lg border border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 p-6">
+                <div className="text-sm text-cyan-800">2 давхар Low-E + Argon</div>
+                <div className="mt-1 text-2xl font-bold text-cyan-700">U ≈ 1.4</div>
+                <div className="text-sm text-cyan-600">W/m²K</div>
               </div>
             </MotionItem>
             <MotionItem delay={0.16}>
-              <div className="bg-muted p-6">
-                <div className="text-sm text-muted-foreground">3 давхар Low-E + Argon</div>
-                <div className="mt-1 text-2xl font-bold text-foreground">U ≤ 1.0</div>
-                <div className="text-sm text-muted-foreground">W/m²K</div>
+              <div className="rounded-lg border border-cyan-200 bg-gradient-to-br from-cyan-100 to-blue-100 p-6">
+                <div className="text-sm text-cyan-900">3 давхар Low-E + Argon</div>
+                <div className="mt-1 text-2xl font-bold text-cyan-800">U ≤ 1.0</div>
+                <div className="text-sm text-cyan-700">W/m²K</div>
               </div>
             </MotionItem>
           </div>
@@ -289,28 +289,28 @@ export default function UnitizedGlassSystemPage() {
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {coldClimateFeatures.map((item, index) => (
               <MotionItem key={item.title} delay={index * 0.08}>
-                <div className="flex h-full flex-col bg-white p-6 shadow-sm">
-                  <item.icon className="h-8 w-8 text-accent" />
-                  <div className="mt-4 font-semibold text-foreground">{item.title}</div>
-                  <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+                <div className="flex h-full flex-col rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+                  <item.icon className="h-8 w-8 text-slate-600" />
+                  <div className="mt-4 font-semibold text-slate-800">{item.title}</div>
+                  <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
                 </div>
               </MotionItem>
             ))}
           </div>
 
-          <div className="mt-8 overflow-hidden border border-border">
+          <div className="mt-8 overflow-hidden rounded-lg border border-slate-300 bg-slate-50/50 shadow-sm">
             <table className="w-full text-left text-sm">
-              <thead className="bg-card text-white">
+              <thead className="bg-gradient-to-r from-slate-700 to-slate-800 text-white">
                 <tr>
                   <th className="px-6 py-4 font-medium">Стандарт</th>
                   <th className="px-6 py-4 font-medium">Тайлбар</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-border">
-                {siberianStandards.map((row) => (
-                  <tr key={row.code}>
-                    <td className="px-6 py-4 font-medium text-foreground">{row.code}</td>
-                    <td className="px-6 py-4 text-muted-foreground">{row.desc}</td>
+              <tbody className="divide-y divide-slate-200">
+                {siberianStandards.map((row, index) => (
+                  <tr key={row.code} className={index % 2 === 0 ? 'bg-white' : 'bg-slate-100/60'}>
+                    <td className="px-6 py-4 font-medium text-slate-800">{row.code}</td>
+                    <td className="px-6 py-4 text-slate-600">{row.desc}</td>
                   </tr>
                 ))}
               </tbody>
