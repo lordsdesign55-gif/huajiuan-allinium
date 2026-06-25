@@ -1,64 +1,148 @@
 import { Link } from '@/i18n/routing';
+import Image from 'next/image';
 import { PageHero } from '@/components/sections/PageHero';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
-import { CheckCircle2, Layers, Ruler, Wind } from 'lucide-react';
+import { CheckCircle2, Layers, Ruler, Wind, Factory, Truck, HardHat, Clock, Shield, TrendingUp, ArrowRight } from 'lucide-react';
 
 const benefits = [
-  'Урьдчилан үйлдвэрлэсэн тул талбай дээр хурдан угсарна',
-  'Чанарын хяналт үйлдвэрт хийгддэг',
-  'Өндөр барилга, том нээлттэй фасадод тохиромжтой',
-  'Салхи, ус нэвтрүүлэхгүй угсарлалт',
-  'Хөдөлмөрийн зардал багасна, аюулгүй байдал сайжирна',
+  { icon: Clock, title: 'Хурдан угсралт', desc: 'Урьдчилан үйлдвэрлэсэн тул талбай дээр угсарлалтын хугацаа 30-50% богиносдог.' },
+  { icon: Factory, title: 'Үйлдвэрийн чанар', desc: 'Чанарын хяналт хяналттай орчинд хийгддэг тул гар алдаа багатай.' },
+  { icon: Shield, title: 'Ус, салхи тусгаарлах', desc: 'Бүрэн битүүмжилсэн панел нь ус нэвтрүүлэх, салхи дуугарах эрсдэлийг багасгадаг.' },
+  { icon: TrendingUp, title: 'Өндөр барилгад тохиромжтой', desc: '50+ давхарын цамхаг, том нээлттэй фасадын инженерчлэлд зориулагдсан.' },
+  { icon: HardHat, title: 'Аюулгүй байдал', desc: 'Талбай дээрх ажлын хэмжээ багасч, ослын эрсдэл буурдаг.' },
+  { icon: Truck, title: 'Тээвэрлэлтийн зохицуулалт', desc: 'Панелийг хамгаалалттай тээвэрлэж, угсарлалтын дараалалд оруулж ирдэг.' },
+];
+
+const process = [
+  { step: '01', title: 'Төсөл дизайн', desc: 'Инженерчлэл, U-утга, салхины ачааллын тооцоо' },
+  { step: '02', title: 'Үйлдвэрт бэлдэх', desc: 'Профиль, шил, резин, төмөр тогтоогч бүрэн угсарна' },
+  { step: '03', title: 'Чанарын хяналт', desc: 'Ус нэвтрүүлэх, салхины даралтын туршилт' },
+  { step: '04', title: 'Тээвэрлэлт', desc: 'Панелийг хамгаалалттай хүргэж, кранаар өргөнө' },
+  { step: '05', title: 'Талбай дээр угсрах', desc: 'Нэг панелийг дунджаар 15-20 минутад бэхлэнэ' },
 ];
 
 const specs = [
   { icon: Ruler, label: 'Панелийн өргөн', value: '1200 ~ 1800 мм' },
   { icon: Layers, label: 'Шилний давхарга', value: '2 / 3 давхар Low-E' },
   { icon: Wind, label: 'Салхины ачаалал', value: '±3.0 kPa хүртэл' },
+  { icon: Shield, label: 'Ус нэвтрүүлэх', value: 'A级 битүүмжлэл' },
+  { icon: Ruler, label: 'Профилийн зузаан', value: '50 ~ 80 мм' },
+  { icon: Layers, label: 'Дулаан тусгаарлалт', value: 'U ≤ 1.0 W/m²K' },
 ];
 
 const examples = [
-  { title: 'Олон давхар оффисын барилга', location: 'Улаанбаатар' },
-  { title: 'Худалдааны төвийн фасад', location: 'Улаанбаатар' },
-  { title: 'Зочид буудлын өргөтгөл', location: 'Улаанбаатар' },
+  { title: 'Олон улсын оффисын цамхаг', location: 'Улаанбаатар', image: '/images/project-2.jpg' },
+  { title: 'Худалдааны төвийн фасад', location: 'Улаанбаатар', image: '/images/project-3.jpg' },
+  { title: 'Зочид буудлын өргөтгөл', location: 'Улаанбаатар', image: '/images/project-6.jpg' },
+];
+
+const comparison = [
+  { feature: 'Угсралтын хугацаа', unitized: 'Богино (панел бэлэн)', stick: 'Урт (талбай дээр нийлүүлнэ)' },
+  { feature: 'Чанарын хяналт', unitized: 'Үйлдвэрт хяналттай', stick: 'Талбайн нөхцөлд хамаарна' },
+  { feature: 'Аюулгүй байдал', unitized: 'Дээд', stick: 'Дундаж' },
+  { feature: 'Өндөр барилгад тохиромж', unitized: 'Маш сайн', stick: 'Хязгаарлагдмал' },
+  { feature: 'Ус, салхи тусгаарлалт', unitized: 'Бүрэн битүүмжилсэн', stick: 'Хөндлөнгийн резинээс хамаарна' },
+];
+
+const faqs = [
+  { q: 'Unitized систем ямар барилгад тохиромжтой вэ?', a: 'Өндөр цамхаг, том нээлттэй фасадтай оффис, худалдааны төв, зочид буудал, эмнэлэг зэрэг төслүүдэд хамгийн тохиромжтой.' },
+  { q: 'Угсралт хэд хоног үргэлжлэх вэ?', a: 'Барилгын өндөр, фасадын талбайгаас хамаарна. Жишээ нь 20 давхар барилгын нэг талын фасадыг 4-6 долоо хоногт дуусгаж болно.' },
+  { q: 'Монголын уур амьсгалд тохируулсан уу?', a: 'Тийм. EOSS unitized систем нь -40°C хүйтэн, +40°C халуун, хүчтэй салхинд тэсвэрлэхэд тохируулсан резин, хөндлөнгийн холболт, шилний багцтай.' },
 ];
 
 export default function UnitizedGlassSystemPage() {
   return (
     <>
-      <PageHero
-        title="Unitized Glass System"
-        subtitle="Урьдчилан үйлдвэрлэсэн шилэн панелийн шийдэл — өндөр барилга, том нээлттэй фасадын итгэлийг бид бий болгоно."
-      />
+      {/* Hero with video */}
+      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-card text-white">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/project-2.jpg"
+          className="absolute inset-0 h-full w-full object-cover opacity-60"
+        >
+          <source src="/videos/unitized-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/70 to-card/30" />
+        <div className="container-site relative z-10 py-24 text-center">
+          <MotionSection className="mx-auto max-w-4xl">
+            <span className="mb-4 inline-block text-sm font-bold uppercase tracking-widest text-accent">Unitized Curtain Wall System</span>
+            <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+              Unitized Glass System
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/80">
+              Урьдчилан үйлдвэрлэсэн шилэн панелийн шийдэл — өндөр барилга, том нээлттэй фасадын итгэлийг бид бий болгоно.
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <Button variant="primary" size="lg" asChild>
+                <Link href="/contact">Үнийн санал авах</Link>
+              </Button>
+              <Button variant="outline" size="lg" className="text-white border-white/30 hover:bg-white/10" asChild>
+                <Link href="/services">Бүх үйлчилгээ харах</Link>
+              </Button>
+            </div>
+          </MotionSection>
+        </div>
+      </section>
 
       <section className="container-site py-16 lg:py-24">
+        {/* Intro */}
         <MotionSection className="max-w-3xl">
-          <h2 className="text-2xl font-bold text-foreground lg:text-3xl">Танилцуулга</h2>
-          <p className="mt-4 leading-relaxed text-muted-foreground">
+          <span className="text-sm font-bold uppercase tracking-widest text-accent">Танилцуулга</span>
+          <h2 className="mt-3 text-3xl font-bold text-foreground lg:text-4xl">
+            Үйлдвэрт бэлдсэн, талбай дээр угсарсан шийдэл
+          </h2>
+          <p className="mt-5 leading-relaxed text-muted-foreground">
             Unitized Glass System нь шилэн пасадын панелийг үйлдвэрт бүрэн бэлдэж, талбай дээр зөвхөн угсарч буулгах систем юм. Энэ нь чанарын хяналтыг сайжруулж, угсралтын хугацааг богиносгож, өндөр барилга, нарийн инженерчлэлтэй фасадын төслүүдэд тохиромжтой.
           </p>
         </MotionSection>
 
-        <MotionSection className="mt-16">
-          <h2 className="text-2xl font-bold text-foreground lg:text-3xl">Давуу талууд</h2>
-          <ul className="mt-6 grid gap-4 sm:grid-cols-2">
-            {benefits.map((benefit, index) => (
-              <MotionItem key={benefit} delay={index * 0.08}>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                  <span className="text-foreground/80">{benefit}</span>
-                </li>
+        {/* Process */}
+        <MotionSection className="mt-20">
+          <h3 className="text-2xl font-bold text-foreground lg:text-3xl">Угсралтын явц</h3>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {process.map((item, index) => (
+              <MotionItem key={item.step} delay={index * 0.08}>
+                <div className="relative bg-muted p-6">
+                  <div className="text-4xl font-bold text-accent/30">{item.step}</div>
+                  <div className="mt-2 font-semibold text-foreground">{item.title}</div>
+                  <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+                </div>
               </MotionItem>
             ))}
-          </ul>
+          </div>
         </MotionSection>
 
-        <MotionSection className="mt-16">
-          <h2 className="text-2xl font-bold text-foreground lg:text-3xl">Техник үзүүлэлт</h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+        {/* Benefits */}
+        <MotionSection className="mt-20">
+          <h3 className="text-2xl font-bold text-foreground lg:text-3xl">Давуу талууд</h3>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {benefits.map((item, index) => (
+              <MotionItem key={item.title} delay={index * 0.08}>
+                <div className="flex h-full gap-4 bg-white p-6 shadow-sm">
+                  <div className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-accent/10 text-accent"
+                  >
+                    <item.icon className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground">{item.title}</div>
+                    <p className="mt-1 text-sm text-muted-foreground">{item.desc}</p>
+                  </div>
+                </div>
+              </MotionItem>
+            ))}
+          </div>
+        </MotionSection>
+
+        {/* Specs */}
+        <MotionSection className="mt-20">
+          <h3 className="text-2xl font-bold text-foreground lg:text-3xl">Техник үзүүлэлт</h3>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {specs.map((spec, index) => (
-              <MotionItem key={spec.label} delay={index * 0.1}>
+              <MotionItem key={spec.label} delay={index * 0.08}>
                 <div className="bg-muted p-6">
                   <spec.icon className="h-6 w-6 text-accent" />
                   <div className="mt-3 text-sm text-muted-foreground">{spec.label}</div>
@@ -69,23 +153,79 @@ export default function UnitizedGlassSystemPage() {
           </div>
         </MotionSection>
 
-        <MotionSection className="mt-16">
-          <h2 className="text-2xl font-bold text-foreground lg:text-3xl">Төслийн жишээ</h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+        {/* Comparison */}
+        <MotionSection className="mt-20">
+          <h3 className="text-2xl font-bold text-foreground lg:text-3xl">Unitized vs Traditional Stick-built</h3>
+          <div className="mt-8 overflow-hidden border border-border">
+            <table className="w-full text-left text-sm">
+              <thead className="bg-card text-white">
+                <tr>
+                  <th className="px-6 py-4 font-medium">Үзүүлэлт</th>
+                  <th className="px-6 py-4 font-medium text-accent">Unitized System</th>
+                  <th className="px-6 py-4 font-medium">Stick-built System</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {comparison.map((row) => (
+                  <tr key={row.feature}>
+                    <td className="px-6 py-4 text-muted-foreground">{row.feature}</td>
+                    <td className="px-6 py-4 font-medium text-foreground">{row.unitized}</td>
+                    <td className="px-6 py-4 text-foreground/70">{row.stick}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </MotionSection>
+
+        {/* Project examples */}
+        <MotionSection className="mt-20">
+          <h3 className="text-2xl font-bold text-foreground lg:text-3xl">Төслийн жишээ</h3>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {examples.map((example, index) => (
               <MotionItem key={example.title} delay={index * 0.1}>
-                <div className="border border-border p-6">
-                  <div className="text-sm text-accent">{example.location}</div>
-                  <div className="mt-2 font-semibold text-foreground">{example.title}</div>
+                <div className="group relative aspect-[4/3] overflow-hidden bg-muted">
+                  <Image
+                    src={example.image}
+                    alt={example.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-5">
+                    <div className="text-xs font-bold uppercase tracking-wider text-accent">{example.location}</div>
+                    <div className="mt-1 text-lg font-semibold text-white">{example.title}</div>
+                  </div>
                 </div>
               </MotionItem>
             ))}
           </div>
         </MotionSection>
 
-        <MotionSection className="mt-16 flex justify-center">
+        {/* FAQ */}
+        <MotionSection className="mt-20 max-w-3xl">
+          <h3 className="text-2xl font-bold text-foreground lg:text-3xl">Түгээмэл асуултууд</h3>
+          <div className="mt-8 space-y-4">
+            {faqs.map((faq, index) => (
+              <MotionItem key={index} delay={index * 0.08}>
+                <div className="border border-border p-6">
+                  <div className="flex items-start gap-3">
+                    <ArrowRight className="mt-1 h-5 w-5 shrink-0 text-accent" />
+                    <div>
+                      <div className="font-semibold text-foreground">{faq.q}</div>
+                      <p className="mt-2 text-muted-foreground">{faq.a}</p>
+                    </div>
+                  </div>
+                </div>
+              </MotionItem>
+            ))}
+          </div>
+        </MotionSection>
+
+        {/* CTA */}
+        <MotionSection className="mt-20 flex justify-center">
           <Button variant="primary" size="lg" asChild>
-            <Link href="/contact">Үнийн санал авах</Link>
+            <Link href="/contact">Unitized системийн үнийн санал авах <ArrowRight className="ml-2 inline h-5 w-5" /></Link>
           </Button>
         </MotionSection>
       </section>

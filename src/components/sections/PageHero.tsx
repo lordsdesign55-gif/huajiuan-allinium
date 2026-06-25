@@ -8,7 +8,9 @@ interface PageHeroProps {
 
 export function PageHero({ title, subtitle, kicker }: PageHeroProps) {
   return (
-    <section className="relative bg-card py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-card py-20 lg:py-28">
+      <div className="absolute inset-0 bg-[url('/images/project-1.jpg')] bg-cover bg-center opacity-20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-card/95 via-card/85 to-card/70" />
       <div className="container-site relative">
         <MotionSection className="max-w-3xl">
           {kicker && (

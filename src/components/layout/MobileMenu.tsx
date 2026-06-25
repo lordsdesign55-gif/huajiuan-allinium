@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
+import { Menu, X, Globe } from 'lucide-react';
+import { Link, usePathname } from '@/i18n/routing';
 import { CmsMenuItem } from '@/lib/mock';
 import { cn } from '@/lib/utils';
 
@@ -12,12 +13,14 @@ interface MobileMenuProps {
 
 export function MobileMenu({ items }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const t = useTranslations('nav');
 
   return (
     <>
       <button
         type="button"
-        aria-label={open ? 'Цэс хаах' : 'Цэс нээх'}
+        aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
         onClick={() => setOpen(!open)}
         className="inline-flex h-10 w-10 items-center justify-center text-white hover:text-accent transition-colors lg:hidden"
@@ -31,7 +34,7 @@ export function MobileMenu({ items }: MobileMenuProps) {
           open ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
         )}
       >
-        <nav className="container-site flex flex-col py-6" aria-label="Гар утасны цэс">
+        <nav className="container-site flex flex-col py-6" aria-label="Mobile navigation">
           {items.map((item) => (
             <Link
               key={item._id}
@@ -39,9 +42,28 @@ export function MobileMenu({ items }: MobileMenuProps) {
               onClick={() => setOpen(false)}
               className="py-3 text-lg font-medium text-white hover:text-accent transition-colors"
             >
-              {item.label}
+              {t(item.labelKey)}
             </Link>
           ))}
+          <div className="mt-4 flex items-center gap-3 border-t border-white/10 pt-4 text-white/70">
+            <Globe className="h-4 w-4" />
+            <Link
+              href={pathname}
+              locale="mn"
+              onClick={() => setOpen(false)}
+              className="hover:text-accent transition-colors"
+            >
+              MN
+            </Link>
+            <Link
+              href={pathname}
+              locale="en"
+              onClick={() => setOpen(false)}
+              className="hover:text-accent transition-colors"
+            >
+              EN
+            </Link>
+          </div>
         </nav>
       </div>
     </>

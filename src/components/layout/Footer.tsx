@@ -1,3 +1,6 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { getFooterMenus } from '@/lib/mock';
@@ -5,6 +8,7 @@ import { Button } from '@/components/ui/Button';
 
 export function Footer() {
   const footerItems = getFooterMenus();
+  const t = useTranslations('nav');
 
   return (
     <footer className="bg-card text-card-foreground border-t border-white/10">
@@ -28,7 +32,7 @@ export function Footer() {
             </p>
             <div className="mt-6">
               <Button variant="primary" size="sm" asChild>
-                <Link href="/contact">Үнийн санал авах</Link>
+                <Link href="/contact">{t('quote')}</Link>
               </Button>
             </div>
           </div>
@@ -39,8 +43,9 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerItems.filter(i => ['/about', '/contact', '/blog'].includes(i.url)).map((item) => (
                   <li key={item._id}>
-                    <Link href={item.url} className="text-sm text-white/70 hover:text-accent transition-colors">
-                      {item.label}
+                    <Link href={item.url} className="text-sm text-white/70 hover:text-accent transition-colors"
+                    >
+                      {t(item.labelKey)}
                     </Link>
                   </li>
                 ))}
@@ -57,7 +62,8 @@ export function Footer() {
                   { url: '/services', label: 'Гадна дуулаалга' },
                 ].map((item) => (
                   <li key={item.url + item.label}>
-                    <Link href={item.url} className="text-sm text-white/70 hover:text-accent transition-colors">
+                    <Link href={item.url} className="text-sm text-white/70 hover:text-accent transition-colors"
+                    >
                       {item.label}
                     </Link>
                   </li>

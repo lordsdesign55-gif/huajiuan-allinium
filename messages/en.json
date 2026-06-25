@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "title": "Huajiuan Allinium — EOSS glass facades, metal facades, external insulation",
+    "description": "Huajiuan Allinium is the official distributor of Huajian Aluminium's EOSS brand in Mongolia, supplying professional facade, insulation and construction fittings solutions."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "unitized": "Unitized Glass System",
+    "gallery": "Projects",
+    "blog": "News",
+    "contact": "Contact",
+    "quote": "Request a quote"
+  },
+  "hero": {
+    "kicker": "#HUAJIUANALLINIUM",
+    "title": "EOSS Glass Facade — The Future of Building Envelopes",
+    "subtitle": "We officially introduce, sell and install Huajian Aluminium's EOSS glass facade systems in Mongolia. Quality, standards and performance are our promise.",
+    "ctaPrimary": "Request a quote",
+    "ctaSecondary": "About us"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "All external finishing solutions in one place",
+    "items": {
+      "glass": {
+        "title": "EOSS Glass Facade",
+        "description": "Passive House certified glass facade engineered for Mongolia's -40°C to +40°C climate."
+      },
+      "metal": {
+        "title": "Metal Facade",
+        "description": "Alucobond and aluminium composite panel finishes with flexible design and long-lasting durability."
+      },
+      "insulation": {
+        "title": "External Insulation",
+        "description": "Rockwool-compliant thermal and acoustic insulation for energy-efficient buildings."
+      },
+      "equipment": {
+        "title": "Fittings & Accessories",
+        "description": "Steel brackets, rubber gaskets, drainage profiles and all supporting accessories."
+      }
+    },
+    "lowE": {
+      "title": "Low-E Glass Features",
+      "intro": "Low-E glass engineered for Mongolia reduces heat loss at -40°C in winter and blocks solar heat at +40°C in summer.",
+      "paneTitle": "Double vs Triple Glazing",
+      "pane2": "Double Low-E",
+      "pane3": "Triple Low-E",
+      "uValue": "U-value",
+      "sound": "Sound insulation",
+      "gValue": "Solar factor (g)",
+      "standard": "Climate suitability",
+      "standardsTitle": "Cold-climate standards",
+      "standards": "ASTM E2190 • EN 1279-2 • EN 673 • CSA A440.2 • GOST 30674 • Passive House certified"
+    }
+  },
+  "about": {
+    "kicker": "About us",
+    "title": "Your trusted partner for building envelopes",
+    "intro": "Huajiuan Allinium has 4+ years of experience supplying and installing glass facades, metal facades, external insulation and construction accessories in Mongolia.",
+    "partnership": "We are the official distributor of Huajian Aluminium's EOSS brand in Mongolia, officially introducing, selling and installing its glass facade systems.",
+    "stats": {
+      "years": "4+ Years",
+      "projects": "50+ Projects",
+      "standard": "100% Standards"
+    }
+  },
+  "gallery": {
+    "title": "Projects",
+    "subtitle": "Completed works built with Huajian Aluminium / EOSS systems.",
+    "cta": "All projects"
+  },
+  "blog": {
+    "title": "News",
+    "subtitle": "Industry news, brand highlights and technical advice",
+    "cta": "All news",
+    "readMore": "Read more"
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Get in touch with our team for your project and request a competitive quote.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Send",
+      "success": "Thank you! We will contact you soon.",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "addressValue": "Ulaanbaatar, Mongolia"
+    }
+  },
+  "cta": {
+    "title": "Ready to start your project?",
+    "subtitle": "Our professional team will prepare a tailored solution and competitive quote for your requirements.",
+    "button": "Request a quote"
+  },
+  "footer": {
+    "tagline": "EOSS glass facades, metal facades, external insulation — quality, standards, performance.",
+    "columns": {
+      "company": "Company",
+      "services": "Services",
+      "resources": "Resources"
+    },
+    "copyright": "© {year} Huajiuan Allinium. All rights reserved."
+  }
+}

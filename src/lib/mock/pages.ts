@@ -20,7 +20,7 @@ export interface CmsPost {
 
 export interface CmsMenuItem {
   _id: string;
-  label: string;
+  labelKey: string;
   url: string;
   order: number;
   kind: 'header' | 'footer';
