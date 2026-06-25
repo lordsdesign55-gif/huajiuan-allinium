@@ -69,6 +69,36 @@ const metalWindows = [
   { title: 'Аюулгүй байдлын цонх', desc: 'Хатсан шил, мултиплекс шилтэй сонголт — ослын эрсдэлийг бууруулна.' },
 ];
 
+const facadeTechLayers = [
+  { step: '01', title: 'Бетон хана', desc: 'Барилгын суурь бүтэц — зоомол, блок, бетон.' },
+  { step: '02', title: 'Дулаалга', desc: 'Rockwool/минерал өвс — дулаан, дуу чимээ тусгаарлалт.' },
+  { step: '03', title: 'Тогтоогч бүрдэл', desc: 'Хөнгөн цагаан/ган Z-профиль, тохируулгатай тулгуур.' },
+  { step: '04', title: 'Агаарын завсар', desc: 'Ус зайлуулах, агаар сэлгэх 30–50 мм завсар — rainscreen зарчим.' },
+  { step: '05', title: 'Alucobond хавтан', desc: '4 мм хөнгөн цагаан композит хавтан — нуусан тогтоогч, 6–12 мм халуун өргөтгөлийн завсар.' },
+];
+
+const facadeSpeed = [
+  { label: 'Уламжлалт зоомол', value: '8–15', unit: 'м²/өдөр', note: 'Арматур, зуурмаг, хатаалт шаарддаг' },
+  { label: 'Уламжлалт шаваас', value: '10–25', unit: 'м²/өдөр', note: 'Олон давхар өнгөлгөө, хатаалт' },
+  { label: 'Металл пасад (бүрэн)', value: '15–30', unit: 'м²/өдөр', note: 'Дулаалга + тогтоогч + хавтан' },
+  { label: 'Металл пасад (хавтан)', value: '30–60', unit: 'м²/өдөр', note: 'Зөвхөн хавтан угсрах' },
+];
+
+const facadeTimeline = [
+  { scenario: '1 баг, бүрэн систем', output: '25 м²/өдөр', days: '480', months: '~22 сар' },
+  { scenario: '1 баг, зөвхөн хавтан', output: '40 м²/өдөр', days: '300', months: '~14 сар' },
+  { scenario: '3 баг, бүрэн систем', output: '90 м²/өдөр', days: '133', months: '~6–7 сар' },
+];
+
+const facadeDesignOptions = [
+  '80+ стандарт өнгө',
+  'Металлик, аноджуулсан, мат дуурайлт',
+  'Spectra / iridescent хувирах өнгө',
+  'Мод, чулуу дуурайсан хэвлэл',
+  'CNC нүхэлгээ, ирмэггүй хөндлөнгийн холболт',
+  'Том хэмжээний хавтан (1.57 × 10 м хүртэл)',
+];
+
 const workflow = [
   { step: '01', title: 'Зөвлөгөө', desc: 'Төслийн шаардлага, уур амьсгал, төсөвт тохируулан шийдэл санал болгоно.' },
   { step: '02', title: 'Инженерчлэл', desc: 'U-утга, салхины ачаалал, ус нэвтрүүлэх зэрэг тооцоог гүйцэтгэнэ.' },
@@ -182,6 +212,111 @@ export default function ServicesPage() {
                   <div className="text-lg font-bold text-foreground">{product.name}</div>
                   <p className="mt-2 text-muted-foreground">{product.desc}</p>
                 </div>
+              </MotionItem>
+            ))}
+          </div>
+        </MotionSection>
+
+        {/* Facade technology */}
+        <MotionSection className="mt-24 border-t border-border pt-16">
+          <div className="text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-accent">Технологи</span>
+            <h2 className="mt-3 text-3xl font-bold text-foreground lg:text-4xl">Rainscreen металл пасадын технологи</h2>
+            <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
+              Alucobond пасад нь ханыг хамгаалах битүү үе, дулаалга, агаар сэлгэх завсар, гаднах хавтан гэсэн многослойн бүтэцтэй. Ус, чийг, салхины даралтыг агаарын завсар хүлээн авч, барилгыг хуурай, дулаан, эрүүх хадгална.
+            </p>
+          </div>
+
+          <div className="mt-12 grid items-center gap-12 lg:grid-cols-2">
+            <div className="relative aspect-square overflow-hidden rounded-lg bg-muted lg:aspect-[4/3]">
+              <Image
+                src="/images/alucobond/project-3.jpg"
+                alt="Metal facade technology cross section"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="space-y-4">
+              {facadeTechLayers.map((layer, index) => (
+                <MotionItem key={layer.step} delay={index * 0.08}>
+                  <div className="flex gap-4 rounded-lg border border-border bg-white p-5 shadow-sm">
+                    <div className="text-3xl font-bold text-accent/30">{layer.step}</div>
+                    <div>
+                      <div className="font-semibold text-foreground">{layer.title}</div>
+                      <p className="mt-1 text-sm text-muted-foreground">{layer.desc}</p>
+                    </div>
+                  </div>
+                </MotionItem>
+              ))}
+            </div>
+          </div>
+        </MotionSection>
+
+        {/* Speed comparison */}
+        <MotionSection className="mt-24 border-t border-border pt-16">
+          <div className="text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-accent">Хурд</span>
+            <h2 className="mt-3 text-3xl font-bold text-foreground lg:text-4xl">Уламжлалт аргаас 3–5 дахин хурдан</h2>
+            <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
+              Хөнгөн цагаан композит хавтанг үйлдвэрт бэлтгэж, талбай дээр зөвхөн хуурай угсардаг тул зуурмаг, шаваас, хатаалтын хүлээлгүй. Өвөл, чийгтэй үед ч ажиллана.
+            </p>
+          </div>
+
+          <div className="mt-12 overflow-hidden rounded-lg border border-border bg-white shadow-sm">
+            <table className="w-full text-left text-sm">
+              <thead className="bg-card text-white">
+                <tr>
+                  <th className="px-6 py-4 font-medium">Арга</th>
+                  <th className="px-6 py-4 font-medium">Бүтээмж</th>
+                  <th className="px-6 py-4 font-medium">Тайлбар</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {facadeSpeed.map((row, index) => (
+                  <tr key={row.label} className={index % 2 === 1 ? 'bg-muted/40' : ''}>
+                    <td className="px-6 py-4 font-medium text-foreground">{row.label}</td>
+                    <td className="px-6 py-4 text-accent font-semibold">{row.value} {row.unit}</td>
+                    <td className="px-6 py-4 text-muted-foreground">{row.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-12">
+            <h3 className="text-center text-xl font-bold text-foreground">20 давхар, 12 000 м² металл пасад — хугацааны тооцоо</h3>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              {facadeTimeline.map((item, index) => (
+                <MotionItem key={item.scenario} delay={index * 0.08}>
+                  <div className="h-full rounded-lg bg-muted p-6 text-center">
+                    <div className="text-sm text-muted-foreground">{item.scenario}</div>
+                    <div className="mt-2 text-3xl font-bold text-foreground">{item.months}</div>
+                    <div className="mt-1 text-sm text-muted-foreground">{item.output} • {item.days} ажлын өдөр</div>
+                  </div>
+                </MotionItem>
+              ))}
+            </div>
+            <p className="mt-6 text-center text-sm text-muted-foreground">
+              Талбайн нөхцөл, цонхны нүх, өнцөг, гондолын тоо, цаг агаараас хамаарч 15–30% нэмэлт хугацаа орж болно. Олон гондол, олон баг ажиллуулбал 6–12 сарын хугацаанд дуусгах боломжтой.
+            </p>
+          </div>
+        </MotionSection>
+
+        {/* Design options */}
+        <MotionSection className="mt-24 border-t border-border pt-16">
+          <div className="text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-accent">Дизайн</span>
+            <h2 className="mt-3 text-3xl font-bold text-foreground lg:text-4xl">Өнгө, хэлбэр, хэмжээний уян хатан сонголт</h2>
+            <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
+              PVDF/FEVE бүрээстэй Alucobond хавтан нь 80+ өнгө, металлик, аноджуулсан, чулуу/мод дуурайсан гадаргуутай. CNC өрөмдлөг, ирмэггүй холболт, том хэмжээний хавтангуудаар архитекторын бүх зорилгыг хэрэгжүүлнэ.
+            </p>
+          </div>
+          <div className="mt-12 flex flex-wrap justify-center gap-3">
+            {facadeDesignOptions.map((option, index) => (
+              <MotionItem key={option} delay={index * 0.05}>
+                <span className="inline-block rounded-full bg-accent/10 px-5 py-2 text-sm font-medium text-accent">
+                  {option}
+                </span>
               </MotionItem>
             ))}
           </div>
