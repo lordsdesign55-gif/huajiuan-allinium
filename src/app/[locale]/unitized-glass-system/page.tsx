@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { PageHero } from '@/components/sections/PageHero';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
-import { CheckCircle2, Layers, Ruler, Wind, Factory, Truck, HardHat, Clock, Shield, TrendingUp, ArrowRight } from 'lucide-react';
+import { CheckCircle2, Layers, Ruler, Wind, Factory, Truck, HardHat, Clock, Shield, TrendingUp, ArrowRight, Zap, Thermometer } from 'lucide-react';
 
 const benefits = [
   { icon: Clock, title: 'Хурдан угсралт', desc: 'Урьдчилан үйлдвэрлэсэн тул талбай дээр угсарлалтын хугацаа 30-50% богиносдог.' },
@@ -52,6 +52,7 @@ const comparison = [
   { feature: 'Аюулгүй байдал', unitized: 'Дээд', stick: 'Дундаж' },
   { feature: 'Өндөр барилгад тохиромж', unitized: 'Маш сайн', stick: 'Хязгаарлагдмал' },
   { feature: 'Ус, салхи тусгаарлалт', unitized: 'Бүрэн битүүмжилсэн', stick: 'Хөндлөнгийн резинээс хамаарна' },
+  { feature: 'Эрчим хүчний хэмнэлт', unitized: 'Өндөр (U ≤ 1.0 W/m²K)', stick: 'Дундаж (U = 1.6–2.2 W/m²K)' },
 ];
 
 const faqs = [
@@ -183,6 +184,48 @@ export default function UnitizedGlassSystemPage() {
                 </div>
               </MotionItem>
             ))}
+          </div>
+        </MotionSection>
+
+        {/* Energy efficiency */}
+        <MotionSection className="mt-20">
+          <h3 className="text-2xl font-bold text-foreground lg:text-3xl">EOSS систем — эрчим хүчний хэмнэлт</h3>
+          <p className="mt-4 max-w-3xl text-muted-foreground">
+            EOSS unitized систем нь Passive House стандартад нийцсэн, 2/3 давхар Low-E шил, Argon хийн дүүргэлттэй багц болон термобарьцалтай профилиэр бүрддэг. Энэ нь барилгын дулаан алдагдлыг эрс багасгаж, өвөлдөө халаалтын зардлыг 30–45%, зундөө хөргөлтийн зардлыг 20–30% хүртэл хэмнэнэ.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <MotionItem delay={0}>
+              <div className="flex h-full flex-col bg-muted p-6">
+                <Thermometer className="h-8 w-8 text-accent" />
+                <div className="mt-4 text-sm text-muted-foreground">U-утга</div>
+                <div className="mt-1 text-2xl font-bold text-foreground">≤ 1.0 W/m²K</div>
+                <p className="mt-2 text-sm text-muted-foreground">Passive House түвшний дулаан тусгаарлалт</p>
+              </div>
+            </MotionItem>
+            <MotionItem delay={0.08}>
+              <div className="flex h-full flex-col bg-muted p-6">
+                <Wind className="h-8 w-8 text-accent" />
+                <div className="mt-4 text-sm text-muted-foreground">Салхины ачаалал</div>
+                <div className="mt-1 text-2xl font-bold text-foreground">±3.0 kPa</div>
+                <p className="mt-2 text-sm text-muted-foreground">Монголын хүчтэй салхинд тэсвэртэй</p>
+              </div>
+            </MotionItem>
+            <MotionItem delay={0.16}>
+              <div className="flex h-full flex-col bg-muted p-6">
+                <Zap className="h-8 w-8 text-accent" />
+                <div className="mt-4 text-sm text-muted-foreground">Халаалтын хэмнэлт</div>
+                <div className="mt-1 text-2xl font-bold text-foreground">30–45%</div>
+                <p className="mt-2 text-sm text-muted-foreground">Өвлийн улиралд дулааны алдагдал багатай</p>
+              </div>
+            </MotionItem>
+            <MotionItem delay={0.24}>
+              <div className="flex h-full flex-col bg-muted p-6">
+                <Shield className="h-8 w-8 text-accent" />
+                <div className="mt-4 text-sm text-muted-foreground">Ус нэвтрүүлэх</div>
+                <div className="mt-1 text-2xl font-bold text-foreground">A级</div>
+                <p className="mt-2 text-sm text-muted-foreground">Бүрэн битүүмжилсэн панел</p>
+              </div>
+            </MotionItem>
           </div>
         </MotionSection>
 
