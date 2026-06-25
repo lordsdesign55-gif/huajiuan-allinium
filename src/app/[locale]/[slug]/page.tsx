@@ -138,10 +138,12 @@ function AboutContent({ page }: { page: { name: string; description: string; con
       </MotionSection>
 
       {/* Legacy content from CMS */}
+      {/*
       <article
         className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground/80 prose-a:text-accent"
         dangerouslySetInnerHTML={{ __html: page.content }}
       />
+      */}
     </div>
   );
 }
