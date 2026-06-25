@@ -55,7 +55,14 @@ const comparison = [
   { feature: 'Эрчим хүчний хэмнэлт', unitized: 'Өндөр (U ≤ 1.0 W/m²K)', stick: 'Дундаж (U = 1.6–2.2 W/m²K)' },
 ];
 
-const faqs = [
+const lowEComparison = [
+  { indicator: 'U-утга (дулаан алдагдал)', regular: '2.7 – 3.0 W/m²K', lowE: '1.0 – 1.4 W/m²K', note: 'Low-E нь 2.5-3 дахин бага дулаан алдагдалтай' },
+  { indicator: 'Гэрлийн нэвтрүүлэлт (LT)', regular: '80 – 90%', lowE: '70 – 80%', note: 'Тохиромжтой өнгөт бүрхүүлээр гэрлийн алдагдал багатай' },
+  { indicator: 'Нарны дулаан нэвтрүүлэлт (g-утга)', regular: '0.75 – 0.85', lowE: '0.35 – 0.60', note: 'Зундаа хэт халалтыг багасгадаг' },
+  { indicator: 'UV хамгаалалт', regular: '20 – 40%', lowE: '70 – 95%', note: 'Дотор эд хогшил, шалны өнгөө хамгаална' },
+  { indicator: 'Халаалтын хэмнэлт', regular: 'Үндсэн', lowE: '30 – 45%', note: 'Өвлийн улиралд илүү их хэмнэнэ' },
+  { indicator: 'Хөргөлтийн хэмнэлт', regular: 'Үндсэн', lowE: '20 – 30%', note: 'Нарны хэт дулааныг бууруулна' },
+];
   { q: 'Unitized систем ямар барилгад тохиромжтой вэ?', a: 'Өндөр цамхаг, том нээлттэй фасадтай оффис, худалдааны төв, зочид буудал, эмнэлэг зэрэг төслүүдэд хамгийн тохиромжтой.' },
   { q: 'Угсралт хэд хоног үргэлжлэх вэ?', a: 'Барилгын өндөр, фасадын талбайгаас хамаарна. Жишээ нь 20 давхар барилгын нэг талын фасадыг 4-6 долоо хоногт дуусгаж болно.' },
   { q: 'Монголын уур амьсгалд тохируулсан уу?', a: 'Тийм. EOSS unitized систем нь -40°C хүйтэн, +40°C халуун, хүчтэй салхинд тэсвэрлэхэд тохируулсан резин, хөндлөнгийн холболт, шилний багцтай.' },
@@ -206,6 +213,64 @@ export default function UnitizedGlassSystemPage() {
                 </div>
               </MotionItem>
             ))}
+          </div>
+        </MotionSection>
+
+        {/* Low-E vs regular glass */}
+        <MotionSection className="mt-20">
+          <span className="text-sm font-bold uppercase tracking-widest text-accent">Шилний сонголт</span>
+          <h3 className="mt-3 text-2xl font-bold text-foreground lg:text-3xl">
+            Low-E шил vs энгийн шил — ялгаа нь юу вэ?
+          </h3>
+          <p className="mt-4 max-w-3xl text-muted-foreground">
+            Low-E (Low-Emissivity) шил нь гадаргуун дээрх нимгэн металл бүрхүүлээр дулааны цацрагийг буцааж, өрөөний дулааныг дотор үлдээдэг. Энгийн 2 давхар шилтэй харьцуулахад U-утга 2.5–3 дахин сайжирч, эрчим хүчний зардал эрс буурна.
+          </p>
+
+          <div className="mt-8 overflow-hidden border border-border">
+            <table className="w-full text-left text-sm">
+              <thead className="bg-card text-white">
+                <tr>
+                  <th className="px-6 py-4 font-medium">Үзүүлэлт</th>
+                  <th className="px-6 py-4 font-medium">Энгийн шил</th>
+                  <th className="px-6 py-4 font-medium text-accent">Low-E шил</th>
+                  <th className="px-6 py-4 font-medium">Тайлбар</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {lowEComparison.map((row) => (
+                  <tr key={row.indicator}>
+                    <td className="px-6 py-4 text-muted-foreground">{row.indicator}</td>
+                    <td className="px-6 py-4 text-foreground/70">{row.regular}</td>
+                    <td className="px-6 py-4 font-semibold text-foreground">{row.lowE}</td>
+                    <td className="px-6 py-4 text-muted-foreground">{row.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-8 grid gap-6 sm:grid-cols-3">
+            <MotionItem delay={0}>
+              <div className="bg-muted p-6">
+                <div className="text-sm text-muted-foreground">Энгийн 2 давхар шил</div>
+                <div className="mt-1 text-2xl font-bold text-foreground">U ≈ 2.8</div>
+                <div className="text-sm text-muted-foreground">W/m²K</div>
+              </div>
+            </MotionItem>
+            <MotionItem delay={0.08}>
+              <div className="bg-muted p-6">
+                <div className="text-sm text-muted-foreground">2 давхар Low-E + Argon</div>
+                <div className="mt-1 text-2xl font-bold text-foreground">U ≈ 1.4</div>
+                <div className="text-sm text-muted-foreground">W/m²K</div>
+              </div>
+            </MotionItem>
+            <MotionItem delay={0.16}>
+              <div className="bg-muted p-6">
+                <div className="text-sm text-muted-foreground">3 давхар Low-E + Argon</div>
+                <div className="mt-1 text-2xl font-bold text-foreground">U ≤ 1.0</div>
+                <div className="text-sm text-muted-foreground">W/m²K</div>
+              </div>
+            </MotionItem>
           </div>
         </MotionSection>
 
