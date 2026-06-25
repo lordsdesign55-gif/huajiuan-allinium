@@ -37,6 +37,15 @@ const examples = [
   { title: 'Зочид буудлын өргөтгөл', location: 'Улаанбаатар', image: '/images/project-6.jpg' },
 ];
 
+const installations = [
+  { title: 'Unitized панелийг кранаар өргөж байна', location: 'Талбай дээр', image: '/images/unitized/install-1.jpg' },
+  { title: 'Панел угсарч буй момент', location: 'Улаанбаатар', image: '/images/unitized/install-2.jpg' },
+  { title: 'Site installation багийн ажиллагаа', location: 'Талбай дээр', image: '/images/unitized/install-3.jpg' },
+  { title: 'Профиль, шилний деталь', location: 'Үйлдвэр', image: '/images/unitized/install-4.jpg' },
+  { title: 'Фасадын угсралтын төлөвлөгөө', location: 'Инженерчлэл', image: '/images/unitized/install-5.jpg' },
+  { title: 'Панелийн тээвэрлэлт, бэлтгэл', location: 'Логистик', image: '/images/unitized/install-6.jpg' },
+];
+
 const comparison = [
   { feature: 'Угсралтын хугацаа', unitized: 'Богино (панел бэлэн)', stick: 'Урт (талбай дээр нийлүүлнэ)' },
   { feature: 'Чанарын хяналт', unitized: 'Үйлдвэрт хяналттай', stick: 'Талбайн нөхцөлд хамаарна' },
@@ -110,6 +119,30 @@ export default function UnitizedGlassSystemPage() {
                   <div className="text-4xl font-bold text-accent/30">{item.step}</div>
                   <div className="mt-2 font-semibold text-foreground">{item.title}</div>
                   <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+                </div>
+              </MotionItem>
+            ))}
+          </div>
+        </MotionSection>
+
+        {/* Installation gallery */}
+        <MotionSection className="mt-20">
+          <h3 className="text-2xl font-bold text-foreground lg:text-3xl">Угсралтын зураг</h3>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {installations.map((item, index) => (
+              <MotionItem key={item.title} delay={index * 0.08}>
+                <div className="group relative aspect-[4/3] overflow-hidden bg-muted">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-5">
+                    <div className="text-xs font-bold uppercase tracking-wider text-accent">{item.location}</div>
+                    <div className="mt-1 text-base font-semibold text-white">{item.title}</div>
+                  </div>
                 </div>
               </MotionItem>
             ))}
