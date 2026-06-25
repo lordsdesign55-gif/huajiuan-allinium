@@ -13,30 +13,35 @@ const services = [
     icon: Building2,
     image: '/images/services/service-glass.jpg',
     features: ['Passive House сертификат', '2 / 3 давхар Low-E шил', '±3.0 kPa салхины ачаалал', 'Ус нэвтрүүлэхгүй битүүмжлэл'],
+    link: '/unitized-glass-system',
   },
   {
     id: 'metalWindow',
     icon: Frame,
     image: '/images/services/service-window.jpg',
     features: ['10 см хөнгөн цагаан профиль', '3 давхар Low-E + Argon', 'U-утга ≤ 1.0 W/m²K', '-40°C хүйтэнд тэсвэртэй'],
+    link: '/metal-windows',
   },
   {
     id: 'metal',
     icon: Layers,
     image: '/images/services/service-metal.jpg',
     features: ['Alucobond A2 / PLUS хавтан', 'Хөнгөн цагаан композит', 'Европ стандарт (EN 13501)', 'Уян хатан дизайн, удаан эдэлгээ'],
+    link: null,
   },
   {
     id: 'insulation',
     icon: Thermometer,
     image: '/images/services/service-insulation.jpg',
     features: ['Rockwool стандарт', 'Дулаан тусгаарлалт', 'Дуу чимээ тусгаарлалт', 'Эрчим хүчний хэмнэлт'],
+    link: null,
   },
   {
     id: 'equipment',
     icon: Wrench,
     image: '/images/services/service-equipment.jpg',
     features: ['Төмөр тогтоогч бүрдэл', 'Резин хөндлөнгийн холболт', 'Ус зайлуулах профиль', 'Бүх дагалдах хэрэгсэл'],
+    link: null,
   },
 ];
 
@@ -173,6 +178,11 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
+                    {service.link && (
+                      <Button variant="outline" size="sm" className="mt-6" asChild>
+                        <Link href={service.link}>Дэлгэрэнгүй <ArrowRight className="ml-2 inline h-4 w-4" /></Link>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </MotionItem>
