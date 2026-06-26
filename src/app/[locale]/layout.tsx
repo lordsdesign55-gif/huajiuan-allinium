@@ -9,6 +9,7 @@ import { ApolloProvider } from '@/lib/apollo/provider';
 import { LenisProvider } from '@/components/providers/LenisProvider';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { Chatbot } from '@/components/chatbot/Chatbot';
 
 export const metadata: Metadata = {
   title: 'Huajiuan Allinium | EOSS - Барилгын пасад, дулаалга, тоног төхөөрөмж',
@@ -121,6 +122,7 @@ export default async function LocaleLayout({
               <Header />
               <main>{children}</main>
               <Footer />
+              <Chatbot />
             </LenisProvider>
           </ApolloProvider>
         </NextIntlClientProvider>

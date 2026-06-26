@@ -126,5 +126,39 @@
     "privacy": "Privacy",
     "terms": "Terms of service",
     "copyright": "© {year} Huajiuan Allinium. All rights reserved."
+  },
+  "chatbot": {
+    "title": "Huajiuan Allinium",
+    "subtitle": "Assistant",
+    "open": "Open chat",
+    "close": "Close chat",
+    "send": "Send",
+    "placeholder": "Type your question...",
+    "welcome": "Hello! We provide building envelope solutions: glass facades, metal windows, metal facades and insulation. How can I help?",
+    "options": {
+      "services": "Services",
+      "quote": "Request a quote",
+      "contact": "Contact us",
+      "prices": "Pricing",
+      "glass": "Glass facade",
+      "metalWindows": "Metal windows",
+      "metalFacade": "Metal facade",
+      "insulation": "Insulation",
+      "back": "Back",
+      "openForm": "Open form",
+      "close": "Finish"
+    },
+    "responses": {
+      "services": "We offer the following services:",
+      "glass": "EOSS glass facade — Passive House certified, engineered for -40°C to +40°C, with double/triple Low-E glazing.",
+      "metalWindows": "EOSS ES101 metal thermal window — 101 mm frame, Uw 0.79 W/m²K, triple Low-E + Argon glass.",
+      "metalFacade": "Alucobond metal facade — fire-resistant aluminium composite panel, 80+ colours and finishes.",
+      "insulation": "Rockwool external insulation — thermal and acoustic insulation for energy-efficient buildings.",
+      "quote": "To request a quote, please fill out the form below. We will contact you soon.",
+      "formLink": "Please click the button below to open the contact form.",
+      "contact": "You can reach us using the details below:",
+      "prices": "Pricing depends on project size, material choice and installation conditions. Please request a quote for an estimate.",
+      "fallback": "Sorry, I didn't fully understand. Please choose one of the options below."
+    }
   }
 }
