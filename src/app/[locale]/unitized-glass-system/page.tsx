@@ -455,6 +455,28 @@ export default async function UnitizedGlassSystemPage({ params }: PageProps) {
 
         <LowESection />
 
+        {/* Pricing */}
+        <MotionSection className="mt-20 border-t border-border pt-16">
+          <div className="text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-accent">Төслийн үнэ</span>
+            <h3 className="mt-3 text-3xl font-bold text-foreground lg:text-4xl">Unitized Glass System үнийн санал</h3>
+            <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
+              Үнэ нь барилгын өндөр, фасадын талбай, шилний сонголт, угсралтын нөхцөл, валютын ханшаас хамааран уян хатан тохирно.
+            </p>
+          </div>
+          <div className="mx-auto mt-10 max-w-2xl rounded-lg border border-border bg-white p-8 text-center shadow-sm">
+            <div className="text-sm text-muted-foreground">Бүтэн системийн угсралттай үнэ</div>
+            <div className="mt-2 text-4xl font-bold text-accent">1,800,000 – 3,000,000 ₮</div>
+            <div className="mt-1 text-sm text-muted-foreground">м² тутамд</div>
+            <ul className="mt-6 space-y-2 text-left text-sm text-muted-foreground">
+              <li>• Панел, профиль, шил, резин, тогтоогч бүрдэл</li>
+              <li>• Үйлдвэрлэл, тээвэрлэлт, талбай дээр угсралт</li>
+              <li>• Чанарын шалгалт, баталгаа, засвар үйлчилгээ</li>
+            </ul>
+            <p className="mt-4 text-xs text-muted-foreground">* 1000 м²-ээс дээш талбайтай төсөлд хөнгөлөлттэй үнэ тохирно.</p>
+          </div>
+        </MotionSection>
+
         {/* CTA */}
         <MotionSection className="mt-20 flex justify-center">
           <Button variant="primary" size="lg" asChild>

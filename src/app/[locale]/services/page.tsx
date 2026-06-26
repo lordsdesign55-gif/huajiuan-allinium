@@ -12,6 +12,8 @@ const services = [
     id: 'glass',
     icon: Building2,
     image: '/images/services/service-glass.jpg',
+    price: '850,000 – 1,600,000 ₮',
+    priceUnit: 'м²',
     features: ['Passive House сертификат', '2 / 3 давхар Low-E шил', '±3.0 kPa салхины ачаалал', 'Ус нэвтрүүлэхгүй битүүмжлэл'],
     link: '/unitized-glass-system',
   },
@@ -19,6 +21,8 @@ const services = [
     id: 'metalWindow',
     icon: Frame,
     image: '/images/services/service-window.jpg',
+    price: '950,000 – 2,350,000 ₮',
+    priceUnit: 'м²',
     features: ['10 см хөнгөн цагаан профиль', '3 давхар Low-E + Argon', 'U-утга ≤ 1.0 W/m²K', '-40°C хүйтэнд тэсвэртэй'],
     link: '/metal-windows',
   },
@@ -26,6 +30,8 @@ const services = [
     id: 'metal',
     icon: Layers,
     image: '/images/services/service-metal.jpg',
+    price: '400,000 – 650,000 ₮',
+    priceUnit: 'м²',
     features: ['Alucobond A2 / PLUS хавтан', 'Хөнгөн цагаан композит', 'Европ стандарт (EN 13501)', 'Уян хатан дизайн, удаан эдэлгээ'],
     link: null,
   },
@@ -33,6 +39,8 @@ const services = [
     id: 'insulation',
     icon: Thermometer,
     image: '/images/services/service-insulation.jpg',
+    price: 'Хэлэлцэн тохирно',
+    priceUnit: '',
     features: ['Rockwool стандарт', 'Дулаан тусгаарлалт', 'Дуу чимээ тусгаарлалт', 'Эрчим хүчний хэмнэлт'],
     link: null,
   },
@@ -40,6 +48,8 @@ const services = [
     id: 'equipment',
     icon: Wrench,
     image: '/images/services/service-equipment.jpg',
+    price: 'Хэлэлцэн тохирно',
+    priceUnit: '',
     features: ['Төмөр тогтоогч бүрдэл', 'Резин хөндлөнгийн холболт', 'Ус зайлуулах профиль', 'Бүх дагалдах хэрэгсэл'],
     link: null,
   },
@@ -162,6 +172,11 @@ export default function ServicesPage() {
                     </div>
                     <h2 className="mt-4 text-2xl font-bold text-foreground lg:text-3xl">{t(`items.${service.id}.title`)}</h2>
                     <p className="mt-4 leading-relaxed text-muted-foreground">{t(`items.${service.id}.description`)}</p>
+                    <div className="mt-5 inline-flex items-baseline gap-2 rounded-md bg-accent/10 px-4 py-2">
+                      <span className="text-sm text-muted-foreground">Төслийн үнэ:</span>
+                      <span className="text-lg font-bold text-accent">{service.price}</span>
+                      {service.priceUnit && <span className="text-sm text-muted-foreground"> / {service.priceUnit}</span>}
+                    </div>
                     <ul className="mt-6 grid gap-3">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-3 text-foreground/80"
@@ -171,6 +186,7 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
+                    <p className="mt-3 text-xs text-muted-foreground">* Үнэ нь төслийн хэмжээ, материалын сонголт, угсралтын нөхцөл, валютын ханшаас хамааран уян хатан тохирно.</p>
                     {service.link && (
                       <Button variant="outline" size="sm" className="mt-6" asChild>
                         <Link href={service.link}>Дэлгэрэнгүй <ArrowRight className="ml-2 inline h-4 w-4" /></Link>

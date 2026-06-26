@@ -218,6 +218,28 @@ export default async function MetalWindowsPage({ params }: PageProps) {
 
         <LowESection />
 
+        {/* Pricing */}
+        <MotionSection className="mt-20 border-t border-border pt-16">
+          <div className="text-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-accent">Төслийн үнэ</span>
+            <h3 className="mt-3 text-3xl font-bold text-foreground lg:text-4xl">EOSS ES101 металл цонхны үнийн санал</h3>
+            <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
+              Үнэ нь цонхны тоо хэмжээ, хэмжээ, шилний сонголт, өнгө, угсралтын нөхцөл, валютын ханшаас хамааран уян хатан тохирно.
+            </p>
+          </div>
+          <div className="mx-auto mt-10 max-w-2xl rounded-lg border border-border bg-white p-8 text-center shadow-sm">
+            <div className="text-sm text-muted-foreground">Бүтэн цонхны системийн үнэ</div>
+            <div className="mt-2 text-4xl font-bold text-accent">950,000 – 2,350,000 ₮</div>
+            <div className="mt-1 text-sm text-muted-foreground">м² тутамд</div>
+            <ul className="mt-6 space-y-2 text-left text-sm text-muted-foreground">
+              <li>• 101 мм хөнгөн цагаан профиль, термобарьцалт</li>
+              <li>• 3 давхар Low-E + Argon шил, Warm-edge spacer</li>
+              <li>• Passive House сертификат, ус/агаар нэвтрүүлэхгүй битүүмжлэл</li>
+            </ul>
+            <p className="mt-4 text-xs text-muted-foreground">* Олон тоогоор захиалсан төсөлд хөнгөлөлттэй үнэ тохирно.</p>
+          </div>
+        </MotionSection>
+
         {/* CTA */}
         <MotionSection className="mt-20 flex justify-center">
           <Button variant="primary" size="lg" asChild>

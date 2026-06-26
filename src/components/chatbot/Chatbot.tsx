@@ -29,9 +29,9 @@ export function Chatbot() {
         {
           id: 'welcome',
           role: 'bot',
-          text: t('welcome'),
-          options: [t('options.services'), t('options.quote'), t('options.contact'), t('options.prices')],
-        },
+      text: t('welcome'),
+      options: [t('options.services'), t('options.quote'), t('options.contact'), t('options.priceList')],
+    },
       ]);
     }
   }, [isOpen, messages.length, t]);
@@ -54,6 +54,13 @@ export function Chatbot() {
         role: 'bot',
         text: t('responses.services'),
         options: [t('options.glass'), t('options.metalWindows'), t('options.metalFacade'), t('options.insulation'), t('options.back')],
+      };
+    } else if (option === t('options.priceList')) {
+      botResponse = {
+        id: (Date.now() + 1).toString(),
+        role: 'bot',
+        text: t('responses.priceList'),
+        options: [t('options.quote'), t('options.back')],
       };
     } else if (option === t('options.glass')) {
       botResponse = {
@@ -104,11 +111,11 @@ export function Chatbot() {
         text: t('responses.contact'),
         options: [t('options.back'), t('options.close')],
       };
-    } else if (option === t('options.prices')) {
+    } else if (option === t('options.prices') || option === t('options.priceList')) {
       botResponse = {
         id: (Date.now() + 1).toString(),
         role: 'bot',
-        text: t('responses.prices'),
+        text: t('responses.priceList'),
         options: [t('options.quote'), t('options.back')],
       };
     } else if (option === t('options.back')) {

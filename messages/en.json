@@ -140,6 +140,7 @@
       "quote": "Request a quote",
       "contact": "Contact us",
       "prices": "Pricing",
+      "priceList": "Price list",
       "glass": "Glass facade",
       "metalWindows": "Metal windows",
       "metalFacade": "Metal facade",
@@ -157,7 +158,8 @@
       "quote": "To request a quote, please fill out the form below. We will contact you soon.",
       "formLink": "Please click the button below to open the contact form.",
       "contact": "You can reach us using the details below:",
-      "prices": "Pricing depends on project size, material choice and installation conditions. Please request a quote for an estimate.",
+      "prices": "EOSS glass facade 850,000 – 1,600,000 MNT/m², Unitized Glass System 1,800,000 – 3,000,000 MNT/m², EOSS metal windows 950,000 – 2,350,000 MNT/m², Alucobond metal facade 400,000 – 650,000 MNT/m². Final price depends on project size, materials and installation conditions.",
+      "priceList": "We offer EOSS glass facade 850,000 – 1,600,000 MNT/m², Unitized Glass System 1,800,000 – 3,000,000 MNT/m², EOSS metal windows 950,000 – 2,350,000 MNT/m², Alucobond metal facade 400,000 – 650,000 MNT/m². Share project details for an exact quote.",
       "fallback": "Sorry, I didn't fully understand. Please choose one of the options below."
     }
   }
