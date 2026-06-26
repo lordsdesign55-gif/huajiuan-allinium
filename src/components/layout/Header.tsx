@@ -18,15 +18,13 @@ export function Header() {
       <div className="container-site flex h-[72px] items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.png"
-            alt="Huajiuan Allinium"
-            width={40}
+            src="/logo.svg"
+            alt="Huajian Aluminium Mongolia"
+            width={220}
             height={40}
             className="h-10 w-auto object-contain"
           />
-          <span className="text-lg font-semibold tracking-tight text-white">
-            Huajiuan Allinium
-          </span>
+          <span className="sr-only">Huajian Aluminium Mongolia</span>
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">

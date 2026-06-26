@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" fill="none">
+  <!-- Icon: stylised facade/window -->
+  <rect x="0" y="4" width="32" height="32" rx="4" fill="#F97316"/>
+  <path d="M6 12h20v4H6z" fill="white"/>
+  <path d="M6 19h8v11H6z" fill="white"/>
+  <path d="M16 19h10v11H16z" fill="white"/>
+  
+  <!-- Text -->
+  <text x="40" y="18" fill="white" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" letter-spacing="-0.01em">Huajian Aluminium</text>
+  <text x="40" y="32" fill="#F97316" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="600" letter-spacing="0.08em">MONGOLIA</text>
+</svg>

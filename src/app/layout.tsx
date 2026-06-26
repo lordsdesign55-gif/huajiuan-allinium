@@ -16,9 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Huajiuan Allinium — EOSS шилен пасад, металл пасад, гадна дуулаалга',
+  title: 'Huajian Aluminium Mongolia — EOSS шилен пасад, металл пасад, гадна дуулаалга',
   description:
-    'Huajiuan Allinium нь Хятадын Huajian Aluminium Mongolia компанийн EOSS брендийн шилен пасадыг Монголд албан ёсоор нэвтрүүлж буй барилгын фасад, дуулаалга, тоноглолын мэргэжлийн компани юм.',
+    'Huajian Aluminium Mongolia нь Хятадын Huajian Aluminium Mongolia компанийн EOSS брендийн шилен пасадыг Монголд албан ёсоор нэвтрүүлж буй барилгын фасад, дуулаалга, тоноглолын мэргэжлийн компани юм.',
   keywords: ['EOSS', 'шилен пасад', 'металл пасад', 'гадна дуулаалга', 'Huajian Aluminium Mongolia', 'Mongolia'],
 };
 

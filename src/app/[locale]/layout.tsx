@@ -12,9 +12,9 @@ import { Footer } from '@/components/layout/Footer';
 import { Chatbot } from '@/components/chatbot/Chatbot';
 
 export const metadata: Metadata = {
-  title: 'Huajiuan Allinium | EOSS - Барилгын пасад, дулаалга, тоног төхөөрөмж',
+  title: 'Huajian Aluminium Mongolia | EOSS - Барилгын пасад, дулаалга, тоног төхөөрөмж',
   description:
-    'Huajiuan Allinium Mongolia - EOSS шилэн пасад, металл цонх, Alucobond фасад, Rockwool дулаалга, барилгын тоног төхөөрөмжийн албан ёсны ханган нийлүүлэгч. 7000-9559',
+    'Huajian Aluminium Mongolia - EOSS шилэн пасад, металл цонх, Alucobond фасад, Rockwool дулаалга, барилгын тоног төхөөрөмжийн албан ёсны ханган нийлүүлэгч. 7000-9559',
   keywords: [
     'EOSS Mongolia',
     'Huajian Aluminium Mongolia',
@@ -36,11 +36,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Huajiuan Allinium | EOSS Mongolia',
+    title: 'Huajian Aluminium Mongolia | EOSS Mongolia',
     description:
       'Барилгын пасад, дулаалга, металл цонх, тоног төхөөрөмжийн шийдэл. 7000-9559',
     url: 'https://huajiuan-allinium.vercel.app',
-    siteName: 'Huajiuan Allinium',
+    siteName: 'Huajian Aluminium Mongolia',
     locale: 'mn_MN',
     type: 'website',
     images: [
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Huajiuan Allinium | EOSS Mongolia',
+    title: 'Huajian Aluminium Mongolia | EOSS Mongolia',
     description: 'Барилгын пасад, дулаалга, металл цонх, тоног төхөөрөмжийн шийдэл.',
     images: ['/images/project-2.jpg'],
   },
@@ -67,10 +67,10 @@ export const metadata: Metadata = {
 const localBusinessJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Huajiuan Allinium',
+  name: 'Huajian Aluminium Mongolia',
   alternateName: 'Гэр групп',
   url: 'https://huajiuan-allinium.vercel.app',
-  logo: 'https://huajiuan-allinium.vercel.app/logo.png',
+  logo: 'https://huajiuan-allinium.vercel.app/logo.svg',
   image: 'https://huajiuan-allinium.vercel.app/images/project-2.jpg',
   telephone: '+976 7000 9559',
   email: 'gergroup11@gmail.com',

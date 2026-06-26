@@ -15,17 +15,15 @@ export function Footer() {
       <div className="container-site py-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <Link href="/" className="flex items-center gap-3 mb-6">
+            <Link href="/" className="mb-6 inline-block">
               <Image
-                src="/logo.png"
-                alt="Huajiuan Allinium"
-                width={40}
+                src="/logo.svg"
+                alt="Huajian Aluminium Mongolia"
+                width={220}
                 height={40}
                 className="h-10 w-auto object-contain"
               />
-              <span className="text-lg font-semibold tracking-tight text-white">
-                Huajiuan Allinium
-              </span>
+              <span className="sr-only">Huajian Aluminium Mongolia</span>
             </Link>
             <p className="max-w-sm text-white/70 leading-relaxed">{t('footer.tagline')}</p>
             <div className="mt-6">
