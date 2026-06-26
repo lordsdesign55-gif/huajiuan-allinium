@@ -99,6 +99,8 @@
       "successMessage": "Бид тантай удахгүй холбогдох болно.",
       "again": "Дахин илгээх",
       "error": "Илгээхэд алдаа гарлаа. Дахин оролдоно уу.",
+      "emailNotConfigured": "Имэйл сервер тохируулаагүй байна. Доорх товчоор шууд имэйл илгээнэ үү.",
+      "sendViaEmail": "Имэйлээр илгээх",
       "namePlaceholder": "Таны нэр",
       "emailPlaceholder": "info@example.mn",
       "phonePlaceholder": "+976 0000 0000",
@@ -125,10 +127,10 @@
     "contact": "Холбоо барих",
     "privacy": "Нууцлал",
     "terms": "Үйлчилгээний нөхцөл",
-    "copyright": "© {year} Huajiuan Allinium. Бүх эрх хуулиар хамгаалагдсан."
+    "copyright": "© {year} Huajian Aluminium Mongolia. Бүх эрх хуулиар хамгаалагдсан."
   },
   "chatbot": {
-    "title": "Huajiuan Allinium",
+    "title": "Huajian Aluminium Mongolia",
     "subtitle": "Туслах чатбот",
     "open": "Чат нээх",
     "close": "Чат хаах",
@@ -163,5 +165,4 @@
       "fallback": "Уучлаарай, би таны асуултыг бүрэн ойлгоогүй. Доорх сонголтуудаас сонгоно уу."
     }
   }
-}
 }

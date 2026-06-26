@@ -99,6 +99,8 @@
       "successMessage": "We will contact you soon.",
       "again": "Send another",
       "error": "Something went wrong. Please try again.",
+      "emailNotConfigured": "Email server is not configured. Please send directly via email using the button below.",
+      "sendViaEmail": "Send via email",
       "namePlaceholder": "Your name",
       "emailPlaceholder": "info@example.com",
       "phonePlaceholder": "+976 0000 0000",
@@ -128,7 +130,7 @@
     "copyright": "© {year} Huajiuan Allinium. All rights reserved."
   },
   "chatbot": {
-    "title": "Huajiuan Allinium",
+    "title": "Huajian Aluminium Mongolia",
     "subtitle": "Assistant",
     "open": "Open chat",
     "close": "Close chat",

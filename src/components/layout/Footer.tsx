@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import Image from 'next/image';
 import { getFooterMenus } from '@/lib/mock';
 import { Button } from '@/components/ui/Button';
 
@@ -16,11 +15,9 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <Link href="/" className="mb-6 inline-block">
-              <Image
+              <img
                 src="/logo.svg"
                 alt="Huajian Aluminium Mongolia"
-                width={220}
-                height={40}
                 className="h-10 w-auto object-contain"
               />
               <span className="sr-only">Huajian Aluminium Mongolia</span>

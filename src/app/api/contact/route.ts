@@ -1,15 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getClient } from '@/lib/apollo/client';
-import { gql } from '@apollo/client';
-
-const CREATE_FORM_SUBMISSION = gql`
-  mutation CpCmsFormSubmissionsAdd($input: FormSubmissionInput!) {
-    cpCmsFormSubmissionsAdd(input: $input) {
-      _id
-      status
-    }
-  }
-`;
+import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -20,24 +10,51 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: 'Missing required fields' }, { status: 400 });
     }
 
-    const client = getClient();
-    await client.mutate({
-      mutation: CREATE_FORM_SUBMISSION,
-      variables: {
-        input: {
-          name,
-          email,
-          phone,
-          message,
-          formName: 'Contact Form',
-          status: 'new',
+    const host = process.env.EMAIL_HOST;
+    const port = Number(process.env.EMAIL_PORT || 587);
+    const user = process.env.EMAIL_USER;
+    const pass = process.env.EMAIL_PASS;
+    const to = process.env.EMAIL_TO || 'gergroup11@gmail.com';
+
+    if (!host || !user || !pass || pass.includes('your_gmail_app_password')) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Email not configured',
+          mailto: `mailto:${to}?subject=${encodeURIComponent('Үнийн санал хүсэлт')}&body=${encodeURIComponent(
+            `Нэр: ${name}\nИмэйл: ${email}\nУтас: ${phone}\n\n${message}`
+          )}`,
         },
-      },
+        { status: 503 }
+      );
+    }
+
+    const transporter = nodemailer.createTransport({
+      host,
+      port,
+      secure: port === 465,
+      auth: { user, pass },
+    });
+
+    await transporter.sendMail({
+      from: `"${name}" <${user}>`,
+      to,
+      replyTo: email,
+      subject: 'Вебээс ирсэн үнийн саналын хүсэлт',
+      text: `Нэр: ${name}\nИмэйл: ${email}\nУтас: ${phone}\n\nМессеж:\n${message}`,
+      html: `
+        <h2>Вебээс ирсэн үнийн саналын хүсэлт</h2>
+        <p><strong>Нэр:</strong> ${name}</p>
+        <p><strong>Имэйл:</strong> ${email}</p>
+        <p><strong>Утас:</strong> ${phone}</p>
+        <p><strong>Мессеж:</strong></p>
+        <p>${message.replace(/\n/g, '<br/>')}</p>
+      `,
     });
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Contact form error:', error);
-    return NextResponse.json({ success: false, error: 'Failed to submit form' }, { status: 500 });
+    return NextResponse.json({ success: false, error: 'Failed to send email' }, { status: 500 });
   }
 }

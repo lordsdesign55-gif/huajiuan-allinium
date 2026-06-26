@@ -5,6 +5,7 @@ import { PageHero } from '@/components/sections/PageHero';
 import { LowESection } from '@/components/sections/LowESection';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
+import { EOSSLogo } from '@/components/icons/EOSSLogo';
 import { CheckCircle2, Layers, Ruler, Wind, Factory, Truck, HardHat, Clock, Shield, TrendingUp, ArrowRight, Zap, Thermometer, Snowflake, FileCheck } from 'lucide-react';
 
 interface PageProps {
@@ -134,6 +135,9 @@ export default async function UnitizedGlassSystemPage({ params }: PageProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-card via-card/70 to-card/30" />
         <div className="container-site relative z-10 py-24 text-center">
           <MotionSection className="mx-auto max-w-4xl">
+            <div className="mb-4 flex justify-center text-accent">
+              <EOSSLogo className="h-12 w-auto" />
+            </div>
             <span className="mb-4 inline-block text-sm font-bold uppercase tracking-widest text-accent">Unitized Curtain Wall System</span>
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Unitized Glass System

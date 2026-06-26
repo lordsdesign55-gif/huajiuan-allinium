@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { LowESection } from '@/components/sections/LowESection';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
+import { EOSSLogo } from '@/components/icons/EOSSLogo';
 import { ArrowRight, CheckCircle2, Award, Thermometer, Wind, Shield, Ruler, Droplets, Flame, Layers, Gem } from 'lucide-react';
 
 interface PageProps {
@@ -85,6 +86,9 @@ export default async function MetalWindowsPage({ params }: PageProps) {
         </div>
         <div className="container-site relative z-10 py-24">
           <MotionSection className="max-w-3xl">
+            <div className="mb-4 text-accent">
+              <EOSSLogo className="h-12 w-auto" />
+            </div>
             <span className="mb-4 inline-block text-sm font-bold uppercase tracking-widest text-accent">EOSS ES101 Passive Window</span>
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Металл дулаан цонх

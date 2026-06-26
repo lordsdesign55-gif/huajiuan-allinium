@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { Link, usePathname } from '@/i18n/routing';
 import { getHeaderMenus } from '@/lib/mock';
 import { MobileMenu } from './MobileMenu';
@@ -17,11 +16,9 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-card text-card-foreground border-b border-white/10">
       <div className="container-site flex h-[72px] items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-3">
-          <Image
+          <img
             src="/logo.svg"
             alt="Huajian Aluminium Mongolia"
-            width={220}
-            height={40}
             className="h-10 w-auto object-contain"
           />
           <span className="sr-only">Huajian Aluminium Mongolia</span>

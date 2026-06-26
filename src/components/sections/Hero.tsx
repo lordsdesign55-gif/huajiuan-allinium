@@ -5,6 +5,8 @@ import { Link } from '@/i18n/routing';
 import { Button } from '@/components/ui/Button';
 import { MotionSection } from '@/components/motion/MotionSection';
 
+import { EOSSLogo } from '@/components/icons/EOSSLogo';
+
 export function Hero() {
   const t = useTranslations('hero');
 
@@ -25,9 +27,14 @@ export function Hero() {
 
       <div className="container-site relative z-10 flex min-h-[90vh] flex-col justify-center py-24 lg:py-32">
         <MotionSection className="max-w-3xl">
-          <span className="mb-6 inline-block text-sm font-bold uppercase tracking-widest text-accent">
-            {t('kicker')}
-          </span>
+          <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <span className="text-sm font-bold uppercase tracking-widest text-accent">
+              {t('kicker')}
+            </span>
+            <div className="text-accent">
+              <EOSSLogo className="h-10 w-auto" />
+            </div>
+          </div>
           <h1 className="text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-display-lg">
             {t('title')}
           </h1>

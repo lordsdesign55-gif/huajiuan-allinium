@@ -21,18 +21,22 @@ export function ContactForm() {
   const t = useTranslations('contact.form');
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [mailtoLink, setMailtoLink] = useState<string | null>(null);
 
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
+    getValues,
   } = useForm<FormValues>({
     resolver: zodResolver(formSchema),
   });
 
   const onSubmit = async (data: FormValues) => {
     try {
+      setSubmitError(null);
+      setMailtoLink(null);
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -42,6 +46,9 @@ export function ContactForm() {
       if (result.success) {
         setSubmitted(true);
         reset();
+      } else if (result.mailto) {
+        setMailtoLink(result.mailto);
+        setSubmitError(t('emailNotConfigured'));
       } else {
         setSubmitError(t('error'));
       }
@@ -49,6 +56,12 @@ export function ContactForm() {
       console.error('Form submit error:', error);
       setSubmitError(t('error'));
     }
+  };
+
+  const openMailto = () => {
+    const data = getValues();
+    const body = `Нэр: ${data.name}\nИмэйл: ${data.email}\nУтас: ${data.phone}\n\n${data.message}`;
+    window.location.href = `mailto:gergroup11@gmail.com?subject=${encodeURIComponent('Үнийн санал хүсэлт')}&body=${encodeURIComponent(body)}`;
   };
 
   if (submitted) {
@@ -66,7 +79,16 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
       {submitError && (
-        <div className="bg-destructive/10 border border-destructive p-3 text-sm text-destructive">{submitError}</div>
+        <div className="bg-destructive/10 border border-destructive p-3 text-sm text-destructive">
+          {submitError}
+          {mailtoLink && (
+            <div className="mt-2">
+              <Button type="button" variant="outline" size="sm" onClick={openMailto}>
+                {t('sendViaEmail')}
+              </Button>
+            </div>
+          )}
+        </div>
       )}
       <div>
         <label htmlFor="name" className="mb-2 block text-sm font-medium text-foreground">{t('name')}</label>
