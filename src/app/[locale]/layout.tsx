@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'Huajiuan Allinium Mongolia - EOSS шилэн пасад, металл цонх, Alucobond фасад, Rockwool дулаалга, барилгын тоног төхөөрөмжийн албан ёсны ханган нийлүүлэгч. 7000-9559',
   keywords: [
     'EOSS Mongolia',
-    'Huajian Aluminium',
+    'Huajian Aluminium Mongolia',
     'шилэн пасад',
     'unitized glass system',
     'металл цонх',

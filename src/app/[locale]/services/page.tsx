@@ -139,7 +139,7 @@ export default function ServicesPage() {
             <span className="mb-4 inline-block text-sm font-bold uppercase tracking-widest text-accent">{nav('services')}</span>
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">{t('subtitle')}</h1>
             <p className="mt-6 max-w-2xl text-lg text-white/80">
-              Huajian Aluminium / EOSS брендийн бүтээгдэхүүн, Passive House стандарт, Монголын уур амьсгалд тохируулсан шийдэл.
+              Huajian Aluminium Mongolia / EOSS брендийн бүтээгдэхүүн, Passive House стандарт, Монголын уур амьсгалд тохируулсан шийдэл.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="primary" size="lg" asChild>
