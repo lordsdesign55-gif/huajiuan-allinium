@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { PageHero } from '@/components/sections/PageHero';
+import { LowESection } from '@/components/sections/LowESection';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
 import { CheckCircle2, Layers, Ruler, Wind, Factory, Truck, HardHat, Clock, Shield, TrendingUp, ArrowRight, Zap, Thermometer, Snowflake, FileCheck } from 'lucide-react';
@@ -451,6 +452,8 @@ export default async function UnitizedGlassSystemPage({ params }: PageProps) {
             ))}
           </div>
         </MotionSection>
+
+        <LowESection />
 
         {/* CTA */}
         <MotionSection className="mt-20 flex justify-center">

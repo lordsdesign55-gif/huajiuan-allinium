@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
+import { LowESection } from '@/components/sections/LowESection';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
 import { ArrowRight, CheckCircle2, Award, Thermometer, Wind, Shield, Ruler, Droplets, Flame, Layers, Gem } from 'lucide-react';
@@ -214,6 +215,8 @@ export default async function MetalWindowsPage({ params }: PageProps) {
             ))}
           </div>
         </MotionSection>
+
+        <LowESection />
 
         {/* CTA */}
         <MotionSection className="mt-20 flex justify-center">

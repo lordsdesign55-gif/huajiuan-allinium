@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
+import { LowESection } from './LowESection';
 import { Building2, Layers, Thermometer, Wrench, Frame } from 'lucide-react';
 
 const serviceKeys = [
@@ -14,15 +15,6 @@ const serviceKeys = [
   { id: 'metal', icon: Layers, image: '/images/project-5.jpg', link: '/services' },
   { id: 'insulation', icon: Thermometer, image: '/images/project-7.jpg', link: '/services' },
   { id: 'equipment', icon: Wrench, image: '/images/project-8.jpg', link: '/services' },
-];
-
-const standards = ['ASTM E2190', 'EN 1279-2', 'EN 673', 'CSA A440.2', 'GOST 30674', 'Passive House сертификат'];
-
-const comparison = [
-  { label: 'U-утга', v2: '1.4 W/m²K', v3: '0.9 W/m²K' },
-  { label: 'Дуу чимээ тусгаарлалт', v2: '32 dB', v3: '40 dB' },
-  { label: 'Нарны коэффициент (g)', v2: '0.62', v3: '0.48' },
-  { label: 'Монголын уур амьсгалд', v2: 'Тохиромжтой', v3: 'Маш тохиромжтой' },
 ];
 
 export function Services() {
@@ -75,47 +67,7 @@ export function Services() {
           ))}
         </div>
 
-        <MotionSection className="mt-20 border-t border-border pt-16">
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground lg:text-3xl">{t('lowE.title')}</h3>
-              <p className="mt-4 leading-relaxed text-muted-foreground">{t('lowE.intro')}</p>
-              <ul className="mt-6 grid gap-3">
-                {standards.map((standard) => (
-                  <li key={standard} className="flex items-center gap-3 text-sm text-foreground">
-                    <span className="h-1.5 w-1.5 bg-accent" />
-                    {standard}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-muted p-6 lg:p-8">
-              <h4 className="text-lg font-semibold text-foreground">{t('lowE.paneTitle')}</h4>
-              <div className="mt-6 overflow-hidden">
-                <table className="w-full text-left text-sm">
-                  <thead className="border-b border-border">
-                    <tr>
-                      <th className="py-3 font-medium text-muted-foreground">{t('lowE.uValue')}</th>
-                      <th className="py-3 font-medium text-foreground">{t('lowE.pane2')}</th>
-                      <th className="py-3 font-medium text-foreground">{t('lowE.pane3')}</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-border">
-                    {comparison.map(({ label, v2, v3 }) => (
-                      <tr key={label}>
-                        <td className="py-3 text-muted-foreground">{label}</td>
-                        <td className="py-3 text-foreground">{v2}</td>
-                        <td className="py-3 font-medium text-accent">{v3}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="mt-4 text-xs text-muted-foreground">{t('lowE.note')}</p>
-            </div>
-          </div>
-        </MotionSection>
+        <LowESection />
 
         <MotionSection className="mt-12 flex justify-center">
           <Button variant="primary" size="lg" asChild>
