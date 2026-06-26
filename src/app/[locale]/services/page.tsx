@@ -5,7 +5,7 @@ import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
-import { ArrowRight, CheckCircle2, Building2, Frame, Layers, Thermometer, Wrench } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Building2, Layers, Thermometer, Wrench } from 'lucide-react';
 
 const services = [
   {
@@ -65,13 +65,6 @@ const euStandards = [
   { code: 'EN 1991-1-4', desc: 'Салхины ачааллын тооцоо (Eurocode 1).' },
   { code: 'EN 1096', desc: 'Бүрээстэй шил — Low-E шилний оптик/энерги үзүүлэлт.' },
   { code: 'EN 1279', desc: 'Дулаалсан шилэн багцын чанар, чийгний тэсвэрлэлт.' },
-];
-
-const metalWindows = [
-  { title: 'Металл дулаан цонх', desc: 'EOSS 10 см хөнгөн цагаан профиль, 3 давхар Low-E + Argon. Passive House сертификаттай.' },
-  { title: 'Хөнгөн цагаан фасад цонх', desc: 'Alucobond пасадтай уялдуулсан, ус/агаар нэвтрүүлэхгүй битүүмжлэл.' },
-  { title: 'Урсах цонх', desc: 'Дуу чимээ, дулаан тусгаарлалт сайтай, том нээлттэй тагт, ложонд зориулсан.' },
-  { title: 'Аюулгүй байдлын цонх', desc: 'Хатсан шил, мултиплекс шилтэй сонголт — ослын эрсдэлийг бууруулна.' },
 ];
 
 const facadeTechLayers = [
@@ -350,28 +343,6 @@ export default function ServicesPage() {
                     <div className="font-semibold text-foreground">{std.code}</div>
                     <p className="mt-1 text-sm text-muted-foreground">{std.desc}</p>
                   </div>
-                </div>
-              </MotionItem>
-            ))}
-          </div>
-        </MotionSection>
-
-        {/* Metal windows */}
-        <MotionSection className="mt-24 border-t border-border pt-16">
-          <div className="text-center">
-            <span className="text-sm font-bold uppercase tracking-widest text-accent">Металл цонх</span>
-            <h2 className="mt-3 text-3xl font-bold text-foreground lg:text-4xl">Металл пасадны цонхны шийдэл</h2>
-            <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
-              Пасадны дизайнтай уялдсан, дулаан тусгаарлалт сайтай, ус/агаар нэвтрүүлэхгүй металл цонхны сонголтууд.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {metalWindows.map((win, index) => (
-              <MotionItem key={win.title} delay={index * 0.08}>
-                <div className="h-full rounded-lg border border-border bg-muted p-6">
-                  <Frame className="h-8 w-8 text-accent" />
-                  <div className="mt-4 font-semibold text-foreground">{win.title}</div>
-                  <p className="mt-2 text-sm text-muted-foreground">{win.desc}</p>
                 </div>
               </MotionItem>
             ))}
