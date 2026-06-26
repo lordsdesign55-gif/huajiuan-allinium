@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale } = await params;
   const isEn = locale === 'en';
   return {
-    title: isEn ? 'Metal Windows EOSS ES101 | Huajiuan Allinium' : 'Металл цонх EOSS ES101 | Huajiuan Allinium',
+    title: isEn ? 'Metal Windows EOSS ES101 | Huajian Aluminium Mongolia' : 'Металл цонх EOSS ES101 | Huajian Aluminium Mongolia',
     description: isEn
       ? 'EOSS ES101 Passive House certified metal thermal window. 101 mm frame, Uw 0.79 W/m²K, triple Low-E glass, designed for -40°C climates.'
       : 'EOSS ES101 Passive House сертификаттай металл дулаан цонх. 101 мм хүрээ, Uw 0.79 W/m²K, 3 давхар Low-E шил, -40°C уур амьсгалд.',

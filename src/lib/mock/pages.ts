@@ -31,7 +31,7 @@ export const pages: CmsPage[] = [
     _id: 'page-home',
     name: 'Нүүр',
     slug: '/',
-    description: 'Huajiuan Allinium — EOSS шилэн пасад, металл пасад, гадна дуулаалга',
+    description: 'Huajian Aluminium Mongolia — EOSS шилэн пасад, металл пасад, гадна дуулаалга',
     content: '',
     status: 'published',
   },
@@ -39,9 +39,9 @@ export const pages: CmsPage[] = [
     _id: 'page-about',
     name: 'Бидний тухай',
     slug: 'about',
-    description: 'Huajian Aluminium Mongolia — 26 жилийн олон улсын туршлага. Монгол дахь албан ёсны төлөөлөгч Huajiuan Allinium.',
+    description: 'Huajian Aluminium Mongolia — 26 жилийн олон улсын туршлага. Монгол дахь албан ёсны төлөөлөгч.',
     content:
-      '<p>Huajiuan Allinium нь 4 жилийн орон нутгийн туршлагатай, барилгын салбарт шилэн пасад, металл пасад, барилгын гадна дулаалга, дагалдах хэрэгсэл тоноглолын худалдаа болон угсралтын үйлчилгээ үзүүлдэг мэргэжлийн компани юм.</p>\n' +
+      '<p>Huajian Aluminium Mongolia нь 4 жилийн орон нутгийн туршлагатай, барилгын салбарт шилэн пасад, металл пасад, барилгын гадна дулаалга, дагалдах хэрэгсэл тоноглолын худалдаа болон угсралтын үйлчилгээ үзүүлдэг мэргэжлийн компани юм.</p>\n' +
       '<p>Бид Хятадын Huajian Aluminium Mongolia компанийн EOSS брендийн албан ёсны хэрэглэгч бөгөөд Монгол улсад тус брендийн шилэн пасадын бүтээгдэхүүнийг албан ёсоор нэвтрүүлж, борлуулж, угсарч байна. EOSS систем нь Passive House сертификаттай, Монголын хатуу уур амьсгалд тохируулсан, эрчим хүчний хэмнэлттэй шийдэл юм.</p>\n' +
       '<p>Манай баг 50 гаруй төсөлд оролцож, стандарт, чанар, бүтээмжийг эрхэмлэн ажиллаж байна.</p>',
     status: 'published',
@@ -71,7 +71,7 @@ export const pages: CmsPage[] = [
     _id: 'page-gallery',
     name: 'Зургийн цомог',
     slug: 'gallery',
-    description: 'Huajiuan Allinium-ийн гүйцэтгэсэн төслүүд',
+    description: 'Huajian Aluminium Mongolia-ийн гүйцэтгэсэн төслүүд',
     content: '',
     status: 'published',
   },

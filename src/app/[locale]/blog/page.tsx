@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale } = await params;
   const isEn = locale === 'en';
   return {
-    title: isEn ? 'News | Huajiuan Allinium' : 'Мэдээ | Huajiuan Allinium',
+    title: isEn ? 'News | Huajian Aluminium Mongolia' : 'Мэдээ | Huajian Aluminium Mongolia',
     description: isEn
       ? 'Industry news, EOSS brand highlights, aluminum market updates and technical advice.'
       : 'Салбарын мэдээ, EOSS брэндийн танилцуулга, хөнгөн цагааны зах зээл, техникийн зөвлөгөө.',

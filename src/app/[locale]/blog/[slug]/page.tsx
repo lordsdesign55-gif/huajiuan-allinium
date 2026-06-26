@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: `${post.title} | Huajiuan Allinium`,
+    title: `${post.title} | Huajian Aluminium Mongolia`,
     description: post.excerpt,
     alternates: {
       canonical: `/${locale}/blog/${slug}`,

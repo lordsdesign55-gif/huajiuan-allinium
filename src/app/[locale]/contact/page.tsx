@@ -10,11 +10,11 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
-  const title = locale === 'en' ? 'Contact | Huajiuan Allinium' : 'Холбоо барих | Huajiuan Allinium';
+  const title = locale === 'en' ? 'Contact | Huajian Aluminium Mongolia' : 'Холбоо барих | Huajian Aluminium Mongolia';
   const description =
     locale === 'en'
-      ? 'Contact Huajiuan Allinium for EOSS facades, metal windows, insulation and construction accessories. Phone: +976 7000 9559'
-      : 'Huajiuan Allinium - EOSS пасад, металл цонх, дулаалга, тоноглолын талаар холбогдох. Утас: 7000-9559';
+      ? 'Contact Huajian Aluminium Mongolia for EOSS facades, metal windows, insulation and construction accessories. Phone: +976 7000 9559'
+      : 'Huajian Aluminium Mongolia - EOSS пасад, металл цонх, дулаалга, тоноглолын талаар холбогдох. Утас: 7000-9559';
   return {
     title,
     description,

@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale } = await params;
   const isEn = locale === 'en';
   return {
-    title: isEn ? 'Unitized Glass System | Huajiuan Allinium' : 'Unitized Glass System | Huajiuan Allinium',
+    title: isEn ? 'Unitized Glass System | Huajian Aluminium Mongolia' : 'Unitized Glass System | Huajian Aluminium Mongolia',
     description: isEn
       ? 'EOSS unitized glass curtain wall system — factory-pre assembled panels, fast installation, Passive House certified for -40°C to +40°C.'
       : 'EOSS unitized glass curtain wall system — үйлдвэрт урьдчилан угсарсан панел, хурдан угсралт, Passive House сертификаттай.',

@@ -18,14 +18,14 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug, locale } = await params;
   const titles: Record<string, Record<string, string>> = {
-    about: { mn: 'Бидний тухай | Huajiuan Allinium', en: 'About Us | Huajiuan Allinium' },
-    services: { mn: 'Үйлчилгээ | Huajiuan Allinium', en: 'Services | Huajiuan Allinium' },
-    gallery: { mn: 'Төслүүд | Huajiuan Allinium', en: 'Projects | Huajiuan Allinium' },
+    about: { mn: 'Бидний тухай | Huajian Aluminium Mongolia', en: 'About Us | Huajian Aluminium Mongolia' },
+    services: { mn: 'Үйлчилгээ | Huajian Aluminium Mongolia', en: 'Services | Huajian Aluminium Mongolia' },
+    gallery: { mn: 'Төслүүд | Huajian Aluminium Mongolia', en: 'Projects | Huajian Aluminium Mongolia' },
   };
   const descriptions: Record<string, Record<string, string>> = {
     about: {
-      mn: 'Huajiuan Allinium — Huajian Aluminium Mongolia EOSS брендийн Монгол дахь албан ёсны төлөөлөгч. 26 жилийн дэлхийн туршлага, 50+ төсөл.',
-      en: 'Huajiuan Allinium — official distributor of Huajian Aluminium Mongolia EOSS brand in Mongolia. 26 years of global expertise, 50+ projects.',
+      mn: 'Huajian Aluminium Mongolia — Huajian Aluminium EOSS брендийн Монгол дахь албан ёсны төлөөлөгч. 26 жилийн дэлхийн туршлага, 50+ төсөл.',
+      en: 'Huajian Aluminium Mongolia — official distributor of Huajian Aluminium EOSS brand in Mongolia. 26 years of global expertise, 50+ projects.',
     },
     services: {
       mn: 'EOSS шилэн пасад, металл цонх, Alucobond пасад, Rockwool дулаалга, барилгын дагалдах тоноглолын бүрэн шийдэл.',
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
   };
   return {
-    title: titles[slug]?.[locale] ?? 'Huajiuan Allinium',
+    title: titles[slug]?.[locale] ?? 'Huajian Aluminium Mongolia',
     description: descriptions[slug]?.[locale] ?? '',
     alternates: {
       canonical: `/${locale}/${slug}`,
@@ -56,7 +56,7 @@ export async function generateStaticParams() {
 const stats = [
   { icon: Award, value: '26+', label: 'жилийн туршлага', suffix: 'Huajian Aluminium Mongolia' },
   { icon: Building2, value: '50+', label: 'гүйцэтгэсэн төсөл', suffix: 'Монголд' },
-  { icon: Users, value: '4+', label: 'жилийн орон нутгийн туршлага', suffix: 'Huajiuan Allinium' },
+  { icon: Users, value: '4+', label: 'жилийн орон нутгийн туршлага', suffix: 'Huajian Aluminium Mongolia' },
   { icon: Globe2, value: '2', label: 'улс', suffix: 'Хятад, Монгол' },
 ];
 
@@ -119,7 +119,7 @@ function AboutContent({ page }: { page: { name: string; description: string; con
               Huajian Aluminium Mongolia 1998 оноос эхлэн Хятадын хөнгөн цагаан, шилэн пасадын салбарт тэргүүлэгч үйлдвэрлэгч болон хөгжсөн. EOSS бренд нь Passive House сертификаттай, олон улсын инженерчлэлийн шаардлагыг бүрэн хангасан систем юм.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Монгол дахь албан ёсны төлөөлөгч <strong>Huajiuan Allinium</strong> нь уг бүтээгдэхүүнийг Монголын -40°C ~ +40°C уур амьсгалд тохируулан нэвтрүүлж, 50 гаруй төсөлд амжилттай хэрэгжүүлээд байна.
+              Монгол дахь албан ёсны төлөөлөгч <strong>Huajian Aluminium Mongolia</strong> нь уг бүтээгдэхүүнийг Монголын -40°C ~ +40°C уур амьсгалд тохируулан нэвтрүүлж, 50 гаруй төсөлд амжилттай хэрэгжүүлээд байна.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="primary" size="lg" asChild>

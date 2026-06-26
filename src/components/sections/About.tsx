@@ -37,7 +37,7 @@ export function About() {
           <MotionSection className="relative aspect-[4/3] overflow-hidden bg-white shadow-lg lg:aspect-square">
             <Image
               src="/images/project-1.jpg"
-              alt="Huajiuan Allinium"
+              alt="Huajian Aluminium Mongolia"
               fill
               className="object-cover"
             />
