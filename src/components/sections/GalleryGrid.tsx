@@ -12,6 +12,9 @@ const galleryProjects = [
   { title: 'Эмнэлэг', system: 'Хатсан шил + профиль', location: 'Улаанбаатар', image: '/images/project-8.jpg' },
   { title: 'Үзвэр үйлчилгээний төв', system: 'Alucobond', location: 'Улаанбаатар', image: '/images/project-9.jpg' },
   { title: 'Агуулах, ложистик төв', system: 'Металл пасад', location: 'Улаанбаатар', image: '/images/hero-bg.jpg' },
+  { title: 'Alucobond фасад', system: 'Европ стандарт пасад', location: 'Улаанбаатар', image: '/images/alucobond/facade-2.jpg' },
+  { title: 'EOSS ES101 цонх', system: 'Passive House цонх', location: 'Улаанбаатар', image: '/images/eoss-windows/gallery-3.jpg' },
+  { title: 'Unitized панел угсралт', system: 'Unitized Glass System', location: 'Улаанбаатар', image: '/images/unitized/install-1.jpg' },
 ];
 
 export function GalleryGrid() {

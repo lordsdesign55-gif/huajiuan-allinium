@@ -11,6 +11,8 @@ const homepageProjects = [
   { title: 'Худалдааны төв', system: 'Unitized Glass System', location: 'Улаанбаатар', image: '/images/project-3.jpg' },
   { title: 'Орон сууцны хороолол', system: '3 давхар Low-E шил', location: 'Улаанбаатар', image: '/images/project-4.jpg' },
   { title: 'Спортын цогцолбор', system: 'Металл пасад', location: 'Улаанбаатар', image: '/images/project-5.jpg' },
+  { title: 'Оффисын цамхаг', system: 'Alucobond фасад', location: 'Улаанбаатар', image: '/images/alucobond/facade-1.jpg' },
+  { title: 'EOSS металл цонх', system: 'Passive House цонх', location: 'Улаанбаатар', image: '/images/eoss-windows/gallery-3.jpg' },
 ];
 
 export function Gallery() {
@@ -34,7 +36,7 @@ export function Gallery() {
           </MotionSection>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {homepageProjects.map((project, index) => (
             <MotionItem key={project.title} delay={index * 0.1}>
               <Link href="/gallery" className="group relative block aspect-[4/3] overflow-hidden bg-muted">

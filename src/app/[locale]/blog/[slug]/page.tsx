@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import { Link } from '@/i18n/routing';
 import { PageHero } from '@/components/sections/PageHero';
 import { MotionSection } from '@/components/motion/MotionSection';
@@ -9,22 +10,38 @@ interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
 
+const postSlugs = [
+  'global-aluminum-price-today',
+  'new-project-eoss-installation',
+  'passive-house-metal-thermal-window',
+  'eoss-shilen-pasad-standard',
+  'metal-pasad-songoh',
+  'gadna-duulaalga-energy',
+];
+
 export async function generateStaticParams() {
-  return [
-    'global-aluminum-price-today',
-    'new-project-eoss-installation',
-    'passive-house-metal-thermal-window',
-    'eoss-shilen-pasad-standard',
-    'metal-pasad-songoh',
-    'gadna-duulaalga-energy',
-  ].map((slug) => ({
-    locale: 'mn',
-    slug,
-  }));
+  return postSlugs.flatMap((slug) => [
+    { locale: 'mn', slug },
+    { locale: 'en', slug },
+  ]);
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug, locale } = await params;
+  const post = getPostBySlug(slug);
+  if (!post) return {};
+  return {
+    title: `${post.title} | Huajiuan Allinium`,
+    description: post.excerpt,
+    alternates: {
+      canonical: `/${locale}/blog/${slug}`,
+      languages: { mn: `/mn/blog/${slug}`, en: `/en/blog/${slug}` },
+    },
+  };
 }
 
 export default async function BlogDetailPage({ params }: PageProps) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const post = getPostBySlug(slug);
 
   if (!post) {
@@ -38,7 +55,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
       <section className="container-site py-16 lg:py-24">
         <MotionSection className="mx-auto max-w-3xl">
           <div className="text-sm text-muted-foreground">
-            {new Date(post.createdAt).toLocaleDateString('mn-MN')}
+            {new Date(post.createdAt).toLocaleDateString(locale === 'en' ? 'en-US' : 'mn-MN')}
           </div>
 
           {post.content ? (
@@ -52,7 +69,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
 
           <div className="mt-12">
             <Button variant="outline" className="border-foreground/20 text-foreground hover:bg-muted" asChild>
-              <Link href="/blog">← Бүх мэдээ</Link>
+              <Link href="/blog">← {locale === 'en' ? 'All news' : 'Бүх мэдээ'}</Link>
             </Button>
           </div>
         </MotionSection>

@@ -66,10 +66,10 @@
   "about": {
     "kicker": "About us",
     "title": "Your trusted partner for building envelopes",
-    "intro": "Huajiuan Allinium has 4+ years of experience supplying and installing glass facades, metal facades, external insulation and construction accessories in Mongolia.",
-    "partnership": "We are the official distributor of Huajian Aluminium's EOSS brand in Mongolia, officially introducing, selling and installing its glass facade systems.",
+    "intro": "With more than 4 years of local experience, Huajiuan Allinium supplies and installs premium glass facades, metal facades, external insulation and construction accessories across Mongolia.",
+    "partnership": "We are the official distributor of Huajian Aluminium's EOSS brand in Mongolia, introducing, selling and installing its certified facade systems backed by 26 years of global aluminium expertise.",
     "stats": {
-      "years": "4+ Years",
+      "years": "26+ Years Global",
       "projects": "50+ Projects",
       "standard": "100% Standards"
     }
@@ -94,8 +94,15 @@
       "phone": "Phone",
       "message": "Message",
       "submit": "Send",
-      "success": "Thank you! We will contact you soon.",
-      "error": "Something went wrong. Please try again."
+      "submitting": "Sending...",
+      "successTitle": "Thank you!",
+      "successMessage": "We will contact you soon.",
+      "again": "Send another",
+      "error": "Something went wrong. Please try again.",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "info@example.com",
+      "phonePlaceholder": "+976 0000 0000",
+      "messagePlaceholder": "Briefly describe your project"
     },
     "info": {
       "phone": "Phone",

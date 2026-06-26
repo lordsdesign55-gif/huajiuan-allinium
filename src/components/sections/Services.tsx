@@ -9,11 +9,11 @@ import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Building2, Layers, Thermometer, Wrench, Frame } from 'lucide-react';
 
 const serviceKeys = [
-  { id: 'glass', icon: Building2, image: '/images/project-2.jpg' },
-  { id: 'metalWindow', icon: Frame, image: '/images/project-3.jpg' },
-  { id: 'metal', icon: Layers, image: '/images/project-5.jpg' },
-  { id: 'insulation', icon: Thermometer, image: '/images/project-7.jpg' },
-  { id: 'equipment', icon: Wrench, image: '/images/project-8.jpg' },
+  { id: 'glass', icon: Building2, image: '/images/project-2.jpg', link: '/unitized-glass-system' },
+  { id: 'metalWindow', icon: Frame, image: '/images/project-3.jpg', link: '/metal-windows' },
+  { id: 'metal', icon: Layers, image: '/images/project-5.jpg', link: '/services' },
+  { id: 'insulation', icon: Thermometer, image: '/images/project-7.jpg', link: '/services' },
+  { id: 'equipment', icon: Wrench, image: '/images/project-8.jpg', link: '/services' },
 ];
 
 const standards = ['ASTM E2190', 'EN 1279-2', 'EN 673', 'CSA A440.2', 'GOST 30674', 'Passive House сертификат'];
@@ -63,7 +63,7 @@ export function Services() {
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-white/80">{t(`items.${service.id}.description`)}</p>
                   <div className="mt-6">
                     <Link
-                      href={`/services#${service.id}`}
+                      href={service.link}
                       className="text-sm font-medium text-accent hover:text-white transition-colors"
                     >
                       {t('details')} →

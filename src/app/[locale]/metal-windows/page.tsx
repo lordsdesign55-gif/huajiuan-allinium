@@ -1,8 +1,28 @@
+import type { Metadata } from 'next';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
 import { ArrowRight, CheckCircle2, Award, Thermometer, Wind, Shield, Ruler, Droplets, Flame, Layers, Gem } from 'lucide-react';
+
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const isEn = locale === 'en';
+  return {
+    title: isEn ? 'Metal Windows EOSS ES101 | Huajiuan Allinium' : 'Металл цонх EOSS ES101 | Huajiuan Allinium',
+    description: isEn
+      ? 'EOSS ES101 Passive House certified metal thermal window. 101 mm frame, Uw 0.79 W/m²K, triple Low-E glass, designed for -40°C climates.'
+      : 'EOSS ES101 Passive House сертификаттай металл дулаан цонх. 101 мм хүрээ, Uw 0.79 W/m²K, 3 давхар Low-E шил, -40°C уур амьсгалд.',
+    alternates: {
+      canonical: `/${locale}/metal-windows`,
+      languages: { mn: '/mn/metal-windows', en: '/en/metal-windows' },
+    },
+  };
+}
 
 const specs = [
   { icon: Ruler, label: 'Хүрээний гүн', value: '101 мм' },
@@ -45,7 +65,10 @@ const gallery = [
   { src: '/images/eoss-windows/gallery-9.jpg', alt: 'EOSS exhibition site' },
 ];
 
-export default function MetalWindowsPage() {
+export default async function MetalWindowsPage({ params }: PageProps) {
+  const { locale } = await params;
+  const isEn = locale === 'en';
+
   return (
     <>
       {/* Hero */}

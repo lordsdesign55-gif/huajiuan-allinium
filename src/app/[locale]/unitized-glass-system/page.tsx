@@ -1,9 +1,29 @@
+import type { Metadata } from 'next';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { PageHero } from '@/components/sections/PageHero';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
 import { CheckCircle2, Layers, Ruler, Wind, Factory, Truck, HardHat, Clock, Shield, TrendingUp, ArrowRight, Zap, Thermometer, Snowflake, FileCheck } from 'lucide-react';
+
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const isEn = locale === 'en';
+  return {
+    title: isEn ? 'Unitized Glass System | Huajiuan Allinium' : 'Unitized Glass System | Huajiuan Allinium',
+    description: isEn
+      ? 'EOSS unitized glass curtain wall system — factory-pre assembled panels, fast installation, Passive House certified for -40°C to +40°C.'
+      : 'EOSS unitized glass curtain wall system — үйлдвэрт урьдчилан угсарсан панел, хурдан угсралт, Passive House сертификаттай.',
+    alternates: {
+      canonical: `/${locale}/unitized-glass-system`,
+      languages: { mn: '/mn/unitized-glass-system', en: '/en/unitized-glass-system' },
+    },
+  };
+}
 
 const benefits = [
   { icon: Clock, title: 'Хурдан угсралт', desc: 'Урьдчилан үйлдвэрлэсэн тул талбай дээр угсарлалтын хугацаа 30-50% богиносдог.' },
@@ -92,7 +112,10 @@ const coldClimateFeatures = [
   { icon: FileCheck, title: 'Бүрэн битүүмжлэл', desc: 'Агаар, ус нэвтрүүлэлтийг үйлдвэрт 100% шалгаж, GOST 26602.2-ийн шаардлагыг хангасан.' },
 ];
 
-export default function UnitizedGlassSystemPage() {
+export default async function UnitizedGlassSystemPage({ params }: PageProps) {
+  const { locale } = await params;
+  const isEn = locale === 'en';
+
   return (
     <>
       {/* Hero with video */}

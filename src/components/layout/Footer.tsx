@@ -56,8 +56,10 @@ export function Footer() {
                 {[
                   { url: '/services', labelKey: 'services.items.glass.title' },
                   { url: '/unitized-glass-system', labelKey: 'nav.unitized' },
+                  { url: '/metal-windows', labelKey: 'nav.metalWindows' },
                   { url: '/services', labelKey: 'services.items.metal.title' },
                   { url: '/services', labelKey: 'services.items.insulation.title' },
+                  { url: '/services', labelKey: 'services.items.equipment.title' },
                 ].map((item) => (
                   <li key={item.url + item.labelKey}>
                     <Link href={item.url} className="text-sm text-white/70 hover:text-accent transition-colors"

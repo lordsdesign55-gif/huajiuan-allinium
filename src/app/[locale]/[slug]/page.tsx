@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getPageBySlug } from '@/lib/mock';
 import { PageHero } from '@/components/sections/PageHero';
@@ -14,8 +15,42 @@ interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
 
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug, locale } = await params;
+  const titles: Record<string, Record<string, string>> = {
+    about: { mn: 'Бидний тухай | Huajiuan Allinium', en: 'About Us | Huajiuan Allinium' },
+    services: { mn: 'Үйлчилгээ | Huajiuan Allinium', en: 'Services | Huajiuan Allinium' },
+    gallery: { mn: 'Төслүүд | Huajiuan Allinium', en: 'Projects | Huajiuan Allinium' },
+  };
+  const descriptions: Record<string, Record<string, string>> = {
+    about: {
+      mn: 'Huajiuan Allinium — Huajian Aluminium EOSS брендийн Монгол дахь албан ёсны төлөөлөгч. 26 жилийн дэлхийн туршлага, 50+ төсөл.',
+      en: 'Huajiuan Allinium — official distributor of Huajian Aluminium EOSS brand in Mongolia. 26 years of global expertise, 50+ projects.',
+    },
+    services: {
+      mn: 'EOSS шилэн пасад, металл цонх, Alucobond пасад, Rockwool дулаалга, барилгын дагалдах тоноглолын бүрэн шийдэл.',
+      en: 'EOSS glass facades, metal windows, Alucobond facades, Rockwool insulation and construction accessories.',
+    },
+    gallery: {
+      mn: 'Монголд хэрэгжүүлсэн Huajian Aluminium / EOSS шилэн пасад, металл пасад, дулаалгын төслүүд.',
+      en: 'Huajian Aluminium / EOSS glass facade, metal facade and insulation projects completed in Mongolia.',
+    },
+  };
+  return {
+    title: titles[slug]?.[locale] ?? 'Huajiuan Allinium',
+    description: descriptions[slug]?.[locale] ?? '',
+    alternates: {
+      canonical: `/${locale}/${slug}`,
+      languages: { mn: `/mn/${slug}`, en: `/en/${slug}` },
+    },
+  };
+}
+
 export async function generateStaticParams() {
-  return validSlugs.map((slug) => ({ locale: 'mn', slug }));
+  return validSlugs.flatMap((slug) => [
+    { locale: 'mn', slug },
+    { locale: 'en', slug },
+  ]);
 }
 
 const stats = [

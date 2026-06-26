@@ -1,8 +1,28 @@
+import type { Metadata } from 'next';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { PageHero } from '@/components/sections/PageHero';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { posts } from '@/lib/mock';
+
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const isEn = locale === 'en';
+  return {
+    title: isEn ? 'News | Huajiuan Allinium' : 'Мэдээ | Huajiuan Allinium',
+    description: isEn
+      ? 'Industry news, EOSS brand highlights, aluminum market updates and technical advice.'
+      : 'Салбарын мэдээ, EOSS брэндийн танилцуулга, хөнгөн цагааны зах зээл, техникийн зөвлөгөө.',
+    alternates: {
+      canonical: `/${locale}/blog`,
+      languages: { mn: '/mn/blog', en: '/en/blog' },
+    },
+  };
+}
 
 const postImages: Record<string, string> = {
   'global-aluminum-price-today': '/images/project-1.jpg',
@@ -13,12 +33,19 @@ const postImages: Record<string, string> = {
   'gadna-duulaalga-energy': '/images/project-6.jpg',
 };
 
-export default function BlogPage() {
+export default async function BlogPage({ params }: PageProps) {
+  const { locale } = await params;
+  const isEn = locale === 'en';
+
   return (
     <>
       <PageHero
-        title="Мэдээ"
-        subtitle="Салбарын мэдээ, брэндийн танилцуулга, техникийн зөвлөгөө"
+        title={isEn ? 'News' : 'Мэдээ'}
+        subtitle={
+          isEn
+            ? 'Industry news, brand highlights and technical advice'
+            : 'Салбарын мэдээ, брэндийн танилцуулга, техникийн зөвлөгөө'
+        }
       />
 
       <section className="container-site py-16 lg:py-24">
@@ -36,7 +63,7 @@ export default function BlogPage() {
                 </Link>
                 <div className="flex flex-col justify-center sm:col-span-2 lg:col-span-3">
                   <div className="text-sm text-muted-foreground">
-                    {new Date(post.createdAt).toLocaleDateString('mn-MN')}
+                    {new Date(post.createdAt).toLocaleDateString(isEn ? 'en-US' : 'mn-MN')}
                   </div>
                   <h2 className="mt-2 text-xl font-semibold text-foreground group-hover:text-accent transition-colors">
                     <Link href={`/blog/${post.slug}`}>{post.title}</Link>
@@ -47,7 +74,7 @@ export default function BlogPage() {
                       href={`/blog/${post.slug}`}
                       className="text-sm font-medium text-accent hover:text-foreground transition-colors"
                     >
-                      Дэлгэрэнгүй унших →
+                      {isEn ? 'Read more' : 'Дэлгэрэнгүй унших'} →
                     </Link>
                   </div>
                 </div>
