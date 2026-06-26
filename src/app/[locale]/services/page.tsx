@@ -5,7 +5,7 @@ import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { MotionSection, MotionItem } from '@/components/motion/MotionSection';
 import { Button } from '@/components/ui/Button';
-import { ArrowRight, CheckCircle2, Building2, Layers, Thermometer, Wrench } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Building2, Layers, Thermometer, Wrench, Frame } from 'lucide-react';
 
 const services = [
   {
